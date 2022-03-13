@@ -10,7 +10,7 @@ namespace GenericListExample
     {
         static void Main(string[] args)
         {
-            string[] classes = new[] { "Person", "Product", "Car" };
+            string[] classes = { "Person", "Product", "Car" };
 
             foreach (var currentClass in classes)
             {
