@@ -1,9 +1,10 @@
 ﻿namespace GenericListExample.Models
 {
-    public class Car
+    public class Car : BaseModel
     {
-        public int Id { get; set; }
         public string Model { get; set; }
         public string Manufacturer { get; set; }
+        public override string ToString() => Model;
+
     }
 }

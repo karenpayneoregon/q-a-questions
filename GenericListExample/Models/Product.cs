@@ -1,8 +1,8 @@
 ﻿namespace GenericListExample.Models
 {
-    public class Product
+    public class Product : BaseModel
     {
-        public int Id { get; set; }
         public string Name { get; set; }
+        public override string ToString() => Name;
     }
 }
