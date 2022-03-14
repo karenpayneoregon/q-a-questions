@@ -17,7 +17,7 @@ namespace CopyToOutputFolderDemo
         {
             InitializeComponent();
         }
-        private string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json");
+        private readonly string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Json");
         private void ValidateFolderExistsButton_Click(object sender, EventArgs e)
         {
 
