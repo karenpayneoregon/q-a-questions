@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyToOutputFolderDemo", "CopyToOutputFolderDemo\CopyToOutputFolderDemo.csproj", "{0E3CEB66-6CC2-483A-B205-B3C5848BDB85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDelegateEventAction", "SimpleDelegateEventAction\SimpleDelegateEventAction.csproj", "{20B2E535-DDC8-4395-B0A4-6BB7721D1076}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDelegateEventAction", "SimpleDelegateEventAction\SimpleDelegateEventAction.csproj", "{20B2E535-DDC8-4395-B0A4-6BB7721D1076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewDistinctGroup", "DataGridViewDistinctGroup\DataGridViewDistinctGroup.csproj", "{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{20B2E535-DDC8-4395-B0A4-6BB7721D1076}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20B2E535-DDC8-4395-B0A4-6BB7721D1076}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20B2E535-DDC8-4395-B0A4-6BB7721D1076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
