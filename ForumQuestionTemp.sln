@@ -14,7 +14,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyToOutputFolderDemo", "C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDelegateEventAction", "SimpleDelegateEventAction\SimpleDelegateEventAction.csproj", "{20B2E535-DDC8-4395-B0A4-6BB7721D1076}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewDistinctGroup", "DataGridViewDistinctGroup\DataGridViewDistinctGroup.csproj", "{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGridViewDistinctGroup", "DataGridViewDistinctGroup\DataGridViewDistinctGroup.csproj", "{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicReadWriteJson", "BasicReadWriteJson\BasicReadWriteJson.csproj", "{8A323F5D-14E8-4633-8CA6-081EA758A668}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E59F99C-EF8B-4E22-AF49-F8FFC8E749C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A323F5D-14E8-4633-8CA6-081EA758A668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A323F5D-14E8-4633-8CA6-081EA758A668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A323F5D-14E8-4633-8CA6-081EA758A668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A323F5D-14E8-4633-8CA6-081EA758A668}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
