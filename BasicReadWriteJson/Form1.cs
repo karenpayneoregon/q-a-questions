@@ -1,8 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using BasicReadWriteJson.Classes;
+using BasicReadWriteJson.Extensions;
 using BasicReadWriteJson.Models;
 
 
@@ -33,34 +36,31 @@ namespace BasicReadWriteJson
             dataGridView1.DataSource = _productsBindingSource;
             _productsBindingSource.Sort = "ProductName";
 
-            for (int index = 0; index < dataGridView1.Columns.Count; index++)
-            {
-                if (dataGridView1.Columns[index].Name.EndsWith("ID"))
-                {
-                    dataGridView1.Columns[index].Visible = false;
-                }
-            }
-            
+            dataGridView1.HideIdentifiers();
+            dataGridView1.ExpandColumns();
+
         }
 
         private void CurrentButton_Click(object sender, EventArgs e)
         {
             if (_productsBindingSource.Current == null) return;
-            // provides access to the current DataGridView row as a Product
             Products current = _productsList[_productsBindingSource.Position];
         }
-        /// <summary>
-        /// Never need this when setting up a data source for the DataGridView
-        /// </summary>
-        private void PeekButton_Click(object sender, EventArgs e)
-        {
-            var row = dataGridView1.Rows[_productsBindingSource.Position];
 
-            for (var index = 0; index < row.Cells.Count; index++)
-            {
-                DataGridViewCell cell = row.Cells[index];
-                Console.WriteLine($@"{row.Cells[cell.ColumnIndex].OwningColumn.Name,-20}{row.Cells[cell.ColumnIndex].ValueType.Name}");
-            }
+        private void IncreaseButton_Click(object sender, EventArgs e)
+        {
+            if (_productsBindingSource.Current == null) return;
+
+            Products current = _productsList[_productsBindingSource.Position];
+            current.UnitsInStockUpDown();
+        }
+
+        private void DecreaseButton_Click(object sender, EventArgs e)
+        {
+            if (_productsBindingSource.Current == null) return;
+
+            Products current = _productsList[_productsBindingSource.Position];
+            current.UnitsInStockUpDown(false);
         }
     }
 }

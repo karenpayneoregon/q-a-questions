@@ -1,7 +1,7 @@
 ﻿
 namespace BasicReadWriteJson
 {
-    partial class Form1
+    partial class Form2
     {
         /// <summary>
         /// Required designer variable.
@@ -29,65 +29,63 @@ namespace BasicReadWriteJson
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.CurrentButton = new System.Windows.Forms.Button();
             this.DecreaseButton = new System.Windows.Forms.Button();
             this.IncreaseButton = new System.Windows.Forms.Button();
+            this.CurrentButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 14);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(602, 183);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // CurrentButton
-            // 
-            this.CurrentButton.Location = new System.Drawing.Point(12, 213);
-            this.CurrentButton.Name = "CurrentButton";
-            this.CurrentButton.Size = new System.Drawing.Size(126, 23);
-            this.CurrentButton.TabIndex = 1;
-            this.CurrentButton.Text = "Current";
-            this.CurrentButton.UseVisualStyleBackColor = true;
-            this.CurrentButton.Click += new System.EventHandler(this.CurrentButton_Click);
             // 
             // DecreaseButton
             // 
             this.DecreaseButton.Image = global::BasicReadWriteJson.Properties.Resources.Smaller_16x;
-            this.DecreaseButton.Location = new System.Drawing.Point(574, 213);
+            this.DecreaseButton.Location = new System.Drawing.Point(575, 211);
             this.DecreaseButton.Name = "DecreaseButton";
             this.DecreaseButton.Size = new System.Drawing.Size(39, 23);
-            this.DecreaseButton.TabIndex = 4;
+            this.DecreaseButton.TabIndex = 8;
             this.DecreaseButton.UseVisualStyleBackColor = true;
             this.DecreaseButton.Click += new System.EventHandler(this.DecreaseButton_Click);
             // 
             // IncreaseButton
             // 
             this.IncreaseButton.Image = global::BasicReadWriteJson.Properties.Resources.Add_16x;
-            this.IncreaseButton.Location = new System.Drawing.Point(529, 213);
+            this.IncreaseButton.Location = new System.Drawing.Point(530, 211);
             this.IncreaseButton.Name = "IncreaseButton";
             this.IncreaseButton.Size = new System.Drawing.Size(39, 23);
-            this.IncreaseButton.TabIndex = 3;
+            this.IncreaseButton.TabIndex = 7;
             this.IncreaseButton.UseVisualStyleBackColor = true;
             this.IncreaseButton.Click += new System.EventHandler(this.IncreaseButton_Click);
             // 
-            // Form1
+            // CurrentButton
+            // 
+            this.CurrentButton.Location = new System.Drawing.Point(13, 211);
+            this.CurrentButton.Name = "CurrentButton";
+            this.CurrentButton.Size = new System.Drawing.Size(126, 23);
+            this.CurrentButton.TabIndex = 6;
+            this.CurrentButton.Text = "Current";
+            this.CurrentButton.UseVisualStyleBackColor = true;
+            this.CurrentButton.Click += new System.EventHandler(this.CurrentButton_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(602, 183);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 254);
+            this.ClientSize = new System.Drawing.Size(628, 255);
             this.Controls.Add(this.DecreaseButton);
             this.Controls.Add(this.IncreaseButton);
             this.Controls.Add(this.CurrentButton);
             this.Controls.Add(this.dataGridView1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Code sample";
+            this.Text = "Using DataTable";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -95,10 +93,9 @@ namespace BasicReadWriteJson
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button CurrentButton;
-        private System.Windows.Forms.Button IncreaseButton;
         private System.Windows.Forms.Button DecreaseButton;
+        private System.Windows.Forms.Button IncreaseButton;
+        private System.Windows.Forms.Button CurrentButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
-
