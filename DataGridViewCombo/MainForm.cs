@@ -20,6 +20,7 @@ namespace DataGridViewCombo1
         {
             Setup();
             CustomersDataGridView.AllowUserToAddRows = false;
+            
         }
         private void Setup()
         {
@@ -42,6 +43,7 @@ namespace DataGridViewCombo1
             ItemTextBoxColumn.DataPropertyName = "Item";
             _customerBindingSource.DataSource = customerTable;
 
+            bindingNavigator1.BindingSource = _customerBindingSource;
             CustomersDataGridView.DataSource = _customerBindingSource;
 
         }
