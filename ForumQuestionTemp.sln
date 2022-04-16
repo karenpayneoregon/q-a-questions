@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackGroundWorker1", "BackGr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VB.NET", "VB.NET", "{9D07A349-44F1-4257-B59F-97A162DAEE19}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ConfigurationLibrary", "SidesMpcLibraryVB\ConfigurationLibrary.vbproj", "{72E816EA-6D04-4E8B-9D3C-46B23AD2F050}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewCombo1", "DataGridViewCombo\DataGridViewCombo1.csproj", "{585DF517-D420-41C0-AA75-7FCB7C69B167}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,17 +56,16 @@ Global
 		{17C7E1E0-C195-4BD5-9BF5-C8EC52767CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C7E1E0-C195-4BD5-9BF5-C8EC52767CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C7E1E0-C195-4BD5-9BF5-C8EC52767CE2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{72E816EA-6D04-4E8B-9D3C-46B23AD2F050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{72E816EA-6D04-4E8B-9D3C-46B23AD2F050}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{72E816EA-6D04-4E8B-9D3C-46B23AD2F050}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{72E816EA-6D04-4E8B-9D3C-46B23AD2F050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C8A8FB3B-8F01-4915-850A-6F8438D02D0A} = {88514674-B6C1-40D2-AB12-41535F811296}
-		{72E816EA-6D04-4E8B-9D3C-46B23AD2F050} = {9D07A349-44F1-4257-B59F-97A162DAEE19}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}
