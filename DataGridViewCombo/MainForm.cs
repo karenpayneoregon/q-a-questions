@@ -45,7 +45,7 @@ namespace DataGridViewCombo1
 
             bindingNavigator1.BindingSource = _customerBindingSource;
             CustomersDataGridView.DataSource = _customerBindingSource;
-
+            
         }
         /// <summary>
         /// access current row data

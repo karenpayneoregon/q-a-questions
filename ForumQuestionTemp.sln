@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VB.NET", "VB.NET", "{9D07A3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewCombo1", "DataGridViewCombo\DataGridViewCombo1.csproj", "{585DF517-D420-41C0-AA75-7FCB7C69B167}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewConditionalImagesDataGridView", "DataGridViewConditionalImagesDataGridView\DataGridViewConditionalImagesDataGridView.csproj", "{35315013-EFFC-4470-A509-2761FC33946B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +62,10 @@ Global
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35315013-EFFC-4470-A509-2761FC33946B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35315013-EFFC-4470-A509-2761FC33946B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35315013-EFFC-4470-A509-2761FC33946B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35315013-EFFC-4470-A509-2761FC33946B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
