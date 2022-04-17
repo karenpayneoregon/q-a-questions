@@ -26,7 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VB.NET", "VB.NET", "{9D07A3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewCombo1", "DataGridViewCombo\DataGridViewCombo1.csproj", "{585DF517-D420-41C0-AA75-7FCB7C69B167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewConditionalImagesDataGridView", "DataGridViewConditionalImagesDataGridView\DataGridViewConditionalImagesDataGridView.csproj", "{35315013-EFFC-4470-A509-2761FC33946B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormHelpers", "WinFormHelpers\WinFormHelpers.csproj", "{BA7087EA-9711-4755-826F-F139BC81CA5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BindingSource code", "BindingSource code", "{A71487FA-F38C-403B-B1BF-C1C78AAD3E72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindingSourceFiltering", "BindingSourceFiltering\BindingSourceFiltering.csproj", "{CE13A4BC-AE92-4643-BEE5-3877274EE3EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,16 +66,22 @@ Global
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{585DF517-D420-41C0-AA75-7FCB7C69B167}.Release|Any CPU.Build.0 = Release|Any CPU
-		{35315013-EFFC-4470-A509-2761FC33946B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{35315013-EFFC-4470-A509-2761FC33946B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{35315013-EFFC-4470-A509-2761FC33946B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{35315013-EFFC-4470-A509-2761FC33946B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA7087EA-9711-4755-826F-F139BC81CA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA7087EA-9711-4755-826F-F139BC81CA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA7087EA-9711-4755-826F-F139BC81CA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA7087EA-9711-4755-826F-F139BC81CA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE13A4BC-AE92-4643-BEE5-3877274EE3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE13A4BC-AE92-4643-BEE5-3877274EE3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE13A4BC-AE92-4643-BEE5-3877274EE3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE13A4BC-AE92-4643-BEE5-3877274EE3EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C8A8FB3B-8F01-4915-850A-6F8438D02D0A} = {88514674-B6C1-40D2-AB12-41535F811296}
+		{BA7087EA-9711-4755-826F-F139BC81CA5B} = {A71487FA-F38C-403B-B1BF-C1C78AAD3E72}
+		{CE13A4BC-AE92-4643-BEE5-3877274EE3EC} = {A71487FA-F38C-403B-B1BF-C1C78AAD3E72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}
