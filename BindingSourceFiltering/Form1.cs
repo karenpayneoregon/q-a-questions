@@ -16,7 +16,7 @@ namespace BindingSourceFiltering
 {
     public partial class Form1 : Form
     {
-        private BindingSource _bindingSource = new BindingSource();
+        private readonly BindingSource _bindingSource = new BindingSource();
         public Form1()
         {
             InitializeComponent();
@@ -64,7 +64,11 @@ namespace BindingSourceFiltering
 
         private void TwoConditionsButton_Click(object sender, EventArgs e)
         {
-            _bindingSource.RowFilterTwoConditions("ProductName", "Chai", "CategoryName", "Beverages");
+            _bindingSource.RowFilterTwoConditions(
+                "ProductName", 
+                "Chai", 
+                "CategoryName", 
+                "Beverages");
         }
     }
 }
