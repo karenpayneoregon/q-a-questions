@@ -6,6 +6,8 @@ Type in a search in either one for filtering, empty the current TextBox to remov
 
 Data is load from a database table but do not be concerned with this if not using a database as at the point the DataTable is used in the form the DataTable has no knowledge of the database.
 
+Code for filtering is in [this project](https://github.com/karenpayneoregon/q-a-questions/tree/master/WinFormHelpers).
+
 See also TechNet [BindingSource Filter with Starts, contains, ends with and case sensitive options](https://social.technet.microsoft.com/wiki/contents/articles/53413.bindingsource-filter-with-starts-contains-ends-with-and-case-sensitive-options.aspx)
 
-
+![im](../assets/BindingSourceFilter.png)
