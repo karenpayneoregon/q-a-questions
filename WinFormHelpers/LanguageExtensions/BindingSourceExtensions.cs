@@ -40,7 +40,12 @@ namespace WinFormHelpers.LanguageExtensions
             sender.DataTable().CaseSensitive = caseSensitive;
             sender.DataView().RowFilter = $"{field} LIKE '%{value.EscapeApostrophe()}'";
         }
-    
+
+        public static void RowFilterTwoConditions(this BindingSource sender, string field1, string value1, string pField2, string value2, bool caseSensitive = false)
+        {
+            sender.DataTable().CaseSensitive = caseSensitive;
+            sender.DataView().RowFilter = $"{field1} = '{value1.EscapeApostrophe()}' AND {pField2} = '{value2.EscapeApostrophe()}'";
+        }
         public static void RowFilterClear(this BindingSource sender)
         {
             sender.DataView().RowFilter = "";

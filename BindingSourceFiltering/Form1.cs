@@ -61,5 +61,10 @@ namespace BindingSourceFiltering
                 _bindingSource.RowFilterEndsWith("ProductName", EndsWithTextBox.Text);
             }
         }
+
+        private void TwoConditionsButton_Click(object sender, EventArgs e)
+        {
+            _bindingSource.RowFilterTwoConditions("ProductName", "Chai", "CategoryName", "Beverages");
+        }
     }
 }

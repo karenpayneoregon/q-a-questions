@@ -33,6 +33,7 @@ namespace BindingSourceFiltering
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.EndsWithTextBox = new System.Windows.Forms.TextBox();
             this.StartsWithTextBox = new System.Windows.Forms.TextBox();
+            this.TwoConditionsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,11 +62,22 @@ namespace BindingSourceFiltering
             this.StartsWithTextBox.Size = new System.Drawing.Size(186, 23);
             this.StartsWithTextBox.TabIndex = 2;
             // 
+            // TwoConditionsButton
+            // 
+            this.TwoConditionsButton.Location = new System.Drawing.Point(232, 310);
+            this.TwoConditionsButton.Name = "TwoConditionsButton";
+            this.TwoConditionsButton.Size = new System.Drawing.Size(108, 23);
+            this.TwoConditionsButton.TabIndex = 3;
+            this.TwoConditionsButton.Text = "2 Conditions";
+            this.TwoConditionsButton.UseVisualStyleBackColor = true;
+            this.TwoConditionsButton.Click += new System.EventHandler(this.TwoConditionsButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 362);
+            this.Controls.Add(this.TwoConditionsButton);
             this.Controls.Add(this.StartsWithTextBox);
             this.Controls.Add(this.EndsWithTextBox);
             this.Controls.Add(this.dataGridView1);
@@ -86,6 +98,7 @@ namespace BindingSourceFiltering
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox EndsWithTextBox;
         private System.Windows.Forms.TextBox StartsWithTextBox;
+        private System.Windows.Forms.Button TwoConditionsButton;
     }
 }
 
