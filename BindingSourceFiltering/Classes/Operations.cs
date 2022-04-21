@@ -46,4 +46,5 @@ namespace BindingSourceFiltering.Classes
                    "INNER JOIN Suppliers AS S ON P.SupplierID = S.SupplierID ORDER BY P.ProductName";
         }
     }
+
 }
