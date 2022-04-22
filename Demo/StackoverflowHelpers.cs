@@ -4,6 +4,7 @@ namespace Demo
 {
     /// <summary>
     /// All this code is from Stackoverflow post
+    /// Karen added <see cref="FormattedPhoneNumber"/>
     /// </summary>
     public class StackoverflowHelpers
     {
@@ -32,10 +33,7 @@ namespace Demo
             return value;
         }
 
-        public static string FormattedPhoneNumber()
-        {
-            return PhoneNumber(RandomDigits(10));
-        }
+        public static string FormattedPhoneNumber() => PhoneNumber(RandomDigits(10));
     }
 
 }
