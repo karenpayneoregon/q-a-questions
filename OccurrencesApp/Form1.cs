@@ -22,7 +22,7 @@ namespace OccurrencesApp
                 listView1.Items.Add(new ListViewItem(item.ItemArray));
             }
 
-            items = items = Operations.GetAllItems(textBox2.Text);
+            items = Operations.GetAllItems(textBox2.Text);
 
             foreach (var item in items.Where(item => char.IsDigit(item.Character)))
             {
