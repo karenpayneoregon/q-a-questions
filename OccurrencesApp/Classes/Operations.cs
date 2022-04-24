@@ -42,5 +42,16 @@ namespace OccurrencesApp.Classes
 
             return itemsGroup;
         }
+
+        public static List<Item> GetInfo(List<List<Item>> list, int findChar)
+        {
+            var items =
+            (
+                from sublist in list
+                from item in sublist
+                where item.Character == findChar
+                select item).ToList();
+            return items;
+        }
     }
 }
