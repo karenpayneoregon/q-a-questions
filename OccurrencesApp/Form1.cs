@@ -13,6 +13,9 @@ namespace OccurrencesApp
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Get occurrences for each char in both TextBoxes
+        /// </summary>
         private void GetButton_Click(object sender, EventArgs e)
         {
             List<Item> items = Operations.GetAllItems(textBox1.Text);
@@ -30,13 +33,15 @@ namespace OccurrencesApp
             }
 
         }
-
+        /// <summary>
+        /// Read lines in a file, get occurrences for each char
+        /// </summary>
         private void ReadFileButton_Click(object sender, EventArgs e)
         {
             List<List<Item>> itemList = Operations.ReadFromFile();
             
-            var one = Operations.GetInfo(itemList, '1').Sum(x => x.Occurrences);
-            var eight = Operations.GetInfo(itemList, '8').Sum(x => x.Occurrences);
+            var one = Operations.GetInfo(itemList, '1').Sum(item => item.Occurrences);
+            var eight = Operations.GetInfo(itemList, '8').Sum(item => item.Occurrences);
             Console.WriteLine($"1 = {one,-4}8 = {eight}");
    
         }
