@@ -6,7 +6,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,26 +34,6 @@ namespace Versioning
         private void button1_Click(object sender, EventArgs e)
         {
 
-        }
-    }
-
-    public class Helpers
-    {
-        public static List<Container> GetZeros(string value)
-        {
-            List<Container> list = new();
-            Regex regex = new(@"\d+(\.\d+)?");
-            var matches = regex.Matches(value);
-            int index = 0;
-
-            foreach (Match match in matches)
-            {
-                var length = match.Value.Replace("0.", "").Length;
-                list.Add(new Container() {Index = index, Value = match.Value, Length = length});
-                index++;
-            }
-
-            return list;
         }
     }
 
