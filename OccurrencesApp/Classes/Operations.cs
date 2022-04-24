@@ -11,10 +11,9 @@ namespace OccurrencesApp.Classes
         public static List<Item> GetAllItems(string values) 
             => (from item in ProcessData(values) select item).ToList();
 
-        public static List<List<Item>> ReadFromFile()
+        public static List<List<Item>> ReadFromFile(string fileName)
         {
             var itemList = new List<List<Item>>();
-            var fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt");
             var lines = File.ReadAllLines(fileName);
 
             foreach (var line in lines)
@@ -25,8 +24,19 @@ namespace OccurrencesApp.Classes
             return itemList;
         }
 
+        /// <summary>
+        /// Get occurrences for each char in a string
+        /// </summary>
+        /// <param name="values"></param>
+        /// <returns></returns>
         private static IOrderedEnumerable<Item> ProcessData(string values)
         {
+            
+            if (string.IsNullOrWhiteSpace(values))
+            {
+                throw new ArgumentException("String is empty");
+            }
+
             var itemsGroup = (
                     from chr in values.ToCharArray()
                     group chr by chr
@@ -43,6 +53,12 @@ namespace OccurrencesApp.Classes
             return itemsGroup;
         }
 
+        /// <summary>
+        /// Get occurrences for <see cref="findChar"/>
+        /// </summary>
+        /// <param name="list">list of <see cref="Item"/></param>
+        /// <param name="findChar">Char to find</param>
+        /// <returns>results</returns>
         public static List<Item> GetInfo(List<List<Item>> list, int findChar)
         {
             var items =

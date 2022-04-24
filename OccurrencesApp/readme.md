@@ -1,6 +1,8 @@
 ﻿# About
 
-Code to obtain count of each character in a string. In this case showing numerics.
+Code to obtain count of each character in a string. 
+
+In this case showing numerics.
 
 ![Occurances](assets/occurances.png)
 

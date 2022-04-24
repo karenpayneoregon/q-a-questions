@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using OccurrencesApp.Classes;
@@ -33,12 +34,14 @@ namespace OccurrencesApp
             }
 
         }
+
         /// <summary>
         /// Read lines in a file, get occurrences for each char
         /// </summary>
         private void ReadFileButton_Click(object sender, EventArgs e)
         {
-            List<List<Item>> itemList = Operations.ReadFromFile();
+            string fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt");
+            List<List<Item>> itemList = Operations.ReadFromFile(fileName);
             
             var one = Operations.GetInfo(itemList, '1').Sum(item => item.Occurrences);
             var eight = Operations.GetInfo(itemList, '8').Sum(item => item.Occurrences);
