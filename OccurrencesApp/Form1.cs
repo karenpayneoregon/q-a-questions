@@ -17,24 +17,16 @@ namespace OccurrencesApp
         {
             List<Item> items = Operations.GetAllItems(textBox1.Text);
 
-            foreach (var item in items)
+            foreach (var item in items.Where(item => char.IsDigit(item.Character)))
             {
-                if (char.IsDigit(item.Character))
-                {
-                    listView1.Items.Add(new ListViewItem(item.ItemArray));
-                }
-                
+                listView1.Items.Add(new ListViewItem(item.ItemArray));
             }
 
             items = items = Operations.GetAllItems(textBox2.Text);
 
-            foreach (var item in items)
+            foreach (var item in items.Where(item => char.IsDigit(item.Character)))
             {
-                if (char.IsDigit(item.Character))
-                {
-                    listView2.Items.Add(new ListViewItem(item.ItemArray));
-                }
-
+                listView2.Items.Add(new ListViewItem(item.ItemArray));
             }
 
         }
