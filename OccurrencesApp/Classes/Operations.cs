@@ -1,19 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace OccurrencesApp.Classes
 {
     public class Operations
     {
-        /// <summary>
-        /// Count occurrences for each char in a string
-        /// </summary>
-        public static List<Item> GetAllItems(string values)
+
+        public static List<Item> GetAllItems(string values) 
+            => (from item in ProcessData(values) select item).ToList();
+
+        public static List<List<Item>> ReadFromFile()
+        {
+            var itemList = new List<List<Item>>();
+            var fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data.txt");
+            var lines = File.ReadAllLines(fileName);
+
+            foreach (var line in lines)
+            {
+                itemList.Add((from item in ProcessData(line) select item).ToList());
+            }
+
+            return itemList;
+        }
+
+        private static IOrderedEnumerable<Item> ProcessData(string values)
         {
             var itemsGroup = (
                     from chr in values.ToCharArray()
-                    group chr by chr into grp
+                    group chr by chr
+                    into grp
                     select new Item
                     {
                         Character = grp.Key,
@@ -23,28 +40,7 @@ namespace OccurrencesApp.Classes
                 .ToList()
                 .OrderBy(item => item.Character.ToString());
 
-            return (from item in itemsGroup select item).ToList();
-
-        }
-
-        /// <summary>
-        /// Count occurrences of numbers in array
-        /// </summary>
-        public static List<NumberItem> GetAllNumbers(int[] values)
-        {
-            IOrderedEnumerable<NumberItem> itemsGroup = (
-                    from chr in values
-                    group chr by chr into grp
-                    select new NumberItem
-                    {
-                        Item = grp.Key,
-                        Occurrences = grp.Count()
-                    })
-                .ToList()
-                .OrderBy(item => item.Item.ToString());
-
-            return (from item in itemsGroup select item).ToList();
-
+            return itemsGroup;
         }
     }
 }
