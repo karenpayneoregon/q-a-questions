@@ -29,61 +29,80 @@ namespace Demo1
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.LoadButton1 = new System.Windows.Forms.Button();
-            this.LoadButton2 = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.GetSelectedButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // checkedListBox1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(27, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 12);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(159, 124);
+            this.checkedListBox1.TabIndex = 0;
             // 
-            // LoadButton1
+            // GetSelectedButton
             // 
-            this.LoadButton1.Location = new System.Drawing.Point(177, 12);
-            this.LoadButton1.Name = "LoadButton1";
-            this.LoadButton1.Size = new System.Drawing.Size(75, 23);
-            this.LoadButton1.TabIndex = 1;
-            this.LoadButton1.Text = "button1";
-            this.LoadButton1.UseVisualStyleBackColor = true;
-            this.LoadButton1.Click += new System.EventHandler(this.LoadButton1_Click);
+            this.GetSelectedButton.Location = new System.Drawing.Point(12, 142);
+            this.GetSelectedButton.Name = "GetSelectedButton";
+            this.GetSelectedButton.Size = new System.Drawing.Size(159, 23);
+            this.GetSelectedButton.TabIndex = 1;
+            this.GetSelectedButton.Text = "Get selected";
+            this.GetSelectedButton.UseVisualStyleBackColor = true;
+            this.GetSelectedButton.Click += new System.EventHandler(this.GetSelectedButton_Click);
             // 
-            // LoadButton2
+            // dataGridView1
             // 
-            this.LoadButton2.Location = new System.Drawing.Point(177, 41);
-            this.LoadButton2.Name = "LoadButton2";
-            this.LoadButton2.Size = new System.Drawing.Size(75, 23);
-            this.LoadButton2.TabIndex = 2;
-            this.LoadButton2.Text = "button2";
-            this.LoadButton2.UseVisualStyleBackColor = true;
-            this.LoadButton2.Click += new System.EventHandler(this.LoadButton2_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dataGridView1.Location = new System.Drawing.Point(177, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(313, 150);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Name";
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Country";
+            this.Column2.HeaderText = "Country";
+            this.Column2.Name = "Column2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 230);
-            this.Controls.Add(this.LoadButton2);
-            this.Controls.Add(this.LoadButton1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(503, 172);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GetSelectedButton);
+            this.Controls.Add(this.checkedListBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Sample";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button LoadButton1;
-        private System.Windows.Forms.Button LoadButton2;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button GetSelectedButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
 

@@ -1,30 +1,40 @@
 ﻿using System;
-using System.Data;
-using System.Drawing;
-using System.IO;
+using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Demo1
 {
     public partial class Form1 : Form
     {
-        private BindingListSpecial<string> _bindingList;
+        private readonly BindingSource _bindingSource = 
+            new BindingSource();
+
         public Form1()
         {
             InitializeComponent();
+
+            checkedListBox1.DataSource = Mocked.List;
+            _bindingSource.DataSource = new List<Item>();
+            dataGridView1.DataSource = _bindingSource;
         }
 
-        private void LoadButton1_Click(object sender, EventArgs e)
+        private void GetSelectedButton_Click(object sender, EventArgs e)
         {
-            _bindingList = new BindingListSpecial<string>(File.ReadAllLines("TextFile1.txt").ToList());
-            comboBox1.DataSource = _bindingList;
-        }
-        private void LoadButton2_Click(object sender, EventArgs e)
-        {
-            _bindingList.AddRange(File.ReadAllLines("TextFile2.txt").ToList());
+            List<Item> selected = checkedListBox1.CheckedList<Item>();
+
+            if (selected.Any())
+            {
+                var data = (List<Item>)_bindingSource.DataSource;
+                foreach (var item in selected)
+                {
+                    if (data.FirstOrDefault(x => x.Name == item.Name && x.Country == item.Country) == null)
+                    {
+                        _bindingSource.Add(item);
+                    }
+                }
+            }
+
         }
     }
 }
