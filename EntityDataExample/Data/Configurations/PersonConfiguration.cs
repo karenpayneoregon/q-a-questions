@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore;
 using System;
+using EntityDataExample.Classes;
 using EntityDataExample.Models;
 
 namespace EntityDataExample.Data.Configurations
@@ -22,6 +23,7 @@ namespace EntityDataExample.Data.Configurations
                 .HasForeignKey(d => d.OccupationIdentifier)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Person_Occupation1");
+
 
             OnConfigurePartial(entity);
         }

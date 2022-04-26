@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using EntityDataExample.Classes;
 using EntityDataExample.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,12 +23,10 @@ namespace EntityDataExample
             Console.WriteLine(nameof(Actors));
             using var context = new Context();
 
-            int occupationIdentifier = 2;
-
             var actors = context.Person
                 .Include(p => p.OccupationIdentifierNavigation)
                 .Include(p => p.CountryIdentifierNavigation)
-                .Where(p => p.OccupationIdentifier == occupationIdentifier)
+                .Where(p => p.OccupationIdentifier == (int)Occupations.Actor)
                 .ToList();
 
             foreach (var person in actors)
@@ -44,12 +43,11 @@ namespace EntityDataExample
 
             using var context = new Context();
 
-            int occupationIdentifier = 1;
 
             var doctors = context.Person
                 .Include(p => p.OccupationIdentifierNavigation)
                 .Include(p => p.CountryIdentifierNavigation)
-                .Where(p => p.OccupationIdentifier == occupationIdentifier)
+                .Where(p => p.OccupationIdentifier == (int)Occupations.Doctor)
                 .ToList();
 
             foreach (var person in doctors)

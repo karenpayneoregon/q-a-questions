@@ -16,9 +16,15 @@
 	  <Content Include="readme.md" />
 	</ItemGroup>
 	<ItemGroup>
+		<PackageReference Include="EntityFrameworkCoreHelpers" Version="1.0.1" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Scripts\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="appsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 </Project>

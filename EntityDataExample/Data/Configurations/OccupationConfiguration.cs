@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore;
 using System;
+using EntityDataExample.Classes;
 using EntityDataExample.Models;
 
 namespace EntityDataExample.Data.Configurations
@@ -12,7 +13,6 @@ namespace EntityDataExample.Data.Configurations
         public void Configure(EntityTypeBuilder<Occupation> entity)
         {
             entity.HasKey(e => e.OccupationIdentifier);
-
             OnConfigurePartial(entity);
         }
 

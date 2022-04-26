@@ -1,4 +1,6 @@
 ﻿
+using EntityDataExample.Classes;
+
 #nullable disable
 namespace EntityDataExample.Models
 {
@@ -9,7 +11,8 @@ namespace EntityDataExample.Models
         public string LastName { get; set; }
         public int OccupationIdentifier { get; set; }
         public int CountryIdentifier { get; set; }
-        public string FullName => $"{FirstName} {LastName}"; public virtual Countries CountryIdentifierNavigation { get; set; }
+        public string FullName => $"{FirstName} {LastName}"; 
+        public virtual Countries CountryIdentifierNavigation { get; set; }
         public virtual Occupation OccupationIdentifierNavigation { get; set; }
     }
 }
