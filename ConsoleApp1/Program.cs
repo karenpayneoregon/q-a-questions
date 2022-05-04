@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 
 namespace ConsoleApp1
@@ -10,17 +11,50 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            for (int index = 0; index < 5; index++)
+            {
+                //Console.WriteLine(Next($"F{index}"));
+            }
+
+            Console.WriteLine(Next("1278-120"));
+
+
+            Console.ReadLine();
+        }
+
+        public static string Next(string value)
+        {
+            string number = Regex.Match(value, "[0-9]+$").Value;
+
+            return value.Substring(0, value.Length - number.Length) +
+                   (long.Parse(number) + 1).ToString().PadLeft(number.Length, '0');
+        }
+
+        private static void ExampleOne()
+        {
             // start fresh each run
             Operations.CreateFromMockedData();
 
             foreach (var person in Operations.RemoveList())
             {
-                Console.WriteLine(Operations.Remove(person.FirstName, person.LastName) ?
-                    $"Removed {person}" :
-                    $"{person} does not exists");
+                Console.WriteLine(Operations.Remove(person.FirstName, person.LastName) ? $"Removed {person}" : $"{person} does not exists");
             }
+        }
 
-            Console.ReadLine();
+        private static void GetFileList()
+        {
+            Directory.GetFiles(
+                    AppDomain.CurrentDomain.BaseDirectory, "Name*.*")
+                .Where(fileName => !fileName.EndsWith("prototype"))
+                .ToList()
+                .ForEach(Console.WriteLine);
+
+
+
+
+
+
+
         }
     }
 
@@ -77,7 +111,7 @@ namespace ConsoleApp1
             else
             {
                 list.Remove(person);
-                File.WriteAllText(FileName, 
+                File.WriteAllText(FileName,
                     JsonConvert.SerializeObject(list, Formatting.Indented));
                 return true;
             }
