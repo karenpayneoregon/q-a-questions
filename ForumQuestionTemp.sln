@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindAndSum", "BindAndSum\Bi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncSimple", "AsyncSimple\AsyncSimple.csproj", "{D6E25CB0-238D-41AE-98CA-3F59593B6886}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsLibrary", "WindowsFormsLibrary\WindowsFormsLibrary.csproj", "{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +62,10 @@ Global
 		{D6E25CB0-238D-41AE-98CA-3F59593B6886}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6E25CB0-238D-41AE-98CA-3F59593B6886}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6E25CB0-238D-41AE-98CA-3F59593B6886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -68,6 +74,7 @@ Global
 		{BA7087EA-9711-4755-826F-F139BC81CA5B} = {A71487FA-F38C-403B-B1BF-C1C78AAD3E72}
 		{CE13A4BC-AE92-4643-BEE5-3877274EE3EC} = {A71487FA-F38C-403B-B1BF-C1C78AAD3E72}
 		{2C562D71-F101-49C1-93EE-ADDC49B72BB7} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
+		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}
