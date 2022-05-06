@@ -29,6 +29,7 @@ namespace DataGridViewCombo1
 
             var (customerTable, colorTable) = DataOperations.LoadData();
 
+
             _colorBindingSource.DataSource = colorTable;
 
             ColorComboBoxColumn.DisplayMember = "ColorText";
@@ -45,8 +46,47 @@ namespace DataGridViewCombo1
 
             bindingNavigator1.BindingSource = _customerBindingSource;
             CustomersDataGridView.DataSource = _customerBindingSource;
-            
+
+            CustomersDataGridView.EditingControlShowing += CustomersDataGridViewOnEditingControlShowing;
+            var currentRow = ((DataRowView)_customerBindingSource.Current).Row;
+            //ColorIdLabel.Text = currentRow.Field<int>("ColorId").ToString();
+            ColorIdLabel.DataBindings.Add(
+                "Text", 
+                _customerBindingSource, 
+                "ColorId", 
+                true);
+
+
         }
+
+
+
+        // TODO
+        private void CustomersDataGridViewOnEditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            if (!CustomersDataGridView.CurrentCell.IsComboBoxCell()) return;
+            if (CustomersDataGridView.Columns[CustomersDataGridView.CurrentCell.ColumnIndex].Name != nameof(ColorComboBoxColumn)) return;
+            if (!(e.Control is ComboBox cb)) return;
+            cb.SelectionChangeCommitted -= SelectionChangeCommitted;
+            cb.SelectionChangeCommitted += SelectionChangeCommitted;
+        }
+
+        private void SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (_customerBindingSource.Current != null)
+            {
+                if (!string.IsNullOrWhiteSpace(((DataGridViewComboBoxEditingControl)sender).Text))
+                {
+                    //CustomersDataGridView.EndEdit();
+                    DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
+
+                    ColorIdLabel.Text = currentRow.Field<int>("ColorId").ToString();
+                    
+
+                }
+            }
+        }
+
         /// <summary>
         /// access current row data
         /// </summary>

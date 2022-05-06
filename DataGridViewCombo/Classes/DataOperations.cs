@@ -31,5 +31,10 @@ namespace DataGridViewCombo1.Classes
             return (dtCustomer, dtColor);
 
         }
+
+        public static void UpdateRow(DataRow dataRow)
+        {
+            // TODO
+        }
     }
 }
