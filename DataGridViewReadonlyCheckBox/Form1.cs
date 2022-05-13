@@ -37,7 +37,7 @@ namespace DataGridViewReadonlyCheckBox
             var value = Convert.ToString(dataGridView1.Rows[e.RowIndex].Cells[2].Value);
             DataGridViewCell cell = dataGridView1.Rows[e.RowIndex].Cells[0];
 
-            if (value != "Germany" || cell.ReadOnly == true) return;
+            if (value != "Germany" || cell.ReadOnly) return;
             DataGridViewCheckBoxCell chkCell = cell as DataGridViewCheckBoxCell;
             chkCell.Value = false;
             chkCell.FlatStyle = FlatStyle.Flat;
