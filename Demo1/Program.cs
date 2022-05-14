@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DataGridViewReadonlyCheckBox
+namespace Demo1
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace DataGridViewReadonlyCheckBox
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ExampleForm());
+            Application.Run(new Form1());
         }
     }
 }

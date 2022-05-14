@@ -49,6 +49,7 @@ namespace DataGridViewCombo1
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.ColorIdLabel = new System.Windows.Forms.Label();
+            this.SetCurrentColorButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -218,11 +219,22 @@ namespace DataGridViewCombo1
             this.ColorIdLabel.TabIndex = 8;
             this.ColorIdLabel.Text = "0";
             // 
+            // SetCurrentColorButton
+            // 
+            this.SetCurrentColorButton.Location = new System.Drawing.Point(245, 212);
+            this.SetCurrentColorButton.Name = "SetCurrentColorButton";
+            this.SetCurrentColorButton.Size = new System.Drawing.Size(75, 23);
+            this.SetCurrentColorButton.TabIndex = 9;
+            this.SetCurrentColorButton.Text = "Set color";
+            this.SetCurrentColorButton.UseVisualStyleBackColor = true;
+            this.SetCurrentColorButton.Click += new System.EventHandler(this.SetCurrentColorButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 264);
+            this.Controls.Add(this.SetCurrentColorButton);
             this.Controls.Add(this.ColorIdLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bindingNavigator1);
@@ -262,5 +274,6 @@ namespace DataGridViewCombo1
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ColorIdLabel;
+        private System.Windows.Forms.Button SetCurrentColorButton;
     }
 }
