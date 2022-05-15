@@ -105,7 +105,7 @@ namespace DataGridViewCombo1
         private void SetCurrentColorButton_Click(object sender, EventArgs e)
         {
             DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
-            currentRow.SetField("ColorId", 8);
+            currentRow.SetField("ColorId", -1);
         }
     }
 }

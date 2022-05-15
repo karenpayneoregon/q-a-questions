@@ -24,6 +24,10 @@ namespace DataGridViewCombo1.Classes
 
                     cmd.CommandText = "SELECT ColorId,ColorText FROM Colors ORDER BY ColorText";
                     dtColor.Load(cmd.ExecuteReader());
+                    var dr = dtColor.NewRow();
+                    dr[0] = -1;
+                    dr[1] = "Select";
+                    dtColor.Rows.InsertAt(dr, 0);
 
                 }
             }
