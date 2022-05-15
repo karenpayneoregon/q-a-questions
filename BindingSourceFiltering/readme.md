@@ -10,4 +10,6 @@ Code for filtering is in [this project](https://github.com/karenpayneoregon/q-a-
 
 See also TechNet [BindingSource Filter with Starts, contains, ends with and case sensitive options](https://social.technet.microsoft.com/wiki/contents/articles/53413.bindingsource-filter-with-starts-contains-ends-with-and-case-sensitive-options.aspx)
 
+[Database script](https://github.com/karenpayneoregon/class-data-scripts/blob/master/north2020.sql)
+
 ![im](../assets/BindingSourceFilter.png)

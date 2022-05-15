@@ -22,8 +22,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class pro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsControls", "WindowsControls\WindowsControls.csproj", "{2C562D71-F101-49C1-93EE-ADDC49B72BB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BindAndSum", "BindAndSum\BindAndSum.csproj", "{58D5BBB1-142A-4275-87F8-B792C0A06749}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncSimple", "AsyncSimple\AsyncSimple.csproj", "{D6E25CB0-238D-41AE-98CA-3F59593B6886}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsLibrary", "WindowsFormsLibrary\WindowsFormsLibrary.csproj", "{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}"
@@ -58,10 +56,6 @@ Global
 		{2C562D71-F101-49C1-93EE-ADDC49B72BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C562D71-F101-49C1-93EE-ADDC49B72BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C562D71-F101-49C1-93EE-ADDC49B72BB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{58D5BBB1-142A-4275-87F8-B792C0A06749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{58D5BBB1-142A-4275-87F8-B792C0A06749}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{58D5BBB1-142A-4275-87F8-B792C0A06749}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{58D5BBB1-142A-4275-87F8-B792C0A06749}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D6E25CB0-238D-41AE-98CA-3F59593B6886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D6E25CB0-238D-41AE-98CA-3F59593B6886}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6E25CB0-238D-41AE-98CA-3F59593B6886}.Release|Any CPU.ActiveCfg = Release|Any CPU
