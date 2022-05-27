@@ -26,13 +26,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncSimple", "AsyncSimple\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsLibrary", "WindowsFormsLibrary\WindowsFormsLibrary.csproj", "{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGridViewReadonlyCheckBox", "DataGridViewReadonlyCheckBox\DataGridViewReadonlyCheckBox.csproj", "{F836C25E-806D-46DF-9122-54095F249211}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo1", "Demo1\Demo1.csproj", "{47F339C2-5A27-4874-BDB7-EB3FEDD70E7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo2", "Demo2\Demo2.csproj", "{AF5FFBFA-7BEE-44B2-88F4-836482C04D08}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindValidate", "DataBindValidate\DataBindValidate.csproj", "{13867FC5-8814-4909-82C6-58BDDDC686DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountsEntityFramework", "AccountsEntityFramework\AccountsEntityFramework.csproj", "{19ED0806-A952-406D-8850-7802273A8EC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,10 +68,6 @@ Global
 		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F836C25E-806D-46DF-9122-54095F249211}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F836C25E-806D-46DF-9122-54095F249211}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F836C25E-806D-46DF-9122-54095F249211}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F836C25E-806D-46DF-9122-54095F249211}.Release|Any CPU.Build.0 = Release|Any CPU
 		{47F339C2-5A27-4874-BDB7-EB3FEDD70E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{47F339C2-5A27-4874-BDB7-EB3FEDD70E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47F339C2-5A27-4874-BDB7-EB3FEDD70E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -84,6 +80,10 @@ Global
 		{13867FC5-8814-4909-82C6-58BDDDC686DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13867FC5-8814-4909-82C6-58BDDDC686DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13867FC5-8814-4909-82C6-58BDDDC686DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19ED0806-A952-406D-8850-7802273A8EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19ED0806-A952-406D-8850-7802273A8EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19ED0806-A952-406D-8850-7802273A8EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19ED0806-A952-406D-8850-7802273A8EC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
