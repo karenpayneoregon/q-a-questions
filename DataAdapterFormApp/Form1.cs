@@ -19,11 +19,15 @@ namespace DataAdapterFormApp
             InitializeComponent();
             Shown += OnShown;
         }
-
+        /// <summary>
+        /// Populate the DataTable with zero records
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnShown(object sender, EventArgs e)
         {
             _sqlDataAdapter = new SqlDataAdapter(
-                "SELECT id, FirstName, LastName, HiredDate FROM dbo.employee;", 
+                "SELECT TOP 0 id, FirstName, LastName, HiredDate FROM dbo.employee;", 
                 connection);
 
             _sqlDataAdapter.Fill(_dataSet);
