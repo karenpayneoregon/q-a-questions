@@ -19,6 +19,7 @@ namespace DataAdapterFormApp
             InitializeComponent();
             Shown += OnShown;
         }
+
         /// <summary>
         /// Populate the DataTable with zero records
         /// </summary>

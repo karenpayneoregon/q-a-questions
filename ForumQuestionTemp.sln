@@ -38,6 +38,10 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSettingExample", "AppSet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAdapterFormApp", "DataAdapterFormApp\DataAdapterFormApp.csproj", "{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit test", "Unit test", "{E38D78D9-D50E-4BFC-9253-3B1ACC36DE9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{48A3F7F6-59F1-43D9-B28C-3353553B2B7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,6 +100,10 @@ Global
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48A3F7F6-59F1-43D9-B28C-3353553B2B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48A3F7F6-59F1-43D9-B28C-3353553B2B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48A3F7F6-59F1-43D9-B28C-3353553B2B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48A3F7F6-59F1-43D9-B28C-3353553B2B7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +113,7 @@ Global
 		{CE13A4BC-AE92-4643-BEE5-3877274EE3EC} = {A71487FA-F38C-403B-B1BF-C1C78AAD3E72}
 		{2C562D71-F101-49C1-93EE-ADDC49B72BB7} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
+		{48A3F7F6-59F1-43D9-B28C-3353553B2B7A} = {E38D78D9-D50E-4BFC-9253-3B1ACC36DE9F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}
