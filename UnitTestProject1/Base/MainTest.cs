@@ -17,11 +17,18 @@ namespace UnitTestProject1
             if (TestContext.TestName is nameof(TestMethod1))
             {
                 _dateTimes.Add(DateTime.Now);
-                Console.WriteLine($"{nameof(Initialization)}, {_dateTimes.Count}");
+                Console.WriteLine($"{nameof(Initialization)}.{nameof(TestMethod1)}, {_dateTimes.Count}");
+                SomeMethod();
             }else if (TestContext.TestName is nameof(TestMethod2))
             {
                 _dateTimes.AddRange(new []{DateTime.Now, DateTime.Now.AddSeconds(2)});
+                Console.WriteLine($"{nameof(Initialization)}.{nameof(TestMethod2)}, {_dateTimes.Count}");
             }
+        }
+
+        private static void SomeMethod()
+        {
+            // Do whatever
         }
 
         [TestCleanup]
