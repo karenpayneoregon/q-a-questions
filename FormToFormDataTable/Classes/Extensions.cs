@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace StackoverflowQuestion.Classes
 {
@@ -8,4 +10,5 @@ namespace StackoverflowQuestion.Classes
             => string.Equals(sender, other, StringComparison.OrdinalIgnoreCase);
 
     }
+
 }

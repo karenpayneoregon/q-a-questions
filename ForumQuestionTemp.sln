@@ -40,6 +40,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject1", "UnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackoverflowQuestion", "FormToFormDataTable\StackoverflowQuestion.csproj", "{FF225E17-9677-47DA-9D07-E06DC2D1780A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlDemo", "XmlDemo\XmlDemo.csproj", "{433FEF98-607D-41C5-976B-989A82491F9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -98,6 +100,10 @@ Global
 		{FF225E17-9677-47DA-9D07-E06DC2D1780A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF225E17-9677-47DA-9D07-E06DC2D1780A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF225E17-9677-47DA-9D07-E06DC2D1780A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{433FEF98-607D-41C5-976B-989A82491F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{433FEF98-607D-41C5-976B-989A82491F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{433FEF98-607D-41C5-976B-989A82491F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{433FEF98-607D-41C5-976B-989A82491F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

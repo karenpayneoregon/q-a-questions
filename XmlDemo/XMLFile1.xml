@@ -1,0 +1,26 @@
+﻿<Root>
+	<CompanyProfile>
+		<CompanyName>Raymond</CompanyName>
+		<SiteName>Gilbers</SiteName>
+		<Imo>123654</Imo>
+		<MachineTotal>2</MachineTotal>
+	</CompanyProfile>
+	<MachineProfile>
+		<MachineName>mach1</MachineName>
+		<SerialNumber>123987</SerialNumber>
+		<TypeNumber>AMI500</TypeNumber>
+		<Type>AC</Type>
+		<NominalSpeed>3000</NominalSpeed>
+		<Frequency>50</Frequency>
+		<NominalPower>1500</NominalPower>
+	</MachineProfile>
+	<MachineProfile>
+		<MachineName>Mach2</MachineName>
+		<SerialNumber>987654</SerialNumber>
+		<TypeNumber>AMZ500</TypeNumber>
+		<Type>AC</Type>
+		<NominalSpeed>1500</NominalSpeed>
+		<Frequency>50</Frequency>
+		<NominalPower>1700</NominalPower>
+	</MachineProfile>
+</Root>
