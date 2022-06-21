@@ -10,11 +10,14 @@ namespace XmlDemo
         private readonly BindingSource _bindingSource = new BindingSource();
         public Form1()
         {
+            
             InitializeComponent();
+
             Root result = XmlOperations.Read();
             _bindingSource.DataSource = result.MachineProfile.ToList();
             MachineProfileComboBox.DataSource = _bindingSource;
-            SerialNumberLabel.DataBindings.Add("Text", _bindingSource, nameof(RootMachineProfile.SerialNumber));
+            SerialNumberLabel.DataBindings.Add("Text", _bindingSource, 
+                nameof(RootMachineProfile.SerialNumber));
         }
     }
 }
