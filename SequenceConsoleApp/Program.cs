@@ -2,7 +2,6 @@
 using System.Linq;
 using SequenceConsoleApp.Classes;
 
-
 namespace SequenceConsoleApp
 {
     partial class Program
@@ -14,10 +13,13 @@ namespace SequenceConsoleApp
             
             if (array.IsSequenceBroken())
             {
-                var test = array.SequenceFindMissing();
-                Console.WriteLine(string.Join(",", array.SequenceFindMissing()));
+                Console.WriteLine(string.Join(",", array.FindMissing()));
             }
 
+            Console.WriteLine();
+            var output = array.Missing();
+
+            Console.WriteLine(string.Join(",", output));
             Console.ReadLine();
         }
     }

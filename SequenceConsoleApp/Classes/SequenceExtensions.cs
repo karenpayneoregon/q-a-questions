@@ -4,17 +4,19 @@ namespace SequenceConsoleApp.Classes
 {
     public static class SequenceExtensions
     {
-        /// <summary>
-        /// Get missing elements
-        /// </summary>
-        /// <param name="sequence"></param>
-        /// <returns>missing elements</returns>
-        /// <remarks>Run <seealso cref="IsSequenceBroken"/> first to determine if elements are missing</remarks>
-        public static int[] SequenceFindMissing(this int[] sequence) =>
+
+        public static int[] FindMissing(this int[] sequence) =>
             sequence.Zip(sequence.Skip(1), (valueLeft, valueRight)
                 => Enumerable.Range(valueLeft + 1, (valueRight - valueLeft) - 1))
                 .SelectMany(item => item)
                 .ToArray();
+
+        public static int[] Missing(this int[] sequence)
+            => Enumerable
+                .Range(1, sequence[^1])
+                .Except(sequence)
+                .ToArray();
+
 
         /// <summary>
         /// Determine if the sequence has missing elements
