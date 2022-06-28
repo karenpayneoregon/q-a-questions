@@ -1,0 +1,23 @@
+﻿using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using W = ConsoleHelperLibrary.Classes.WindowUtility;
+
+// ReSharper disable once CheckNamespace
+namespace StackoverflowEmailTemplateConsole
+{
+    partial class Program
+    {
+        [ModuleInitializer]
+        public static void Init()
+        {
+            Console.Title = "Code sample: templating";
+            W.SetConsoleWindowPosition(W.AnchorWindow.Center);
+        }
+    }
+}
+
+
+
+
+
