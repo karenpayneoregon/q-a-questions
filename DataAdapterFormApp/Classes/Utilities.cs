@@ -2,9 +2,8 @@
 using System.Data;
 using System.Data.OleDb;
 using System.Linq;
-using DataAdapterFormApp.Classes;
 
-namespace DataAdapterFormApp
+namespace DataAdapterFormApp.Classes
 {
     public class Utilities
     {
