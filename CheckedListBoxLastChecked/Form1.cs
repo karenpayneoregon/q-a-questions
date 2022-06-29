@@ -39,6 +39,8 @@ namespace CheckedListBoxLastChecked
                 MessageBox.Show("Nothing checked yet");
             }
         }
+
+  
     }
 
     public class LastChecked
