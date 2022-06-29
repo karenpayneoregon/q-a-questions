@@ -7,7 +7,7 @@ using DataAdapterFormApp.Extensions;
 namespace DataAdapterFormApp
 {
     /// <summary>
-    /// https://social.msdn.microsoft.com/Forums/vstudio/en-US/98bfec38-f7f7-45a8-a980-d0931b54ce87/how-to-get-rowid-value-or-objectid-from-datarow?forum=vbgeneral
+    /// 
     /// </summary>
     public partial class Form1 : Form
     {
