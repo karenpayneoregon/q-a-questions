@@ -41,12 +41,12 @@ namespace DataAdapterFormApp
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(515, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(515, 177);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 167);
+            this.button1.Location = new System.Drawing.Point(12, 196);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace DataAdapterFormApp
             // 
             // InspectButton
             // 
-            this.InspectButton.Location = new System.Drawing.Point(93, 167);
+            this.InspectButton.Location = new System.Drawing.Point(93, 196);
             this.InspectButton.Name = "InspectButton";
             this.InspectButton.Size = new System.Drawing.Size(75, 23);
             this.InspectButton.TabIndex = 2;
@@ -66,7 +66,7 @@ namespace DataAdapterFormApp
             // 
             // FixIdButton
             // 
-            this.FixIdButton.Location = new System.Drawing.Point(174, 167);
+            this.FixIdButton.Location = new System.Drawing.Point(174, 196);
             this.FixIdButton.Name = "FixIdButton";
             this.FixIdButton.Size = new System.Drawing.Size(75, 23);
             this.FixIdButton.TabIndex = 3;

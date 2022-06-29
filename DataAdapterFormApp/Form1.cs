@@ -27,6 +27,7 @@ namespace DataAdapterFormApp
 
         /// <summary>
         /// Populate the DataTable with zero records
+        /// TODO remove once code has been placed in EmployeeOperations
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -42,11 +43,21 @@ namespace DataAdapterFormApp
             dataGridView1.Columns[0].ReadOnly = true;
         }
 
+        /// <summary>
+        /// TODO remove once code has been placed in EmployeeOperations
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UpDateAllButton_Click(object sender, EventArgs e)
         {
             _sqlDataAdapter.Update(_dataSet);
         }
 
+        /// <summary>
+        /// TODO remove once code has been placed in EmployeeOperations
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void InspectButton_Click(object sender, EventArgs e)
         {
             var current = ((DataRowView)_bindingSource.Current).Row;
@@ -54,6 +65,11 @@ namespace DataAdapterFormApp
 
         }
 
+        /// <summary>
+        /// TODO For testing only, will be moved out of this form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FixIdButton_Click(object sender, EventArgs e)
         {
             var table = (DataTable)_bindingSource.DataSource;
@@ -62,7 +78,7 @@ namespace DataAdapterFormApp
             {
                 if (table.Rows[rowIndex][0] == DBNull.Value)
                 {
-                    Console.WriteLine();
+
                 }
 
             }
