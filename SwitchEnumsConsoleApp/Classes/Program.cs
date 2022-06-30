@@ -11,7 +11,7 @@ namespace SwitchEnumsConsoleApp
         [ModuleInitializer]
         public static void Init()
         {
-            Console.Title = "Code sample";
+            Console.Title = "Code sample: switch options";
             W.SetConsoleWindowPosition(W.AnchorWindow.Center);
         }
 
