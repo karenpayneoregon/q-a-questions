@@ -1,24 +1,12 @@
 ﻿using System;
-using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
-using DataAdapterFormApp.Extensions;
+using DataAdapterFormApp.Classes;
 
 namespace DataAdapterFormApp
 {
-    /// <summary>
-    /// 
-    /// </summary>
+
     public partial class Form1 : Form
     {
-        private static string ConnectionString =
-            "Data Source=.\\sqlexpress;Initial Catalog=ForumExample;Integrated Security=True";
-
-        private SqlDataAdapter _sqlDataAdapter = new SqlDataAdapter();
-        private readonly DataSet _dataSet = new DataSet();
-        private readonly SqlConnection connection = new SqlConnection(ConnectionString);
-        private readonly BindingSource _bindingSource = new BindingSource();
-
         public Form1()
         {
             InitializeComponent();
@@ -27,60 +15,37 @@ namespace DataAdapterFormApp
 
         /// <summary>
         /// Populate the DataTable with zero records
-        /// TODO remove once code has been placed in EmployeeOperations
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void OnShown(object sender, EventArgs e)
         {
-            _sqlDataAdapter = new SqlDataAdapter("SELECT id, FirstName, LastName, HiredDate FROM dbo.employee;", connection);
+            var (success, exception) = EmployeeOperations.Load();
 
-            _sqlDataAdapter.Fill(_dataSet);
-            _ = new SqlCommandBuilder(_sqlDataAdapter);
-            _sqlDataAdapter.MissingSchemaAction = MissingSchemaAction.AddWithKey;
-            _bindingSource.DataSource = _dataSet.Tables[0];
-            dataGridView1.DataSource = _bindingSource;
-            dataGridView1.Columns[0].ReadOnly = true;
-        }
-
-        /// <summary>
-        /// TODO remove once code has been placed in EmployeeOperations
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void UpDateAllButton_Click(object sender, EventArgs e)
-        {
-            _sqlDataAdapter.Update(_dataSet);
-        }
-
-        /// <summary>
-        /// TODO remove once code has been placed in EmployeeOperations
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void InspectButton_Click(object sender, EventArgs e)
-        {
-            var current = ((DataRowView)_bindingSource.Current).Row;
-            var rowId = current.ObjectIdentifier();
-
-        }
-
-        /// <summary>
-        /// TODO For testing only, will be moved out of this form
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void FixIdButton_Click(object sender, EventArgs e)
-        {
-            var table = (DataTable)_bindingSource.DataSource;
-
-            for (int rowIndex = 0; rowIndex < table.Rows.Count; rowIndex++)
+            if (success)
             {
-                if (table.Rows[rowIndex][0] == DBNull.Value)
-                {
+                dataGridView1.DataSource = EmployeeOperations.BindingSource;
+                dataGridView1.Columns[0].ReadOnly = true;
+            }
+            else
+            {
+                SaveChangeButton.Enabled = false;
+                MessageBox.Show($@"Failed to load data\n{exception.Message}");
+            }
 
-                }
+        }
 
+        /// <summary>
+        /// Save all changes
+        /// </summary>
+        private void SaveChangeButton_Click(object sender, EventArgs e)
+        {
+            var (affected, exception) = EmployeeOperations.SaveChanges();
+            if (exception != null)
+            {
+                MessageBox.Show($@"Save failed\n{exception.Message}");
+            }
+            else
+            {
+                MessageBox.Show($@"Affected records {affected}");
             }
         }
     }
