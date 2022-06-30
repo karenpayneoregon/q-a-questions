@@ -79,8 +79,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="assets\image.png" />
     <Content Include="assets\SaveAll_16x.png" />
-    <Content Include="assets\screenshot.png" />
     <Content Include="readme.md" />
   </ItemGroup>
   <ItemGroup>

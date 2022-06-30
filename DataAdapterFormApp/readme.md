@@ -13,7 +13,7 @@ All data operations are in EmployeeOperations.
 
 Will be only one button for save when finished.
 
-![.](assets/screenshot.png)
+![image](assets/image.png)
 
 ## Form code
 
