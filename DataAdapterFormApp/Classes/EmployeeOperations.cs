@@ -55,6 +55,21 @@ namespace DataAdapterFormApp.Classes
 
         public static DataTable DataTable() => (DataTable)BindingSource.DataSource;
 
+        public static (bool hasChanges, DataTable table) ModifiedRecords()
+        {
+            var table = DataTable().GetChanges(DataRowState.Modified);
+            return table == null ? (false, null) : (true, modified: table);
+        }
+        public static bool HasModified() => DataTable().GetChanges(DataRowState.Modified) != null;
+
+        public static (bool hasChanges, DataTable table) Added()
+        {
+            var table = DataTable().GetChanges(DataRowState.Added);
+            return table == null ? (false, null) : (true, modified: table);
+        }
+        public static bool HasNewRecords() => DataTable().GetChanges(DataRowState.Added) != null;
+        public static bool HasDeletedRecords() => DataTable().GetChanges(DataRowState.Deleted) != null;
+
         public static (int affected, Exception exception) SaveChanges()
         {
             var count = -1;

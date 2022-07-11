@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 using DataAdapterFormApp.Classes;
 
@@ -46,6 +48,25 @@ namespace DataAdapterFormApp
             else
             {
                 MessageBox.Show($@"Affected records {affected}");
+            }
+        }
+
+        private void GetChangesButton_Click(object sender, EventArgs e)
+        {
+            DataTable modified = EmployeeOperations.DataTable().GetChanges(DataRowState.Modified);
+            if (modified != null)
+            {
+                Console.WriteLine();
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<string> columnNames = SqlServerUtilities.ColumnNameForTable("Customers");
+            foreach (var name in columnNames)
+            {
+                Console.WriteLine(name);
             }
         }
     }

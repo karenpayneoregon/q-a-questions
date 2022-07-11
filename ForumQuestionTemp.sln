@@ -58,6 +58,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchEnumsConsoleApp", "Sw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloneImagePictureBox", "CloneImagePictureBox\CloneImagePictureBox.csproj", "{804E0A39-FF78-4CE3-B8FD-0C01FB130FD9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClassToStringExample", "AbstractClassToStringExample\AbstractClassToStringExample.csproj", "{F9B07213-AD49-4F55-81BA-20DDBF3252EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -148,6 +150,10 @@ Global
 		{804E0A39-FF78-4CE3-B8FD-0C01FB130FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{804E0A39-FF78-4CE3-B8FD-0C01FB130FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{804E0A39-FF78-4CE3-B8FD-0C01FB130FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B07213-AD49-4F55-81BA-20DDBF3252EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B07213-AD49-4F55-81BA-20DDBF3252EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B07213-AD49-4F55-81BA-20DDBF3252EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B07213-AD49-4F55-81BA-20DDBF3252EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
