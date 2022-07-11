@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using System.Windows.Forms;
 
 using static AbstractClassToStringExample.Classes.Mocked;
@@ -17,8 +16,6 @@ namespace AbstractClassToStringExample
         {
             comboBox1.DataSource = MachineList1();
             comboBox2.DataSource = MachineList2();
-
-
         }
     }
 }
