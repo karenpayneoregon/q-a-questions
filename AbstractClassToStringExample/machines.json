@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "Machine 1A",
+    "SerialNumber": "X1234"
+  },
+  {
+    "Name": "Machine 1B",
+    "SerialNumber": "X1255"
+  },
+  {
+    "Name": "Machine 1C",
+    "SerialNumber": "X1265"
+  }
+]

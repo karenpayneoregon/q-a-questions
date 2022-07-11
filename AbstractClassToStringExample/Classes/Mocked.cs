@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using AbstractClassToStringExample.Models;
+using Newtonsoft.Json;
 
 namespace AbstractClassToStringExample.Classes
 {
@@ -8,21 +10,11 @@ namespace AbstractClassToStringExample.Classes
     /// </summary>
     public class Mocked
     {
-        public static List<BaseContainer> MachineList(bool type1 = true)
-        {
-            return type1
-                ? new List<BaseContainer>()
-                {
-                    new MachineCombo1() { SerialNumber = "X1234", Name = "Machine 1A" },
-                    new MachineCombo1() { SerialNumber = "X1255", Name = "Machine 1B" },
-                    new MachineCombo1() { SerialNumber = "X1265", Name = "Machine 1C" },
-                }
-                : new List<BaseContainer>()
-                {
-                    new MachineCombo2() { SerialNumber = "X1234", Name = "Machine 1A" },
-                    new MachineCombo2() { SerialNumber = "X1255", Name = "Machine 1B" },
-                    new MachineCombo2() { SerialNumber = "X1265", Name = "Machine 1C" },
-                };
-        }
+        private static string _fileName = "machines.json";
+        public static List<MachineCombo1> MachineList1() => 
+            JsonConvert.DeserializeObject<List<MachineCombo1>>(File.ReadAllText(_fileName));
+
+        public static List<MachineCombo2> MachineList2() =>
+            JsonConvert.DeserializeObject<List<MachineCombo2>>(File.ReadAllText(_fileName));
     }
 }

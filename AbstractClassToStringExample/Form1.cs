@@ -1,5 +1,7 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
+
 using static AbstractClassToStringExample.Classes.Mocked;
 
 namespace AbstractClassToStringExample
@@ -13,8 +15,10 @@ namespace AbstractClassToStringExample
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox1.DataSource = MachineList();
-            comboBox2.DataSource = MachineList(false);
+            comboBox1.DataSource = MachineList1();
+            comboBox2.DataSource = MachineList2();
+
+
         }
     }
 }
