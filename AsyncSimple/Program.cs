@@ -18,6 +18,15 @@ namespace AsyncSimple
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+        }
+    }
+
+    public static class Fridge
+    {
+        public static class Food
+        {
+            public const string Pizza = "Yummy";
         }
     }
 }
