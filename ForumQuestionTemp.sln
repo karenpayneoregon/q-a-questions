@@ -24,8 +24,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncSimple", "AsyncSimple\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsLibrary", "WindowsFormsLibrary\WindowsFormsLibrary.csproj", "{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBindValidate", "DataBindValidate\DataBindValidate.csproj", "{13867FC5-8814-4909-82C6-58BDDDC686DD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerAsyncReadCore", "SqlServerAsyncReadCore\SqlServerAsyncReadCore.csproj", "{012E994E-28E7-49FF-B9D5-266E5D225941}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSettingExample", "AppSettingExample\AppSettingExample.vbproj", "{D508D760-4803-4ECD-8A8E-5AB9F748F348}"
@@ -58,6 +56,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwitchEnumsConsoleApp", "Sw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClassToStringExample", "AbstractClassToStringExample\AbstractClassToStringExample.csproj", "{F9B07213-AD49-4F55-81BA-20DDBF3252EE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopThroughFile", "LoopThroughFile\LoopThroughFile.csproj", "{1A48E157-10C2-4DE1-B9F7-A82B0DC769FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console1", "Console1\Console1.csproj", "{6BB99AA8-8A92-482B-A96F-69512B0F0F74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,10 +90,6 @@ Global
 		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A15C0BC-0D19-46BC-B36C-E689A912ED4A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13867FC5-8814-4909-82C6-58BDDDC686DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13867FC5-8814-4909-82C6-58BDDDC686DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13867FC5-8814-4909-82C6-58BDDDC686DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13867FC5-8814-4909-82C6-58BDDDC686DD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{012E994E-28E7-49FF-B9D5-266E5D225941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{012E994E-28E7-49FF-B9D5-266E5D225941}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{012E994E-28E7-49FF-B9D5-266E5D225941}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -148,6 +146,14 @@ Global
 		{F9B07213-AD49-4F55-81BA-20DDBF3252EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9B07213-AD49-4F55-81BA-20DDBF3252EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9B07213-AD49-4F55-81BA-20DDBF3252EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A48E157-10C2-4DE1-B9F7-A82B0DC769FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A48E157-10C2-4DE1-B9F7-A82B0DC769FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A48E157-10C2-4DE1-B9F7-A82B0DC769FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A48E157-10C2-4DE1-B9F7-A82B0DC769FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB99AA8-8A92-482B-A96F-69512B0F0F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB99AA8-8A92-482B-A96F-69512B0F0F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB99AA8-8A92-482B-A96F-69512B0F0F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB99AA8-8A92-482B-A96F-69512B0F0F74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

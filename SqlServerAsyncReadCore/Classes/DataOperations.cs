@@ -11,8 +11,30 @@ namespace SqlServerAsyncReadCore.Classes
     {
         private static string _connectionString =
             "Data Source=.\\sqlexpress;Initial Catalog=NorthWind2020;Integrated Security=True";
+        private static string _connectionString1 =
+            "Data Source=.\\sqlexpress;Initial Catalog=Examples;Integrated Security=True";
 
+        public static (bool success, Exception exception, int id) AddNewRecord(DateTime dateTime)
+        {
+            using var cn = new SqlConnection { ConnectionString = _connectionString1 };
+            using var cmd = new SqlCommand { Connection = cn };
+            cmd.CommandText = "INSERT INTO dbo.Table1 (SomeDateTime) " +
+                              "VALUES (@SomeDateTime);" +
+                              "SELECT CAST(scope_identity() AS int);";
 
+            cmd.Parameters.Add("@SomeDateTime", SqlDbType.DateTime).Value = dateTime;
+
+            try
+            {
+                cn.Open();
+                return (true, null, Convert.ToInt32(cmd.ExecuteScalar()));
+
+            }
+            catch (Exception ex)
+            {
+                return (false, ex, -1);
+            }
+        }
         public static async Task<DataTable> ReadProductsTask(CancellationToken ct)
         {
 

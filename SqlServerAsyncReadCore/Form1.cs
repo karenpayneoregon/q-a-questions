@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace SqlServerAsyncReadCore
             //Shown += OnShown;
         }
 
-        private async void OnShown(object? sender, EventArgs e)
+        private async void OnShown(object sender, EventArgs e)
         {
             var table = await DataOperations.ReadProductsTask(_cancellationTokenSource.Token);
 
@@ -36,6 +37,26 @@ namespace SqlServerAsyncReadCore
 
             dataGridView1.DataSource = table;
             dataGridView1.Columns["CompanyName"].Frozen = true;
+        }
+
+        private void InsertButton_Click(object sender, EventArgs e)
+        {
+            if (DateTime.TryParse(TextBox1.Text.Trim(), out var dateTime))
+            {
+                var (success, exception, id) = DataOperations.AddNewRecord(dateTime);
+                if (success)
+                {
+                    // we can use id var
+                }
+                else
+                {
+                    // failure - log error using exception var about
+                }
+            }
+            else
+            {
+                // not a valid date time, tell the user
+            }
         }
     }
 }

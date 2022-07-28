@@ -31,7 +31,11 @@ namespace SqlServerAsyncReadCore
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.InsertButton = new System.Windows.Forms.Button();
+            this.TextBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -44,7 +48,7 @@ namespace SqlServerAsyncReadCore
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(17, 322);
+            this.button1.Location = new System.Drawing.Point(12, 321);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -52,11 +56,41 @@ namespace SqlServerAsyncReadCore
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // InsertButton
+            // 
+            this.InsertButton.Location = new System.Drawing.Point(16, 28);
+            this.InsertButton.Name = "InsertButton";
+            this.InsertButton.Size = new System.Drawing.Size(75, 23);
+            this.InsertButton.TabIndex = 2;
+            this.InsertButton.Text = "Insert";
+            this.InsertButton.UseVisualStyleBackColor = true;
+            this.InsertButton.Click += new System.EventHandler(this.InsertButton_Click);
+            // 
+            // TextBox1
+            // 
+            this.TextBox1.Location = new System.Drawing.Point(112, 29);
+            this.TextBox1.Name = "TextBox1";
+            this.TextBox1.Size = new System.Drawing.Size(142, 23);
+            this.TextBox1.TabIndex = 3;
+            this.TextBox1.Text = "7/1/2021 12:00:00 AM";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.TextBox1);
+            this.groupBox1.Controls.Add(this.InsertButton);
+            this.groupBox1.Location = new System.Drawing.Point(1, 361);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(285, 75);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Insert demo";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -64,6 +98,8 @@ namespace SqlServerAsyncReadCore
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cancel if opening takes too long";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -72,6 +108,9 @@ namespace SqlServerAsyncReadCore
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button InsertButton;
+        private System.Windows.Forms.TextBox TextBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
