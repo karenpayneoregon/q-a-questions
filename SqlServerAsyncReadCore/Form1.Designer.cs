@@ -34,6 +34,8 @@ namespace SqlServerAsyncReadCore
             this.InsertButton = new System.Windows.Forms.Button();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxClear1 = new SqlServerAsyncReadCore.Classes.ComboBoxClear();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -85,11 +87,30 @@ namespace SqlServerAsyncReadCore
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insert demo";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(400, 329);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // comboBoxClear1
+            // 
+            this.comboBoxClear1.FirstItemText = "Clear";
+            this.comboBoxClear1.FormattingEnabled = true;
+            this.comboBoxClear1.Location = new System.Drawing.Point(632, 403);
+            this.comboBoxClear1.Name = "comboBoxClear1";
+            this.comboBoxClear1.Size = new System.Drawing.Size(121, 23);
+            this.comboBoxClear1.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxClear1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -111,6 +132,8 @@ namespace SqlServerAsyncReadCore
         private System.Windows.Forms.Button InsertButton;
         private System.Windows.Forms.TextBox TextBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private Classes.ComboBoxClear comboBoxClear1;
     }
 }
 

@@ -5,12 +5,13 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using SqlServerAsyncReadCore.Classes;
-
+using static System.Globalization.DateTimeFormatInfo;
 namespace SqlServerAsyncReadCore
 {
     public partial class Form1 : Form
@@ -19,6 +20,8 @@ namespace SqlServerAsyncReadCore
         public Form1()
         {
             InitializeComponent();
+
+            comboBoxClear1.Items.AddRange(CurrentInfo!.MonthNames[..^1]);
             
             //Shown += OnShown;
         }
@@ -59,4 +62,6 @@ namespace SqlServerAsyncReadCore
             }
         }
     }
+
+
 }
