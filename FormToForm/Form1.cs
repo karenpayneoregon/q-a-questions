@@ -13,7 +13,7 @@ namespace FormToForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var f = new Form2();
+            var f = new Form2(checkBox1.Checked);
             f.PassEvent += OnPassEvent;
             f.ShowDialog();
             f.Dispose();
