@@ -15,10 +15,15 @@ namespace DataAdapterFormApp
             Shown += OnShown;
         }
 
-        /// <summary>
-        /// Populate the DataTable with zero records
-        /// </summary>
         private void OnShown(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        /// <summary>
+        /// Load data in <seealso cref="OnShown"/> or reload in <seealso cref="ReloadDataButton_Click"/>
+        /// </summary>
+        private void LoadData()
         {
             var (success, exception) = EmployeeOperations.Load();
 
@@ -32,7 +37,6 @@ namespace DataAdapterFormApp
                 SaveChangeButton.Enabled = false;
                 MessageBox.Show($@"Failed to load data\n{exception.Message}");
             }
-
         }
 
         /// <summary>
@@ -53,7 +57,9 @@ namespace DataAdapterFormApp
 
         private void GetChangesButton_Click(object sender, EventArgs e)
         {
+            
             DataTable modified = EmployeeOperations.DataTable().GetChanges(DataRowState.Modified);
+
             if (modified != null)
             {
                 Console.WriteLine();
@@ -61,13 +67,24 @@ namespace DataAdapterFormApp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ShowColumnNamesButton_Click(object sender, EventArgs e)
         {
-            List<string> columnNames = SqlServerUtilities.ColumnNameForTable("Customers");
+            List<string> columnNames = SqlServerUtilities.ColumnNameForTable("employee");
             foreach (var name in columnNames)
             {
                 Console.WriteLine(name);
             }
+        }
+
+        private void MockedEditButton_Click(object sender, EventArgs e)
+        {
+            var row = EmployeeOperations.Current();
+            row.SetField("FirstName", "Karen");
+        }
+
+        private void ReloadDataButton_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

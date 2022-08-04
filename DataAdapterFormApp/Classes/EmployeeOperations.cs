@@ -21,17 +21,27 @@ namespace DataAdapterFormApp.Classes
     public class EmployeeOperations
     {
         public static string ConnectionString => 
-            "Data Source=.\\sqlexpress;Initial Catalog=ForumExample;Integrated Security=True";
+            "Data Source=.\\sqlexpress;Initial Catalog=Examples;Integrated Security=True";
 
         private static SqlDataAdapter _sqlDataAdapter = new SqlDataAdapter();
-        private static readonly DataSet _dataSet = new DataSet();
+        private static DataSet _dataSet;
         private static readonly SqlConnection connection = new SqlConnection(ConnectionString);
         public static readonly BindingSource BindingSource = new BindingSource();
 
+        /// <summary>
+        /// Read Employee data
+        /// </summary>
+        /// <remarks>
+        /// _dataSet would normally be created once while in this case
+        /// we create it each time for refreshing
+        /// </remarks>
         public static (bool success, Exception exception) Load()
         {
             try
             {
+                
+                _dataSet = new DataSet();
+
                 var selectStatement = "SELECT id, FirstName, LastName, HiredDate FROM dbo.employee;";
                 _sqlDataAdapter = new SqlDataAdapter(selectStatement, connection);
 
@@ -48,11 +58,14 @@ namespace DataAdapterFormApp.Classes
             }
         }
 
-        public static DataRow Current()
-        {
-            return ((DataRowView)BindingSource.Current).Row;
-        }
+        /// <summary>
+        /// Access current DataRow in the BindingSource
+        /// </summary>
+        public static DataRow Current() => ((DataRowView)BindingSource.Current).Row;
 
+        /// <summary>
+        /// Access underlying DataTable of the BindingSource
+        /// </summary>
         public static DataTable DataTable() => (DataTable)BindingSource.DataSource;
 
         public static (bool hasChanges, DataTable table) ModifiedRecords()
@@ -60,6 +73,7 @@ namespace DataAdapterFormApp.Classes
             var table = DataTable().GetChanges(DataRowState.Modified);
             return table == null ? (false, null) : (true, modified: table);
         }
+
         public static bool HasModified() => DataTable().GetChanges(DataRowState.Modified) != null;
 
         public static (bool hasChanges, DataTable table) Added()
@@ -67,7 +81,9 @@ namespace DataAdapterFormApp.Classes
             var table = DataTable().GetChanges(DataRowState.Added);
             return table == null ? (false, null) : (true, modified: table);
         }
+        
         public static bool HasNewRecords() => DataTable().GetChanges(DataRowState.Added) != null;
+
         public static bool HasDeletedRecords() => DataTable().GetChanges(DataRowState.Deleted) != null;
 
         public static (int affected, Exception exception) SaveChanges()

@@ -33,6 +33,8 @@ namespace DataAdapterFormApp
             this.SaveChangeButton = new System.Windows.Forms.Button();
             this.GetChangesButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.ReloadDataButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,19 +70,41 @@ namespace DataAdapterFormApp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(367, 196);
+            this.button1.Location = new System.Drawing.Point(400, 195);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(105, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "Column names";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.ShowColumnNamesButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(198, 196);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Mock edit";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.MockedEditButton_Click);
+            // 
+            // ReloadDataButton
+            // 
+            this.ReloadDataButton.Location = new System.Drawing.Point(279, 195);
+            this.ReloadDataButton.Name = "ReloadDataButton";
+            this.ReloadDataButton.Size = new System.Drawing.Size(75, 23);
+            this.ReloadDataButton.TabIndex = 5;
+            this.ReloadDataButton.Text = "Reload";
+            this.ReloadDataButton.UseVisualStyleBackColor = true;
+            this.ReloadDataButton.Click += new System.EventHandler(this.ReloadDataButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 230);
+            this.Controls.Add(this.ReloadDataButton);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.GetChangesButton);
             this.Controls.Add(this.SaveChangeButton);
@@ -100,6 +124,8 @@ namespace DataAdapterFormApp
         private System.Windows.Forms.Button SaveChangeButton;
         private System.Windows.Forms.Button GetChangesButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ReloadDataButton;
     }
 }
 

@@ -1,4 +1,4 @@
-﻿USE [ForumExample]
+﻿USE [Examples]
 GO
 /****** Object:  Table [dbo].[employee]    Script Date: 6/13/2022 6:43:37 AM ******/
 SET ANSI_NULLS ON

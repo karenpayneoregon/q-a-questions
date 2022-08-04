@@ -26,9 +26,6 @@ namespace DataAdapterFormApp.Extensions
         /// </summary>
         /// <param name="row">Valid DataRow state will be unchanged to use</param>
         /// <returns>new primary key</returns>
-        /// <remarks>
-        /// TODO
-        /// </remarks>
         public static int ObjectIdentifier(this DataRow row)
         {
             FieldInfo fieldInfo = row.GetType().GetField("ObjectID", BindingFlags.NonPublic | BindingFlags.Instance);

@@ -10,7 +10,7 @@ namespace DataAdapterFormApp.Classes
         /// Change this to your database server and catalog
         /// </summary>
         public static string ConnectionString =>
-            "Data Source=.\\sqlexpress;Initial Catalog=Northwind2020;Integrated Security=True";
+            "Data Source=.\\sqlexpress;Initial Catalog=Examples;Integrated Security=True";
 
         /// <summary>
         /// Pass in an existing table name to get column names
