@@ -1,6 +1,6 @@
 ﻿# About
 
-Get int values from a string array
+Get int values from a string array. Try it in [dotnetfiddle](https://dotnetfiddle.net/kscBrp)
 
 
 ```csharp
