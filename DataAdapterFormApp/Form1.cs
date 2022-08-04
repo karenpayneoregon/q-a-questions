@@ -57,14 +57,9 @@ namespace DataAdapterFormApp
 
         private void GetChangesButton_Click(object sender, EventArgs e)
         {
-            
             DataTable modified = EmployeeOperations.DataTable().GetChanges(DataRowState.Modified);
 
-            if (modified != null)
-            {
-                Console.WriteLine();
-            }
-
+            MessageBox.Show(modified != null ? "Has change" : "No change");
         }
 
         private void ShowColumnNamesButton_Click(object sender, EventArgs e)
