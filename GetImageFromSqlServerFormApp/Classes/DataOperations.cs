@@ -12,6 +12,7 @@ namespace GetImageFromSqlServerFormApp.Classes
         public static string ConnectionString = 
             "Data Source=.\\sqlexpress;Initial Catalog=WorkingImages;Integrated Security=True";
 
+
         /// <summary>
         /// Get record count
         /// </summary>
@@ -54,10 +55,43 @@ namespace GetImageFromSqlServerFormApp.Classes
                         }
 
                     }
+                    else
+                    {
+                        fruit.Picture = null; 
+                    }
                 }
             }
 
             return fruit;
+        }
+        /// <summary>
+        /// Responsive for creating a error image
+        /// </summary>
+        /// <param name="pMessageText">Message to display in image</param>
+        /// <param name="pFontName">Font for pMessageText</param>
+        /// <param name="pFontSize">Font size for pMessageText</param>
+        /// <param name="pBackColor">pMessageText back color</param>
+        /// <param name="pForeColor">pMessageText fore color</param>
+        /// <param name="pWidth">Image width</param>
+        /// <param name="pHeight">Image height</param>
+        /// <returns></returns>
+        public static Bitmap ConvertTextToImage(string pMessageText, string pFontName, int pFontSize, Color pBackColor, Color pForeColor, int pWidth, int pHeight)
+        {
+
+            var bmp = new Bitmap(pWidth, pHeight);
+
+            using (var graphics = Graphics.FromImage(bmp))
+            {
+                var font = new Font(pFontName, pFontSize);
+                graphics.FillRectangle(new SolidBrush(pBackColor), 0, 0, bmp.Width, bmp.Height);
+                graphics.DrawString(pMessageText, font, new SolidBrush(pForeColor), 0, 0);
+                graphics.Flush();
+                font.Dispose();
+                graphics.Dispose();
+            }
+
+            return bmp;
+
         }
     }
 }
