@@ -17,4 +17,9 @@
 	<ItemGroup>
 	  <Folder Include="Scripts\" />
 	</ItemGroup>
+
+
+	<ItemGroup>
+	  <ProjectReference Include="..\WinFormHelpers\WinFormHelpers.csproj" />
+	</ItemGroup>
 </Project>

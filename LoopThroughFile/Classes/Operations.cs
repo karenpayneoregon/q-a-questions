@@ -18,6 +18,7 @@ namespace LoopThroughFile.Classes
                     int index = 0;
                     while (!reader.EndOfStream)
                     {
+
                         if (decimal.TryParse(reader.ReadLine(), out var result))
                         {
                             total += result;

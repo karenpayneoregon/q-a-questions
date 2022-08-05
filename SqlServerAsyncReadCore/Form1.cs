@@ -16,14 +16,13 @@ namespace SqlServerAsyncReadCore
 {
     public partial class Form1 : Form
     {
-        private CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+        private readonly CancellationTokenSource _cancellationTokenSource = new();
+
         public Form1()
         {
             InitializeComponent();
 
-            comboBoxClear1.Items.AddRange(CurrentInfo!.MonthNames[..^1]);
-            
-            //Shown += OnShown;
+            Shown += OnShown;
         }
 
         private async void OnShown(object sender, EventArgs e)

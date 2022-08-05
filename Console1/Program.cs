@@ -1,34 +1,41 @@
 ﻿using System;
+using System.IO;
 using Console1.Classes;
+using SpreadsheetLight;
 
 namespace Console1
 {
     partial class Program
     {
-        private static bool _continue = true;
+ 
         static void Main(string[] args)
         {
-            Counter counter = new(4);
-            counter.ThresholdReached += OnThresholdReached;
+            var currentFolder = Directory.GetCurrentDirectory();
 
-            // try and go passed Threshold
-            for (int index = 0; index < 15; index++)
+            try
             {
-                if (_continue)
+                Directory.SetCurrentDirectory(@"TODO");
+                using (var sheet = new SLDocument("Test.xlsx"))
                 {
-                    counter.Add(index);
+                    SLWorksheetStatistics stats = sheet.GetWorksheetStatistics();
+                    Console.WriteLine(stats.NumberOfRows);
                 }
-                
+            }
+            finally
+            {
+                Directory.SetCurrentDirectory(currentFolder);
             }
 
             Console.ReadLine();
 
         }
 
-        private static void OnThresholdReached(int threshold, DateTime timeReached)
-        {
-            Console.WriteLine($"The threshold of {threshold} was reached at {timeReached}.");
-            _continue = false;
-        }
+
+    }
+
+    public class ExcelOperations
+    {
+        public string WorkingFolder { get; set; }
+
     }
 }

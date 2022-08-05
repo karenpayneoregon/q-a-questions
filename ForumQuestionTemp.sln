@@ -46,8 +46,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathLibrary", "PathLibrary\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathLibraryConsoleApp", "PathLibraryConsoleApp\PathLibraryConsoleApp.csproj", "{05B8AF58-147E-4FC3-A2A1-6F9586F60870}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visual Basic", "Visual Basic", "{E21878C5-296B-43AE-B080-45BB26F55147}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StackoverflowEmailTemplateConsole", "StackoverflowEmailTemplateConsole\StackoverflowEmailTemplateConsole.csproj", "{CD845D4A-657E-499B-82B7-372CB7F4A957}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckedListBoxLastChecked", "CheckedListBoxLastChecked\CheckedListBoxLastChecked.csproj", "{28C5144B-A7ED-41B1-ADC2-772EB0D7E8C9}"
@@ -62,7 +60,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console1", "Console1\Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormToForm", "FormToForm\FormToForm.csproj", "{B145D9F2-08EA-42EC-B2B4-3D6DE008CF4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringArrayGetIntsConsoleApp", "StringArrayGetIntsConsoleApp\StringArrayGetIntsConsoleApp.csproj", "{1F959A4A-FD93-4D98-8E20-4428DED4E650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringArrayGetIntsConsoleApp", "StringArrayGetIntsConsoleApp\StringArrayGetIntsConsoleApp.csproj", "{1F959A4A-FD93-4D98-8E20-4428DED4E650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetImageFromSqlServerFormApp", "GetImageFromSqlServerFormApp\GetImageFromSqlServerFormApp.csproj", "{082C85F9-ACF9-4364-B0B2-BF013A3E921D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -166,6 +166,10 @@ Global
 		{1F959A4A-FD93-4D98-8E20-4428DED4E650}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F959A4A-FD93-4D98-8E20-4428DED4E650}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F959A4A-FD93-4D98-8E20-4428DED4E650}.Release|Any CPU.Build.0 = Release|Any CPU
+		{082C85F9-ACF9-4364-B0B2-BF013A3E921D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{082C85F9-ACF9-4364-B0B2-BF013A3E921D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{082C85F9-ACF9-4364-B0B2-BF013A3E921D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{082C85F9-ACF9-4364-B0B2-BF013A3E921D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
