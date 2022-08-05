@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -63,6 +64,25 @@ namespace GetImageFromSqlServerFormApp.Classes
             }
 
             return fruit;
+        }
+        public static List<Fruit> GetImageDetails()
+        {
+            List<Fruit> list = new List<Fruit>();
+            using (var cn = new SqlConnection(ConnectionString))
+            {
+                using (var cmd = new SqlCommand("SELECT id, Description FROM dbo.Fruits;", cn))
+                {
+                    cn.Open();
+                    var reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        list.Add(new Fruit() {Id = reader.GetInt32(0), Description = reader.GetString(1)});
+                    }
+                }
+            }
+
+            return list;
         }
         /// <summary>
         /// Responsive for creating a error image
