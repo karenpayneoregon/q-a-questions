@@ -1,5 +1,5 @@
 ﻿using System;
-
+using PathLibrary.Classes;
 using D = PathLibrary.Classes.Directory;
 
 namespace PathLibraryConsoleApp
@@ -15,6 +15,8 @@ namespace PathLibraryConsoleApp
             {
                 Console.WriteLine($"{name} is valid? {D.IsValidFolderName(name)}");
             }
+
+            Console.WriteLine(FileHelpers.UniqueFileName(false));
 
             Console.ReadLine();
         }
