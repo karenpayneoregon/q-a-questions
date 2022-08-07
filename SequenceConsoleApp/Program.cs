@@ -9,16 +9,10 @@ namespace SequenceConsoleApp
         static void Main(string[] args)
         {
 
-            int[] array = { 1, 2, 3, 5, 6, 8, 10 };
-            
-            if (array.IsSequenceBroken())
-            {
-                Console.WriteLine(string.Join(",", array.FindMissing()));
-            }
+            int[] array = { 3, 4, 5, 7, 8, 1 };
 
-            Console.WriteLine();
-            var output = array.Missing();
-
+            Console.WriteLine(array.IsSequenceBroken());
+            var output = array.Missing1();
             Console.WriteLine(string.Join(",", output));
             Console.ReadLine();
         }

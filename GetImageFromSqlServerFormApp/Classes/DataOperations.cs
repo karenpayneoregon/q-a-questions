@@ -65,6 +65,8 @@ namespace GetImageFromSqlServerFormApp.Classes
 
             return fruit;
         }
+
+
         public static List<Fruit> GetImageDetails()
         {
             List<Fruit> list = new List<Fruit>();

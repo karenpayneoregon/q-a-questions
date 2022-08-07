@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Immutable;
+using System.Linq;
 
 namespace SequenceConsoleApp.Classes
 {
@@ -6,16 +8,28 @@ namespace SequenceConsoleApp.Classes
     {
 
         public static int[] FindMissing(this int[] sequence) =>
-            sequence.Zip(sequence.Skip(1), (valueLeft, valueRight)
-                => Enumerable.Range(valueLeft + 1, (valueRight - valueLeft) - 1))
+            sequence
+                .Sort()
+                .Zip(sequence.Skip(1), (valueLeft, valueRight) 
+                    => Enumerable.Range(valueLeft + 1, (valueRight - valueLeft) - 1))
                 .SelectMany(item => item)
                 .ToArray();
 
+
         public static int[] Missing(this int[] sequence)
-            => Enumerable
+        {
+            Array.Sort(sequence);
+            return Enumerable.Range(sequence.First(), sequence.Last()).Except(sequence).ToArray();
+        }
+
+        public static int[] Missing1(this int[] sequence)
+        {
+            Array.Sort(sequence);
+            return Enumerable
                 .Range(1, sequence[^1])
                 .Except(sequence)
                 .ToArray();
+        }
 
 
         /// <summary>
@@ -23,8 +37,16 @@ namespace SequenceConsoleApp.Classes
         /// </summary>
         /// <param name="sequence">int array</param>
         /// <returns>true if missing elements, false if no missing elements</returns>
-        public static bool IsSequenceBroken(this int[] sequence) =>
-            sequence.Zip(sequence.Skip(1), (valueLeft, valueRight)
+        public static bool IsSequenceBroken(this int[] sequence)
+        {
+            return sequence.Sort().Zip(sequence.Skip(1), (valueLeft, valueRight)
                 => valueRight - valueLeft).Any(item => item != 1);
+        }
+
+        public static int[] Sort(this int[] sender)
+        {
+            Array.Sort(sender);
+            return sender;
+        }
     }
 }
