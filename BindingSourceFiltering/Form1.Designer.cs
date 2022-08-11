@@ -34,6 +34,7 @@ namespace BindingSourceFiltering
             this.EndsWithTextBox = new System.Windows.Forms.TextBox();
             this.StartsWithTextBox = new System.Windows.Forms.TextBox();
             this.TwoConditionsButton = new System.Windows.Forms.Button();
+            this.RemoveCurrentButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,11 +73,22 @@ namespace BindingSourceFiltering
             this.TwoConditionsButton.UseVisualStyleBackColor = true;
             this.TwoConditionsButton.Click += new System.EventHandler(this.TwoConditionsButton_Click);
             // 
+            // RemoveCurrentButton
+            // 
+            this.RemoveCurrentButton.Location = new System.Drawing.Point(359, 310);
+            this.RemoveCurrentButton.Name = "RemoveCurrentButton";
+            this.RemoveCurrentButton.Size = new System.Drawing.Size(97, 23);
+            this.RemoveCurrentButton.TabIndex = 4;
+            this.RemoveCurrentButton.Text = "Delete current";
+            this.RemoveCurrentButton.UseVisualStyleBackColor = true;
+            this.RemoveCurrentButton.Click += new System.EventHandler(this.RemoveCurrentButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(680, 362);
+            this.Controls.Add(this.RemoveCurrentButton);
             this.Controls.Add(this.TwoConditionsButton);
             this.Controls.Add(this.StartsWithTextBox);
             this.Controls.Add(this.EndsWithTextBox);
@@ -100,6 +112,7 @@ namespace BindingSourceFiltering
         private System.Windows.Forms.TextBox EndsWithTextBox;
         private System.Windows.Forms.TextBox StartsWithTextBox;
         private System.Windows.Forms.Button TwoConditionsButton;
+        private System.Windows.Forms.Button RemoveCurrentButton;
     }
 }
 

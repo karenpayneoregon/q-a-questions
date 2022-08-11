@@ -12,6 +12,7 @@ using BindingSourceFiltering.Classes;
 using BindingSourceFiltering.Extensions;
 using WinFormHelpers.LanguageExtensions;
 
+
 namespace BindingSourceFiltering
 {
     public partial class Form1 : Form
@@ -69,6 +70,13 @@ namespace BindingSourceFiltering
                 "Chai", 
                 "CategoryName", 
                 "Beverages");
+        }
+
+        private void RemoveCurrentButton_Click(object sender, EventArgs e)
+        {
+            // should use a dialog to ask if they are sure
+            // Also, remove the row from the database table first is wise
+            _bindingSource.RemoveCurrent();
         }
     }
 }
