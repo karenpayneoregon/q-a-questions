@@ -26,6 +26,7 @@ namespace DemoApp
                     if (container != null && container.success == 1)
                     {
                         var dt = container.items.ToList().ToDataTable();
+                        dataGridView1.DataSource = dt;
                     }
                     else
                     {
