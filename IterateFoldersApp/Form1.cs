@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using IterateFoldersApp.Classes;
 
@@ -9,17 +10,40 @@ namespace IterateFoldersApp
 {
     public partial class Form1 : Form
     {
+        private CancellationTokenSource cancellationTokenSource = new();
         public Form1()
         {
             InitializeComponent();
+            FormClosing += OnFormClosing;
+        }
+
+        private void OnFormClosing(object sender, FormClosingEventArgs e)
+        {
+            cancellationTokenSource.Cancel();
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
+            if (cancellationTokenSource.IsCancellationRequested)
+            {
+                cancellationTokenSource.Dispose();
+                cancellationTokenSource = new CancellationTokenSource();
+            }
+
             FileOperations operations = new();
             operations.Traverse += OperationsOnTraverse;
             operations.Done += OnDone;
-            await operations.EnumerateFiles("C:\\OED\\Dotnetland\\VS2019", "*.*", SearchOption.AllDirectories);
+            try
+            {
+                await operations.EnumerateFiles("C:\\OED\\Dotnetland\\VS2019", "*.*", SearchOption.AllDirectories, cancellationTokenSource.Token);
+            }
+            catch (Exception exception)
+            {
+                if (exception is OperationCanceledException)
+                {
+                    label1.Text = @"Cancelled";
+                }
+            }
         }
 
         private void OnDone()
@@ -49,6 +73,11 @@ namespace IterateFoldersApp
         private void button3_Click(object sender, EventArgs e)
         {
             var (directoryCount, fileCount) = DirectoryHelpers.DirectoryFileCount("C:\\OED\\Dotnetland\\VS2019");
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            cancellationTokenSource.Cancel();
         }
     }
 }

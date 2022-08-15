@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace IterateFoldersApp.Classes
@@ -10,10 +11,10 @@ namespace IterateFoldersApp.Classes
         public delegate void OnDone();
         public event OnDone Done;
 
-        public async Task EnumerateFiles(string path, string searchPattern, SearchOption searchOption = SearchOption.TopDirectoryOnly)
+        public async Task EnumerateFiles(string path, string searchPattern, SearchOption searchOption, CancellationToken ct)
         {
-            using var enumerator = await Task.Run(() => Directory.EnumerateFiles(path, searchPattern, searchOption).GetEnumerator());
-            while (await Task.Run(() => enumerator.MoveNext()))
+            using var enumerator = await Task.Run(() => Directory.EnumerateFiles(path, searchPattern, searchOption).GetEnumerator(), ct);
+            while (await Task.Run(() => enumerator.MoveNext(), ct))
             {
                 Traverse?.Invoke(enumerator.Current);
             }
