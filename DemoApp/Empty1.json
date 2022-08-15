@@ -1,0 +1,285 @@
+﻿{
+  "success": 1,
+  "items": [
+    {
+      "ItemID": "13",
+      "ItemName": "Diamond (50 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "3",
+      "ItemName": "Diamond (59 Kg Jute)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "2",
+      "ItemName": "Diamond (59 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "12",
+      "ItemName": "Diamond (60 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "60",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "21",
+      "ItemName": "Dugdhapurna (50 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "22",
+      "ItemName": "Dugdhapurna (59 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "10",
+      "ItemName": "Dugdhashakti (50 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "11",
+      "ItemName": "Dugdhashakti (59 Kg Jute)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "7",
+      "ItemName": "Dugdhashakti (59 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "20",
+      "ItemName": "Dugdhashakti (R) 59kg PP",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "17",
+      "ItemName": "Dugdhashakti 50 Kg PP (R)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "1",
+      "ItemName": "Extra Milk (50 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "8",
+      "ItemName": "Extra Milk (59 Kg Jute)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "19",
+      "ItemName": "Extra Milk (59 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "29",
+      "ItemName": "Gold Mash (50Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "15",
+      "ItemName": "Horse Feed (40Kg)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "40",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "14",
+      "ItemName": "Horse Feed (50 Kg)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "9",
+      "ItemName": "Hutatama Gold - 50 Kg",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "4",
+      "ItemName": "Poshak (25Kg PP ) Type-1",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "25",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "5",
+      "ItemName": "Poshak (40Kg PP) Type- 2",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "40",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "16",
+      "ItemName": "Poshak (50 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "18",
+      "ItemName": "Prime(50kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "6",
+      "ItemName": "Sampurna (50 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "25",
+      "ItemName": "Saras Cotton Seed Cake 40Kg",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "40",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "26",
+      "ItemName": "Saras Cotton Seed Cake 45Kg",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "45",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "24",
+      "ItemName": "Saras Cotton Seed Cake 50 Kg",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "28",
+      "ItemName": "test11",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "111",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "23",
+      "ItemName": "Test222",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+﻿{
+  "success": 1,
+  "items": [
+    {
+      "ItemID": "13",
+      "ItemName": "Diamond (50 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "8",
+      "ItemName": "Extra Milk (59 Kg Jute)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "19",
+      "ItemName": "Extra Milk (59 Kg PP)",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "59",
+      "ItemGroup": ""
+    },
+    {
+      "ItemID": "23",
+      "ItemName": "Test222",
+      "ItemDesc": "",
+      "MRP": "0",
+      "Rate": "0",
+      "Unit": "",
+      "Weight": "50",
+      "ItemGroup": ""
+    }
+  ]
+}

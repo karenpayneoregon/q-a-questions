@@ -46,7 +46,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetImageFromSqlServerFormAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateButtons", "CreateButtons\CreateButtons.csproj", "{84A3D44D-9567-42D9-8B86-FF40D9F58D4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadioInTabControl", "RadioInTabControl\RadioInTabControl.csproj", "{DABBDD5F-4B54-422D-982B-B99A11AD7E5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RadioInTabControl", "RadioInTabControl\RadioInTabControl.csproj", "{DABBDD5F-4B54-422D-982B-B99A11AD7E5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.csproj", "{69074E21-2962-4D36-B0D0-0D2A52395834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -126,6 +128,10 @@ Global
 		{DABBDD5F-4B54-422D-982B-B99A11AD7E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DABBDD5F-4B54-422D-982B-B99A11AD7E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DABBDD5F-4B54-422D-982B-B99A11AD7E5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69074E21-2962-4D36-B0D0-0D2A52395834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69074E21-2962-4D36-B0D0-0D2A52395834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69074E21-2962-4D36-B0D0-0D2A52395834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69074E21-2962-4D36-B0D0-0D2A52395834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
