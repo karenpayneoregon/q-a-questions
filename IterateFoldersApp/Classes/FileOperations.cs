@@ -10,7 +10,7 @@ namespace IterateFoldersApp.Classes
         public delegate void OnDone();
         public event OnDone Done;
 
-        public async Task CollectFiles(string path, string searchPattern, SearchOption searchOption = SearchOption.TopDirectoryOnly)
+        public async Task EnumerateFiles(string path, string searchPattern, SearchOption searchOption = SearchOption.TopDirectoryOnly)
         {
             using var enumerator = await Task.Run(() => Directory.EnumerateFiles(path, searchPattern, searchOption).GetEnumerator());
             while (await Task.Run(() => enumerator.MoveNext()))
@@ -20,5 +20,6 @@ namespace IterateFoldersApp.Classes
 
             Done?.Invoke();
         }
+
     }
 }
