@@ -1,7 +1,7 @@
 ﻿
 Simple example to read an image from SQL-Server to a PictureBox
 
-Form1 before changes in Form2
+
 
 ![o](screen.png)
 
@@ -17,6 +17,10 @@ Added Form2 which shows how to update an image, in this case from a file.
 4. Run, press the button
 5. Open Program.cs, change startup form to Form1
 6. Run, note the third image has changed from what we did in Form2.
+
+Form1 before changes in Form2
+
+![x](Before.png)
 
 Form1 after changes in Form2
 
