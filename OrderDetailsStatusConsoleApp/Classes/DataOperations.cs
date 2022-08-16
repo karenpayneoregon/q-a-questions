@@ -19,9 +19,11 @@ namespace OrderDetailsStatusConsoleApp.Classes
             using var context = new NorthContext();
             return context
                 .OrderDetails
-                .Include(x => x.Product)
-                .Include(x => x.Status)
-                .Where(x => x.OrderId == orderId && identifiers.Contains(x.Status.StatusId))
+                .Include(od => od.Product)
+                .Include(od => od.Status)
+                .Where(od => 
+                    od.OrderId == orderId && 
+                    identifiers.Contains(od.Status.StatusId))
                 .ToList();
         }
     }
