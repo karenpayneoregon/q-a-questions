@@ -52,9 +52,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IterateFoldersApp", "IterateFoldersApp\IterateFoldersApp.csproj", "{E0CDE030-4631-4220-A34C-D122EBECE0FF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EF Core", "EF Core", "{DF8955C6-03B4-439A-965A-B330DDC6E12D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderDetailsStatusConsoleApp", "OrderDetailsStatusConsoleApp\OrderDetailsStatusConsoleApp.csproj", "{38642FFC-8E25-4A64-AEFD-91B159EB22F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonConvertForColdFusion", "JsonConvertForColdFusion\JsonConvertForColdFusion.csproj", "{64C0B383-2AF4-4708-8DEA-5FBF7AEDB55A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -142,10 +140,10 @@ Global
 		{E0CDE030-4631-4220-A34C-D122EBECE0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0CDE030-4631-4220-A34C-D122EBECE0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0CDE030-4631-4220-A34C-D122EBECE0FF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38642FFC-8E25-4A64-AEFD-91B159EB22F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{38642FFC-8E25-4A64-AEFD-91B159EB22F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{38642FFC-8E25-4A64-AEFD-91B159EB22F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{38642FFC-8E25-4A64-AEFD-91B159EB22F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C0B383-2AF4-4708-8DEA-5FBF7AEDB55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C0B383-2AF4-4708-8DEA-5FBF7AEDB55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C0B383-2AF4-4708-8DEA-5FBF7AEDB55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C0B383-2AF4-4708-8DEA-5FBF7AEDB55A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,7 +155,6 @@ Global
 		{74BD9A60-1AB4-433E-9A3D-032E0FF0D70E} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 		{6267BF35-F0F9-4CCC-86B9-BE26157DF6FC} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 		{05B8AF58-147E-4FC3-A2A1-6F9586F60870} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
-		{38642FFC-8E25-4A64-AEFD-91B159EB22F7} = {DF8955C6-03B4-439A-965A-B330DDC6E12D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}

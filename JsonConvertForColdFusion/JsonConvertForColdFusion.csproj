@@ -16,17 +16,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="ConsoleHelperLibrary" Version="1.0.0" />
-	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
+	  <ProjectReference Include="..\ConsoleHelperLibrary\ConsoleHelperLibrary.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Database scripts\" />
+	  <None Update="Json\tags.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
 	</ItemGroup>
 
-	<ItemGroup>
+	<!--<ItemGroup>
 		<PackageReference Include="Spectre.Console" Version="0.44.0" />
-	</ItemGroup>
+	</ItemGroup>-->
 
 	<!--<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />

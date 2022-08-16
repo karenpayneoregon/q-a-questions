@@ -17,7 +17,7 @@ namespace GetImageFromSqlServerFormApp
         {
 
             /*
-             * There is no key pasted 3, so 4 is invalid
+             * There is no key passed 3, so 4 is invalid
              */
             var fruit = DataOperations.GetImage(4);
 

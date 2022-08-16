@@ -30,6 +30,22 @@ namespace GetImageFromSqlServerFormApp.Classes
                 
             }
         }
+
+        public static void UpdateImage(int id, byte[] imageBytes)
+        {
+            using (var cn = new SqlConnection(ConnectionString))
+            {
+                using (var cmd = new SqlCommand("UPDATE [dbo].[Fruits] SET [Picture] = @ByteArray  WHERE Id  = @Id", cn))
+                {
+                    cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                    cmd.Parameters.Add("@ByteArray", SqlDbType.VarBinary).Value = imageBytes;
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+
+                }
+
+            }
+        }
         /// <summary>
         /// Get image by primary key
         /// </summary>
