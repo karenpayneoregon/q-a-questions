@@ -1,6 +1,9 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using DemoApp.Classes;
 using DemoApp.Models;
@@ -64,7 +67,12 @@ namespace DemoApp
 
         private void DetailOnDownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
         {
-            Console.WriteLine(e.Result);
+            if (e.Cancelled == false)
+            {
+                Console.WriteLine(e.Result);
+            }
+            
         }
+
     }
 }

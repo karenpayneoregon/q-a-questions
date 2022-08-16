@@ -31,8 +31,10 @@ namespace IterateFoldersApp
             }
 
             FileOperations operations = new();
+
             operations.Traverse += OperationsOnTraverse;
             operations.Done += OnDone;
+
             try
             {
                 await operations.EnumerateFiles("C:\\OED\\Dotnetland\\VS2019", "*.*", SearchOption.AllDirectories, cancellationTokenSource.Token);
@@ -64,7 +66,7 @@ namespace IterateFoldersApp
         {
             
             button2.Text = $@"{DirectoryHelpers.FileCount("C:\\OED\\Dotnetland\\VS2019"):N0}";
-            button2.Text = DirectoryHelpers.FileCount("C:\\OED\\Dotnetland\\VS2019").ToString("N0");
+            //button2.Text = DirectoryHelpers.FileCount("C:\\OED\\Dotnetland\\VS2019").ToString("N0");
 
             DirectoryHelpers.FileCount("", SearchOption.AllDirectories);
             DirectoryHelpers.FileCount("", SearchOption.AllDirectories,"");
