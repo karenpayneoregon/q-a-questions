@@ -30,6 +30,8 @@ namespace IterateFoldersApp
                 cancellationTokenSource = new CancellationTokenSource();
             }
 
+            progressBar1.Maximum = DirectoryHelpers.FileCount("C:\\OED\\Dotnetland\\VS2019");
+            progressBar1.Value = 0;
             FileOperations operations = new();
 
             operations.Traverse += OperationsOnTraverse;
@@ -59,6 +61,7 @@ namespace IterateFoldersApp
             if (File.Exists(sender))
             {
                 label1.Text = $"Working {info.Name}";
+                progressBar1.Value += 1;
             }
         }
 
@@ -68,8 +71,8 @@ namespace IterateFoldersApp
             button2.Text = $@"{DirectoryHelpers.FileCount("C:\\OED\\Dotnetland\\VS2019"):N0}";
             //button2.Text = DirectoryHelpers.FileCount("C:\\OED\\Dotnetland\\VS2019").ToString("N0");
 
-            DirectoryHelpers.FileCount("", SearchOption.AllDirectories);
-            DirectoryHelpers.FileCount("", SearchOption.AllDirectories,"");
+            //DirectoryHelpers.FileCount("", SearchOption.AllDirectories);
+            //DirectoryHelpers.FileCount("", SearchOption.AllDirectories,"");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -79,6 +82,7 @@ namespace IterateFoldersApp
 
         private void button4_Click(object sender, EventArgs e)
         {
+            progressBar1.Value = 0;
             cancellationTokenSource.Cancel();
         }
     }
