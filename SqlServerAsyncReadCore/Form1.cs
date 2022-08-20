@@ -63,7 +63,7 @@ namespace SqlServerAsyncReadCore
 
         private void AgeButton_Click(object sender, EventArgs e)
         {
-            DataOperations.GetAge();
+            DataOperations.GetAge(new DateTime(2022, 8, 20));
         }
     }
 

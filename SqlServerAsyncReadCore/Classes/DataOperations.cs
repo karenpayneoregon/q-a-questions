@@ -58,7 +58,7 @@ namespace SqlServerAsyncReadCore.Classes
                     return null;
                 }
 
-                productTable.Load(await cmd.ExecuteReaderAsync());
+                productTable.Load(await cmd.ExecuteReaderAsync(ct));
 
                 return productTable;
 
@@ -66,7 +66,7 @@ namespace SqlServerAsyncReadCore.Classes
 
         }
 
-        public static void GetAge()
+        public static void GetAge(DateTime date)
         {
             using var cn = new SqlConnection(_connectionString);
             using var cmd = new SqlCommand
@@ -76,7 +76,7 @@ namespace SqlServerAsyncReadCore.Classes
                 
             };
 
-            cmd.Parameters.Add("@FromDate", SqlDbType.Date).Value = new DateTime(2022, 8, 20);
+            cmd.Parameters.Add("@FromDate", SqlDbType.Date).Value = date;
             cmd.Parameters.Add("@BirthDate", SqlDbType.Date).Value = new DateTime(1956, 9, 24);
             cn.Open();
 
