@@ -66,6 +66,23 @@ namespace SqlServerAsyncReadCore.Classes
 
         }
 
+        public static void GetAge()
+        {
+            using var cn = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand
+            {
+                Connection = cn, 
+                CommandText = "select (0 + Convert(Char(8),@FromDate,112) - Convert(Char(8),@BirthDate,112)) / 10000"
+                
+            };
+
+            cmd.Parameters.Add("@FromDate", SqlDbType.Date).Value = new DateTime(2022, 8, 20);
+            cmd.Parameters.Add("@BirthDate", SqlDbType.Date).Value = new DateTime(1956, 9, 24);
+            cn.Open();
+
+            var age = (int)cmd.ExecuteScalar();
+        }
+
         private static string SelectStatement()
         {
             return "SELECT P.ProductID, P.ProductName, P.SupplierID, S.CompanyName, P.CategoryID, " +

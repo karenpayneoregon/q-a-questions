@@ -34,6 +34,7 @@ namespace SqlServerAsyncReadCore
             this.InsertButton = new System.Windows.Forms.Button();
             this.TextBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.AgeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -85,11 +86,22 @@ namespace SqlServerAsyncReadCore
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Insert demo";
             // 
+            // AgeButton
+            // 
+            this.AgeButton.Location = new System.Drawing.Point(585, 356);
+            this.AgeButton.Name = "AgeButton";
+            this.AgeButton.Size = new System.Drawing.Size(75, 23);
+            this.AgeButton.TabIndex = 5;
+            this.AgeButton.Text = "Get age";
+            this.AgeButton.UseVisualStyleBackColor = true;
+            this.AgeButton.Click += new System.EventHandler(this.AgeButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AgeButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -111,6 +123,7 @@ namespace SqlServerAsyncReadCore
         private System.Windows.Forms.Button InsertButton;
         private System.Windows.Forms.TextBox TextBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button AgeButton;
     }
 }
 

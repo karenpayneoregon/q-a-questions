@@ -60,6 +60,11 @@ namespace SqlServerAsyncReadCore
                 // not a valid date time, tell the user
             }
         }
+
+        private void AgeButton_Click(object sender, EventArgs e)
+        {
+            DataOperations.GetAge();
+        }
     }
 
 
