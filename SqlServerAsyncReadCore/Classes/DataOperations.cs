@@ -66,7 +66,7 @@ namespace SqlServerAsyncReadCore.Classes
 
         }
 
-        public static void GetAge(DateTime date)
+        public static void GetAge(DateTime fromDateTime)
         {
             using var cn = new SqlConnection(_connectionString);
             using var cmd = new SqlCommand
@@ -76,7 +76,7 @@ namespace SqlServerAsyncReadCore.Classes
                 
             };
 
-            cmd.Parameters.Add("@FromDate", SqlDbType.Date).Value = date;
+            cmd.Parameters.Add("@FromDate", SqlDbType.Date).Value = fromDateTime;
             cmd.Parameters.Add("@BirthDate", SqlDbType.Date).Value = new DateTime(1956, 9, 24);
             cn.Open();
 
