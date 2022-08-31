@@ -25,9 +25,11 @@ namespace WinFormsAppKarenVersion.Controls
         [Category("Custom")]
         [Description("Override value for WatchValue")]
         public double OverRideValue { get; set; }
+
         [Category("Custom")]
         [Description("Value to watch and change")]
         public double WatchValue { get; set; }
+
         protected override void OnTextChanged(EventArgs e)
         {
             if (double.TryParse(Text, out var value))
@@ -44,15 +46,11 @@ namespace WinFormsAppKarenVersion.Controls
             }
             base.OnTextChanged(e);
         }
-
-
-
+        
         public event PropertyChangedEventHandler? PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
-
-
 }
