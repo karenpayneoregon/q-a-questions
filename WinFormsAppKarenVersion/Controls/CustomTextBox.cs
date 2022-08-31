@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 
 namespace WinFormsAppKarenVersion.Controls
@@ -16,10 +17,7 @@ namespace WinFormsAppKarenVersion.Controls
             get => _doubleValue;
             set
             {
-                //OnValueChanged?.Invoke(value);
                 _doubleValue = value;
-
-
                 OnPropertyChanged();
             }
         }
@@ -36,7 +34,7 @@ namespace WinFormsAppKarenVersion.Controls
             {
                 if (value == WatchValue)
                 {
-                    Text = OverRideValue.ToString();
+                    Text = OverRideValue.ToString(CultureInfo.InvariantCulture);
                     OnValueChanged?.Invoke(30);
                 }
                 else
