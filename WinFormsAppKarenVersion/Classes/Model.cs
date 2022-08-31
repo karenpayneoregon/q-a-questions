@@ -1,12 +1,12 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WinFormsAppKarenVersion;
+namespace WinFormsAppKarenVersion.Classes;
 
 public class Model : INotifyPropertyChanged
 {
     private double? _doubleValue;
-    
+
     public double? DoubleValue
     {
         get => _doubleValue;

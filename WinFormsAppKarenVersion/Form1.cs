@@ -1,3 +1,5 @@
+using WinFormsAppKarenVersion.Classes;
+
 namespace WinFormsAppKarenVersion;
 
 public partial class Form1 : Form
