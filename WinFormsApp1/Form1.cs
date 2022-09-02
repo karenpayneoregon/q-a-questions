@@ -18,36 +18,32 @@ namespace WinFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Faker<LineItem> faker = new Faker<LineItem>()
-                .RuleFor(item => item.Value, f => f.Random.String2(1, 100));
 
-            var result = faker.Generate(1000);
-
-            StringBuilder builder = new ();
-
-            foreach (var item in result)
-            {
-                builder.Append(item);
-            }
-
-            File.WriteAllText("Dump.txt", builder.ToString());
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Button1PerformClick((Button)sender);
+        }
 
-    }
+  
+        private void Button1PerformClick(Button button)
+        {
+            MessageBox.Show(button.Name);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+     
+        }
 
-public class LineItem
-{
-    public string Value { get; set; }
-    public override string ToString() => Value;
-}
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("4");
+        }
 
-    public static class Extensions
-    {
-        public static bool AllInt(this string[] sender) =>
-            sender.SelectMany(item => item.ToCharArray()).All(char.IsNumber);
-
-        public static string[] TextValue(this List<TextBox> sender)
-            => sender.Select(x => x.Text).ToArray();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button4.PerformClick();
+        }
     }
 }
