@@ -36,6 +36,7 @@ namespace AsyncSimple
         private void CancelButton_Click(object sender, EventArgs egEventArgs)
         {
             _cts.Cancel();
+            toolStripProgressBar1.Value = 0;
         }
         private static async Task AsyncMethod(IProgress<int> progress, CancellationToken ct)
         {
@@ -43,7 +44,7 @@ namespace AsyncSimple
             for (int index = 1; index <= 100; index++)
             {
                 //Simulate an async call that takes some time to complete
-                await Task.Delay(500, ct);
+                await Task.Delay(50, ct);
 
                 progress?.Report(index);
 
