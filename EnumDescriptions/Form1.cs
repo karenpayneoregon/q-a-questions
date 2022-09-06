@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EnumDescriptions.Classes;
 using EnumDescriptions.Extensions;
-
+using EnumDescriptions.Models;
 
 namespace EnumDescriptions
 {

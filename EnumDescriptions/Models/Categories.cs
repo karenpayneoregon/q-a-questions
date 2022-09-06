@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace EnumDescriptions.Classes
+namespace EnumDescriptions.Models
 {
     public enum Categories
     {
@@ -13,4 +13,6 @@ namespace EnumDescriptions.Classes
         [Description("Dried fruit and bean curd")]
         Produce
     }
+
+
 }

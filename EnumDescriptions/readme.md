@@ -2,7 +2,7 @@
 
 Code sample to get descriptions for `enum` members.
 
-![x](screenshot.png)
+![Image](image.png)
 
 ```csharp
 public class Operations

@@ -14,18 +14,6 @@ namespace EnumDescriptions.Classes
                     (Attribute.GetCustomAttribute(value.GetType().GetField(value.ToString())!,
                         typeof(DescriptionAttribute)) as DescriptionAttribute)!.Description, value))
                 .ToList();
-        public static List<KeyValuePair<string, Enum>> GetItemsAsDictionarySafe<T>()
-        {
-            if (!typeof(T).IsEnum)
-            {
-                throw new ArgumentException("Must be an enum");
-            }
-            return Enum.GetValues(typeof(T)).Cast<T>()
-                .Cast<Enum>()
-                .Select(value => new KeyValuePair<string, Enum>(
-                    (Attribute.GetCustomAttribute(value.GetType().GetField(value.ToString())!, 
-                        typeof(DescriptionAttribute)) as DescriptionAttribute)!.Description, value))
-                .ToList();
-        }
+
     }
 }

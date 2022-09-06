@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using EnumDescriptions.Models;
 using static System.Attribute;
 
 namespace EnumDescriptions.Classes

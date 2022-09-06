@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EnumDescriptions.Classes
+namespace EnumDescriptions.Models
 {
     public class ItemContainer
     {
