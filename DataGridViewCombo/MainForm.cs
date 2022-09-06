@@ -99,7 +99,7 @@ namespace DataGridViewCombo1
             var colorName = (_colorBindingSource.DataSource as DataTable).AsEnumerable()
                 .FirstOrDefault(row => row.Field<int>("ColorId") == customerRow.Field<int>("ColorId"))
                 .Field<string>("ColorText");
-            Console.WriteLine(colorName);
+            MessageBox.Show(colorName);
         }
 
         private void SetCurrentColorButton_Click(object sender, EventArgs e)
