@@ -9,7 +9,7 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             dataGridView1.DataSource = DataOperations.Table().Clone();
-            dataGridView1.Columns["Process"].Visible = false;
+            dataGridView1.Columns["Process"]!.Visible = false;
         }
 
         public void Receive(DataRow row)
