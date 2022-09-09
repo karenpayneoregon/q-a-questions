@@ -1,31 +1,46 @@
-#nullable disable
+﻿using System.Data;
 
 namespace WinFormsApp1;
 
 public partial class Form1 : Form
 {
+
+    private Form2 _form2;
     public Form1()
     {
         InitializeComponent();
+
+        dataGridView1.DataSource = DataOperations.Table();
     }
-
-    private void OpenFormButton_Click(object sender, EventArgs e)
+    
+    private void ProcessButton_Click(object sender, EventArgs e)
     {
-        Form2 form2 = new ();
 
-        try
-        {
-            form2.AddProduct += OnAddProduct;
-            form2.ShowDialog();
-        }
-        finally
-        {
-            form2.Dispose();
-        }
-    }
+        _form2 ??= new Form2();
 
-    private void OnAddProduct(Product product)
-    {
-        label1.Text = $"{product.Name} {product.Price:C} {product.Quantity}";
+        if (_form2.IsDisposed)
+        {
+            _form2 = new Form2();
+        }
+        
+        if (!_form2.Visible)
+        {
+            _form2.Top = 0;
+            _form2.Left = 0;
+            _form2.Show();
+        }
+
+        var checkedData = ((DataTable)dataGridView1.DataSource)
+            .AsEnumerable().Where(dataRow => dataRow.Field<bool>("Process")).ToList();
+
+        if (checkedData.Count <= 0) return;
+        {
+            var table = checkedData.CopyToDataTable();
+
+            foreach (DataRow row in table.Rows)
+            {
+                _form2.Receive(row);
+            }
+        }
     }
 }

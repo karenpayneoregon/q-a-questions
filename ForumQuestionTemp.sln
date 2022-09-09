@@ -48,8 +48,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopThroughFile", "LoopThro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{EFEF620B-BA92-46C3-8653-808574532468}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonDemoApp", "KP_ConsoleAppNet61\JsonDemoApp.csproj", "{E25974E9-D5B6-4ED8-8E72-A0FE89BCB5D3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumDescriptions", "EnumDescriptions\EnumDescriptions.csproj", "{47E792B0-4040-4658-A93D-83201C219434}"
 EndProject
 Global
@@ -122,10 +120,6 @@ Global
 		{EFEF620B-BA92-46C3-8653-808574532468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFEF620B-BA92-46C3-8653-808574532468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFEF620B-BA92-46C3-8653-808574532468}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E25974E9-D5B6-4ED8-8E72-A0FE89BCB5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E25974E9-D5B6-4ED8-8E72-A0FE89BCB5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E25974E9-D5B6-4ED8-8E72-A0FE89BCB5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E25974E9-D5B6-4ED8-8E72-A0FE89BCB5D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{47E792B0-4040-4658-A93D-83201C219434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{47E792B0-4040-4658-A93D-83201C219434}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47E792B0-4040-4658-A93D-83201C219434}.Release|Any CPU.ActiveCfg = Release|Any CPU

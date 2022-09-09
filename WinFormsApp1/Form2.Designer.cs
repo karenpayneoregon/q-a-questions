@@ -28,33 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddProductButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // AddProductButton
+            // dataGridView1
             // 
-            this.AddProductButton.Location = new System.Drawing.Point(12, 12);
-            this.AddProductButton.Name = "AddProductButton";
-            this.AddProductButton.Size = new System.Drawing.Size(131, 23);
-            this.AddProductButton.TabIndex = 0;
-            this.AddProductButton.Text = "Add product";
-            this.AddProductButton.UseVisualStyleBackColor = true;
-            this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(512, 162);
+            this.dataGridView1.TabIndex = 1;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 181);
-            this.Controls.Add(this.AddProductButton);
+            this.ClientSize = new System.Drawing.Size(536, 230);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Button AddProductButton;
+        private DataGridView dataGridView1;
     }
 }
