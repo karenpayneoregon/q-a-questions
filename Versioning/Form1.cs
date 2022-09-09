@@ -30,17 +30,5 @@ namespace Versioning
                 Debug.WriteLine($"{container.Index,-10}{container.Length, -10}{container.Value}");
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
-
-    public class Container
-    {
-        public int Index { get; set; }
-        public string Value { get; set; }
-        public int Length { get; set; }
     }
 }
