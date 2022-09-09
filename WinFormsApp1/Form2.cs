@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace WinFormsApp1
 {
@@ -17,19 +9,21 @@ namespace WinFormsApp1
         {
             InitializeComponent();
             dataGridView1.DataSource = DataOperations.Table().Clone();
+            dataGridView1.Columns["Process"].Visible = false;
         }
 
         public void Receive(DataRow row)
         {
             var table = ((DataTable)dataGridView1.DataSource);
-            var test = table.AsEnumerable().FirstOrDefault(x => x.Field<int>("Id") == row.Field<int>("Id"));
+            
+            var test = table.AsEnumerable()
+                .FirstOrDefault(x => x.Field<int>("Id") == row.Field<int>("Id"));
+
             if (test == null)
             {
                 table.ImportRow(row);    
             }
 
         }
-
-        
     }
 }
