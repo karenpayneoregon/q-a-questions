@@ -34,8 +34,17 @@ namespace SqlServerAsyncReadCore
         {
             var table = await DataOperations.ReadProductsTask(_cancellationTokenSource.Token);
 
+            table.Columns["ProductID"].ColumnMapping = MappingType.Hidden;
+            table.Columns["SupplierID"].ColumnMapping = MappingType.Hidden;
+            table.Columns["CategoryID"].ColumnMapping = MappingType.Hidden;
             dataGridView1.DataSource = table;
+
             dataGridView1.Columns["CompanyName"].Frozen = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataTable table = dataGridView1.GetDataTable();
         }
     }
 }

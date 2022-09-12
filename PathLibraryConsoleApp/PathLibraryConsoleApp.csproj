@@ -2,8 +2,9 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net5.0</TargetFramework>
-		<LangVersion>9.0</LangVersion>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
 		<ApplicationIcon>csharp.ico</ApplicationIcon>
 	</PropertyGroup>
 
@@ -27,5 +28,9 @@
 	<!--<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
 	</ItemGroup>-->
+
+	<Target Name="MakeLogFolder" AfterTargets="Build">
+		<MakeDir Directories="$(OutDir)Files" />
+	</Target>
 
 </Project>

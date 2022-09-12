@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using PathLibrary.Classes;
 using D = PathLibrary.Classes.Directory1;
 
@@ -8,8 +9,10 @@ namespace PathLibraryConsoleApp
     {
         static void Main(string[] args)
         {
-            string folderName = @"\VS2022";
-            string parentFolder = DirectoryHelpers.ParentFolder(folderName);
+
+            
+            Console.WriteLine(DirectoryHelpers.ParentFolder(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files")));
+            Console.WriteLine(DirectoryHelpers.ParentFolder());
 
             Console.ReadLine();
         }
