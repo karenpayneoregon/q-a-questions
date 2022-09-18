@@ -30,8 +30,6 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AppSettingExample", "AppSet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAdapterFormApp", "DataAdapterFormApp\DataAdapterFormApp.csproj", "{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit test", "Unit test", "{E38D78D9-D50E-4BFC-9253-3B1ACC36DE9F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleHelperLibrary", "ConsoleHelperLibrary\ConsoleHelperLibrary.csproj", "{74BD9A60-1AB4-433E-9A3D-032E0FF0D70E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PathLibrary", "PathLibrary\PathLibrary.csproj", "{6267BF35-F0F9-4CCC-86B9-BE26157DF6FC}"
@@ -50,7 +48,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinFormsApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumDescriptions", "EnumDescriptions\EnumDescriptions.csproj", "{47E792B0-4040-4658-A93D-83201C219434}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlkataWinFormsApp", "SqlkataWinFormsApp\SqlkataWinFormsApp.csproj", "{EE2D7B0E-798B-428C-B716-1042F2222FFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlkataWinFormsApp", "SqlkataWinFormsApp\SqlkataWinFormsApp.csproj", "{EE2D7B0E-798B-428C-B716-1042F2222FFD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataGridView1", "DataGridView1\DataGridView1.vbproj", "{325B27ED-5181-4307-82EA-7819FEF08D9B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -130,6 +130,10 @@ Global
 		{EE2D7B0E-798B-428C-B716-1042F2222FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE2D7B0E-798B-428C-B716-1042F2222FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE2D7B0E-798B-428C-B716-1042F2222FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{325B27ED-5181-4307-82EA-7819FEF08D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{325B27ED-5181-4307-82EA-7819FEF08D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{325B27ED-5181-4307-82EA-7819FEF08D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{325B27ED-5181-4307-82EA-7819FEF08D9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +145,7 @@ Global
 		{74BD9A60-1AB4-433E-9A3D-032E0FF0D70E} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 		{6267BF35-F0F9-4CCC-86B9-BE26157DF6FC} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 		{05B8AF58-147E-4FC3-A2A1-6F9586F60870} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
+		{325B27ED-5181-4307-82EA-7819FEF08D9B} = {E21878C5-296B-43AE-B080-45BB26F55147}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}
