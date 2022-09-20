@@ -11,8 +11,10 @@ public partial class Form1 : Form
         InitializeComponent();
 
         dataGridView1.DataSource = DataOperations.Table();
+        dataGridView2.DataSource = DataOperations.Table().Clone();
+        dataGridView2.Columns["Process"]!.Visible = false;
     }
-    
+
     private void ProcessButton_Click(object sender, EventArgs e)
     {
 
@@ -22,7 +24,7 @@ public partial class Form1 : Form
         {
             _form2 = new Form2();
         }
-        
+
         if (!_form2.Visible)
         {
             _form2.Top = 0;
@@ -42,5 +44,30 @@ public partial class Form1 : Form
                 _form2.Receive(row);
             }
         }
+    }
+
+    private void ProcessLocalButton_Click(object sender, EventArgs e)
+    {
+        var checkedData = ((DataTable)dataGridView1.DataSource)
+            .AsEnumerable().Where(dataRow => dataRow.Field<bool>("Process")).ToList();
+
+        if (checkedData.Count <= 0) return;
+
+
+        var table1 = checkedData.CopyToDataTable();
+        var table2 = ((DataTable)dataGridView2.DataSource);
+
+        foreach (DataRow row in table1.Rows)
+        {
+            var test = table2.AsEnumerable()
+                .FirstOrDefault(x => x.Field<int>("Id") == row.Field<int>("Id"));
+
+            if (test == null)
+            {
+                table2.ImportRow(row);
+            }
+        }
+
+
     }
 }
