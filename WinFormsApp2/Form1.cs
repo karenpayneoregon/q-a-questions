@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+using System.Data;
 using WinFormsApp2.Classes;
 
 namespace WinFormsApp2
@@ -32,6 +34,12 @@ namespace WinFormsApp2
                 }
             }
             dataGridView2.ExpandColumns(10);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var json = File.ReadAllText("Customers.json");
+            DataTable dt = JsonConvert.DeserializeObject<DataTable>(json);
         }
     }
 }

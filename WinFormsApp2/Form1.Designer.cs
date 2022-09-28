@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -52,11 +53,22 @@
             this.dataGridView2.Size = new System.Drawing.Size(392, 96);
             this.dataGridView2.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(26, 232);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 224);
+            this.ClientSize = new System.Drawing.Size(459, 283);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -73,5 +85,6 @@
 
         private DataGridView dataGridView1;
         private DataGridView dataGridView2;
+        private Button button1;
     }
 }

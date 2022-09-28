@@ -7,4 +7,16 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="readme.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="readme.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentEmail.Core" Version="3.0.2" />
+  </ItemGroup>
+
 </Project>

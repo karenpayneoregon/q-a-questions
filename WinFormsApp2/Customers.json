@@ -1,0 +1,38 @@
+﻿[
+  {
+    "CustomerIdentifier": 1,
+    "CompanyName": "Alfreds Futterkiste's",
+    "ContactName": "Maria Anders",
+    "Address": "Obere Str. 57",
+    "City": "Berlin",
+    "PostalCode": "12209",
+    "Country": "Germany"
+  },
+  {
+    "CustomerIdentifier": 2,
+    "CompanyName": "Ana Trujillo Emparedados y helados",
+    "ContactName": "Ana Trujillo",
+    "Address": "Avda. de la ConstituciÃ³n 2222",
+    "City": "MÃ©xico D.F.",
+    "PostalCode": "05021",
+    "Country": "Mexico"
+  },
+  {
+    "CustomerIdentifier": 3,
+    "CompanyName": "Antonio Moreno TaquerÃ­a",
+    "ContactName": "Antonio Moreno",
+    "Address": "Mataderos  2312",
+    "City": "MÃ©xico D.F.",
+    "PostalCode": "05023",
+    "Country": "Mexico"
+  },
+  {
+    "CustomerIdentifier": 4,
+    "CompanyName": "Around the Horn",
+    "ContactName": "Thomas Hardy",
+    "Address": "120 Hanover Sq.",
+    "City": "London",
+    "PostalCode": "WA1 1DP",
+    "Country": "UK"
+  }
+]

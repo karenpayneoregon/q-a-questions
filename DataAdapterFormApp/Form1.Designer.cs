@@ -32,7 +32,8 @@ namespace DataAdapterFormApp
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SaveChangeButton = new System.Windows.Forms.Button();
             this.GetChangesButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ExportExcelButton = new System.Windows.Forms.Button();
+            this.ExportToTxtButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,22 +67,33 @@ namespace DataAdapterFormApp
             this.GetChangesButton.UseVisualStyleBackColor = true;
             this.GetChangesButton.Click += new System.EventHandler(this.GetChangesButton_Click);
             // 
-            // button1
+            // ExportExcelButton
             // 
-            this.button1.Location = new System.Drawing.Point(367, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ExportExcelButton.Location = new System.Drawing.Point(430, 196);
+            this.ExportExcelButton.Name = "ExportExcelButton";
+            this.ExportExcelButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportExcelButton.TabIndex = 3;
+            this.ExportExcelButton.Text = "To Excel";
+            this.ExportExcelButton.UseVisualStyleBackColor = true;
+            this.ExportExcelButton.Click += new System.EventHandler(this.ExportExcelButton_Click);
+            // 
+            // ExportToTxtButton
+            // 
+            this.ExportToTxtButton.Location = new System.Drawing.Point(349, 195);
+            this.ExportToTxtButton.Name = "ExportToTxtButton";
+            this.ExportToTxtButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportToTxtButton.TabIndex = 4;
+            this.ExportToTxtButton.Text = "To Txt";
+            this.ExportToTxtButton.UseVisualStyleBackColor = true;
+            this.ExportToTxtButton.Click += new System.EventHandler(this.ExportToTxtButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(517, 230);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ExportToTxtButton);
+            this.Controls.Add(this.ExportExcelButton);
             this.Controls.Add(this.GetChangesButton);
             this.Controls.Add(this.SaveChangeButton);
             this.Controls.Add(this.dataGridView1);
@@ -99,7 +111,8 @@ namespace DataAdapterFormApp
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button SaveChangeButton;
         private System.Windows.Forms.Button GetChangesButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ExportExcelButton;
+        private System.Windows.Forms.Button ExportToTxtButton;
     }
 }
 

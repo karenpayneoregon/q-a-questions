@@ -21,7 +21,7 @@ namespace SqlServerAsyncReadCore.Classes
                 var productTable = new DataTable();
 
                 using var cn = new SqlConnection(_connectionString);
-                using var cmd = new SqlCommand {Connection = cn, CommandText = SelectStatement()};
+                using var cmd = new SqlCommand { Connection = cn, CommandText = SelectStatement() };
                 try
                 {
                     await cn.OpenAsync(ct);
@@ -52,6 +52,29 @@ namespace SqlServerAsyncReadCore.Classes
                    "FROM  Products AS P INNER JOIN Categories AS C ON P.CategoryID = C.CategoryID " +
                    "INNER JOIN Suppliers AS S ON P.SupplierID = S.SupplierID";
         }
+
+public static void Test()
+{
+    try
+    {
+        var cn = new SqlConnection("TODO");
+        cn.Open();
+    }
+    catch (SqlException se)
+    {
+        switch (se.Number)
+        {
+            case 35 or 40:
+                break;
+            default:
+                break;
+        }
+    }
+    catch (Exception e)
+    {
+
+    }
+}
 
     }
 

@@ -1,28 +1,39 @@
-﻿namespace Project1;
+﻿using FluentEmail.Core;
+
+namespace Project1;
 
 internal class Program
 {
     static void Main(string[] args)
     {
-        Mocked.People().ForEach(p => Console.WriteLine($"{p.FirstName} {p.LastName}"));
+        Console.Title = "Code";
+
+        /*
+         * Can come from a file
+         */
+        string template = @"
+<html>
+ <body>
+  <h1><%= ##Name## %></h1>
+  <p>On <%=##Date##%> you are required to change your password</p>
+  <p>Any questions contact ##Contact##</p>
+ </body>
+</html>
+";
+
+        var email = Email
+            .From("fromEmail")
+            .To("toEmail")
+            .Subject("subject")
+            .UsingTemplate(template, new
+            {
+                Name = "Mary Sue", 
+                Date = new DateTime(2022,10,12).ToString("d"),
+                Contact = "Bill Jones (504) 999-1234"
+            });
+
+        Console.WriteLine(email.Data.Body); // for body of email
         Console.ReadLine();
     }
 }
 
-internal class Mocked
-{
-    public static List<Person> People() =>
-        new()
-        {
-            new () { Id = 1, FirstName = "Jim", LastName = "Smith" },
-            new () { Id = 2, FirstName = "Mary", LastName = "Adams" },
-            new () {Id = 3, FirstName = "Katrina", LastName = "Payne"}
-        };
-}
-
-internal class Person
-{
-    public int Id { get; set; }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-}

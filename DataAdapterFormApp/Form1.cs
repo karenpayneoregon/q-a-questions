@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 using DataAdapterFormApp.Classes;
+using DataAdapterFormApp.Extensions;
 
 namespace DataAdapterFormApp
 {
@@ -61,12 +62,30 @@ namespace DataAdapterFormApp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ExportExcelButton_Click(object sender, EventArgs e)
         {
-            List<string> columnNames = SqlServerUtilities.ColumnNameForTable("Customers");
-            foreach (var name in columnNames)
+            var dt = (DataTable)EmployeeOperations.BindingSource.DataSource;
+            var (success, exception) = ExcelOperations.Export(dt, "SomeFile.xlsx");
+            if (success)
             {
-                Console.WriteLine(name);
+                // finished saving
+            }
+            else
+            {
+                // encountered issues, see exception
+            }
+        }
+
+        private void ExportToTxtButton_Click(object sender, EventArgs e)
+        {
+            var success = dataGridView1.ExportToTextFile("SomeFile.txt");
+            if (success)
+            {
+                // file saved
+            }
+            else
+            {
+                // failed
             }
         }
     }
