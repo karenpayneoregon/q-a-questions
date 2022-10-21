@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<Student name="Anne" year ="2021">
+		<FOO>11</FOO>
+	</Student>
+	<Student name="John"  year ="2022">
+		<FOO>22</FOO>
+	</Student>
+
+</root>

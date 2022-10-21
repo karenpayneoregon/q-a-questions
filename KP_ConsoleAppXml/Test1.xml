@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<School>
+	<Student>
+		<FirstName>David</FirstName>
+		<LastName>Smith</LastName>
+	</Student>
+	<Teacher>
+		<FirstName>Mary</FirstName>
+		<LastName>Adams</LastName>
+	</Teacher>
+</School>

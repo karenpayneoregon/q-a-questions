@@ -1,4 +1,6 @@
-﻿using System.Diagnostics;
+﻿using System.ComponentModel;
+using System.Diagnostics;
+using System.Reflection;
 using RangeForEach.Classes;
 
 namespace RangeForEach
@@ -7,7 +9,14 @@ namespace RangeForEach
     {
         static void Main(string[] args)
         {
-            ForEachIndexing();
+
+
+
+            (int id, string firstName, string middleName, string lastName) = 
+                new Person(1,"Karen", "", "Payne");
+
+            Console.WriteLine($"{id}, {firstName}, {middleName}, {lastName}");
+            //ForEachIndexing();
             Console.ReadLine();
         }
 
@@ -29,5 +38,13 @@ namespace RangeForEach
             Console.ReadLine();
         }
     }
+
+    public record Person(
+        [property: Description("Key")] int Id,
+        [property: Description("First Name")] string FirstName,
+        [property: Description("Middle Name")] string MiddleName,
+        [property: Description("Last Name")] string LastName
+    );
+
 
 }
