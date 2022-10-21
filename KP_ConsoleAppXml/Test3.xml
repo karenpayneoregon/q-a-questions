@@ -1,9 +1,14 @@
 ﻿<Students>
 	<Student Id="1" Name="Anne" Year ="2021">
-		<FOO>11</FOO>
+		<SomeDate>2022-10-21T07:13:57.8607937-07:00</SomeDate>
+		<Dummy>First</Dummy>
 	</Student>
 	<Student Id="2" Name="John"  Year ="2022">
-		<FOO>22</FOO>
+		<SomeDate>1956-10-04T07:13:57.8607937-07:00</SomeDate>
+		<Dummy>Second</Dummy>
 	</Student>
-
+	<Student Id="3" Name="Karen"  Year ="2023">
+		<SomeDate>1956-10-04T07:13:57.8607937-07:00</SomeDate>
+		<Dummy>Third</Dummy>
+	</Student>
 </Students>

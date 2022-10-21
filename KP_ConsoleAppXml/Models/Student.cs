@@ -23,5 +23,8 @@ public class Student
     [JsonProperty("@Year")]
     public int Year { get; set; }
 
-    public string FOO { get; set; }
+    [JsonProperty("SomeDate")]
+    public DateTime BirthDate { get; set; }
+
+    public bool Activated { get; set; }
 }

@@ -7,21 +7,17 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
-        StudentOperations.Example1();
+
+        Dictionary<string, string> dictionary = new Dictionary<string, string>
+        {
+            { "Something", "111" },
+            { "Another", DateTime.Now.Hour.ToString() }
+        };
+
+        StudentOperations.XDocFindByAttribute(3, dictionary);
+
         Console.ReadLine();
     }
 
-    private static void EmployeeSingleTest()
-    {
-        Employee emp = new Employee()
-        {
-            EmployeeID = 1,
-            FirstName = "Karen",
-            LastName = "Payne",
-            BirthDate = new DateTime(1956, 9, 24)
-        };
 
-        string xml = EmployeeOperations.EmployeeToXml(emp);
-        string json = EmployeeOperations.EmployeeToJson(emp);
-    }
 }

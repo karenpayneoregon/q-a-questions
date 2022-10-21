@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Serialization;
@@ -13,10 +11,29 @@ namespace KP_ConsoleAppXml.Classes
 {
     internal class FileOperations
     {
-        public static void SelectAttribute()
+        /// <summary>
+        /// Read file, find <see cref="Student.Dummy"/> where Dummy is not in the model and
+        /// update if found
+        /// </summary>
+        public static void SelectAttribute1()
+        {
+            XDocument doc = XDocument.Load("Test2.xml");
+
+            XElement foo = doc.Descendants().FirstOrDefault(x => x.Name.LocalName == "Dummy");
+            foo?.SetValue("14.11.2222");
+
+            doc.Save("DoneStudents.xml");
+
+        }
+
+        /// <summary>
+        /// Same as about but by <see cref="Student.Name"/> which is in the model
+        /// </summary>
+        public static void SelectAttribute2()
         {
             XmlDocument doc = new ();
             doc.LoadXml(File.ReadAllText("Test2.xml"));
+
             XmlNodeList names = doc.SelectNodes("//Student/@name");
 
             for (int index = 0; index < names!.Count; index++)
@@ -34,16 +51,11 @@ namespace KP_ConsoleAppXml.Classes
             doc.Save("DoneStudents.xml");
         }
 
-        public static void SelectAttribute1()
-        {
-            XDocument doc = XDocument.Load("Test2.xml");
-
-            XElement foo = doc.Descendants().FirstOrDefault(x => x.Name.LocalName == "FOO");
-            foo?.SetValue("14.11.2222");
-
-            doc.Save("DoneStudents.xml");
-
-        }
+        /// <summary>
+        /// Simple add <see cref="XElement.AddBeforeSelf"/>
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
         public static void ReadWriteSimple(string firstName, string lastName)
         {
             if (!File.Exists("Test.xml"))
@@ -83,32 +95,5 @@ namespace KP_ConsoleAppXml.Classes
                 xDocument.Save("done.xml");
             }
         }
-
-
-        //public static string XmlToPrettyJson(string xml)
-        //{
-        //    var doc = XDocument.Parse(xml);
-        //    return JsonConvert.SerializeXNode(doc, Formatting.Indented);
-        //}
-
-        public static string XmlToJson()
-        {
-            List<Student> emp;
-            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Student));
-            using (StringReader textReader = new StringReader(File.ReadAllText("Test3.xml")))
-            {
-                emp = (List<Student>)xmlSerializer.Deserialize(textReader);
-            }
-
-            return "";
-            //return EmployeeToJson(emp);
-        }
-        public static string EmployeeToJson(Student emp)
-        {
-            return JsonSerializer.Serialize(emp);
-        }
     }
-
-
-
 }
