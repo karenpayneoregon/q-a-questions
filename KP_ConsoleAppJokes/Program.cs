@@ -33,6 +33,7 @@ internal partial class Program
         {
             BaseAddress = new Uri(url)
         };
+
         using var response = httpClient.GetAsync(url);
         string responseBody = response.Result.Content.ReadAsStringAsync().Result;
         return responseBody;
