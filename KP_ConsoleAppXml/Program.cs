@@ -14,10 +14,26 @@ internal partial class Program
             { "Another", DateTime.Now.Hour.ToString() }
         };
 
-        StudentOperations.XDocFindByAttribute(3, dictionary);
+        //StudentOperations.XDocFindByAttribute(3, dictionary);
+
+        DateTime dateTime = DateTime.Now;
+        var dateNow = DateOnly.FromDateTime(dateTime);
+        Console.WriteLine(dateNow);
+
+
 
         Console.ReadLine();
     }
 
 
+
+
+}
+
+public static class Extensions
+{
+    public static string ToDateOnly(this string sender) => 
+        DateTime.TryParse(sender, out var dateTime) ? 
+            DateOnly.FromDateTime(dateTime).ToString() : 
+            sender;
 }

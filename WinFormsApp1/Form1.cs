@@ -6,13 +6,18 @@ public partial class Form1 : Form
 {
 
     private Form2 _form2;
+    private readonly BindingSource _bindingSource = new ();
     public Form1()
     {
         InitializeComponent();
 
-        dataGridView1.DataSource = DataOperations.Table();
+        _bindingSource.DataSource = DataOperations.Table();
+        dataGridView1.DataSource = _bindingSource;
         dataGridView2.DataSource = DataOperations.Table().Clone();
         dataGridView2.Columns["Process"]!.Visible = false;
+
+
+        coreBindingNavigator1.BindingSource = _bindingSource;
     }
 
     private void ProcessButton_Click(object sender, EventArgs e)
@@ -68,6 +73,11 @@ public partial class Form1 : Form
             }
         }
 
+
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
 
     }
 }

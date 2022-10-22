@@ -24,4 +24,8 @@
     <Folder Include="assets\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormHelpers\WinFormHelpers.csproj" />
+  </ItemGroup>
+
 </Project>
