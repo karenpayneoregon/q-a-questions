@@ -2,10 +2,10 @@
 {
     public class SpectreConsoleHelpers
     {
-        public static void ExitPrompt()
+        public static void Prompt()
         {
             Console.WriteLine();
-            Render(new Rule($"[yellow]Press[/] [cyan]ENTER[/] [yellow]to exit[/]").RuleStyle(Style.Parse("silver")).Centered());
+            Render(new Rule($"[yellow]Press[/] [cyan]ENTER[/] [yellow]to continue[/]").RuleStyle(Style.Parse("silver")).Centered());
             Console.ReadLine();
         }
         private static void Render(Rule rule)

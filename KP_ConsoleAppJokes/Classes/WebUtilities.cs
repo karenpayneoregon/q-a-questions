@@ -12,6 +12,8 @@ internal class WebUtilities
 
         using var response = httpClient.GetAsync(url);
         string responseBody = response.Result.Content.ReadAsStringAsync().Result;
+
         return responseBody;
+
     }
 }

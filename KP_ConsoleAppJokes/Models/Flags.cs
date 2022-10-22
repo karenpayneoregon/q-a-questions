@@ -1,4 +1,4 @@
-﻿namespace KP_ConsoleAppJokes.Classes;
+﻿namespace KP_ConsoleAppJokes.Models;
 
 public class Flags
 {
