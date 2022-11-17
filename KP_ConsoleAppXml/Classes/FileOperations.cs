@@ -56,9 +56,9 @@ namespace KP_ConsoleAppXml.Classes
         /// </summary>
         /// <param name="firstName"></param>
         /// <param name="lastName"></param>
-        public static void ReadWriteSimple(string firstName, string lastName)
+        public static void ReadWriteSimple(string firstName, string lastName, bool formType)
         {
-            if (!File.Exists("Test.xml"))
+            if (!File.Exists("Testpppp.xml"))
             {
                 XmlWriterSettings xmlWriterSettings = new()
                 {
@@ -73,6 +73,8 @@ namespace KP_ConsoleAppXml.Classes
                 xmlWriter.WriteStartElement("Student");
                 xmlWriter.WriteElementString("FirstName", firstName);
                 xmlWriter.WriteElementString("LastName", lastName);
+                xmlWriter.WriteElementString("FilingMethod", formType ? "1" : "0");
+
                 xmlWriter.WriteEndElement();
 
                 xmlWriter.WriteEndElement();

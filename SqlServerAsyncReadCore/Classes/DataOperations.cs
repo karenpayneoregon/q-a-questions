@@ -13,6 +13,20 @@ namespace SqlServerAsyncReadCore.Classes
             "Data Source=.\\sqlexpress;Initial Catalog=NorthWind2020;Integrated Security=True";
 
 
+        public static DataTable Categories()
+        {
+            var catTable = new DataTable();
+
+            using var cn = new SqlConnection(_connectionString);
+            using var cmd = new SqlCommand
+            {
+                Connection = cn, 
+                CommandText = "SELECT CategoryID,CategoryName,Picture  FROM dbo.Categories  WHERE CategoryID < 9"
+            };
+            cn.Open();
+            catTable.Load(cmd.ExecuteReader());
+            return catTable;
+        }
         public static async Task<DataTable> ReadProductsTask(CancellationToken ct)
         {
 

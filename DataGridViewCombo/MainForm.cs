@@ -50,11 +50,7 @@ namespace DataGridViewCombo1
             CustomersDataGridView.EditingControlShowing += CustomersDataGridViewOnEditingControlShowing;
             var currentRow = ((DataRowView)_customerBindingSource.Current).Row;
             //ColorIdLabel.Text = currentRow.Field<int>("ColorId").ToString();
-            ColorIdLabel.DataBindings.Add(
-                "Text", 
-                _customerBindingSource, 
-                "ColorId", 
-                true);
+            ColorIdLabel.DataBindings.Add("Text", _customerBindingSource, "ColorId", true);
 
 
         }

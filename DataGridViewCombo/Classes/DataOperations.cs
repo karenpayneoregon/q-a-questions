@@ -1,6 +1,5 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 
 namespace DataGridViewCombo1.Classes
 {
@@ -21,6 +20,7 @@ namespace DataGridViewCombo1.Classes
                     cn.Open();
 
                     cmd.CommandText = "SELECT id,Item,ColorId,CustomerId FROM Product";
+
                     dtCustomer.Load(cmd.ExecuteReader());
 
                     cmd.CommandText = "SELECT ColorId,ColorText FROM Colors ORDER BY ColorText";

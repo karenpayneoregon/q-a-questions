@@ -3,6 +3,8 @@ using Newtonsoft.Json;
 
 namespace KP_ConsoleAppJokes.Classes;
 
+// https://v2.jokeapi.dev/
+// https://www.jokeapi.dev/#url-parameters
 internal class RandomJokes
 {
     public static void Execute()

@@ -8,8 +8,7 @@ internal partial class Program
     [ModuleInitializer]
     public static void Init()
     {
-        AnsiConsole.MarkupLine("");
-        Console.Title = "Code sample";
+        Console.Title = "XML Sample";
         WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
     }
 }
