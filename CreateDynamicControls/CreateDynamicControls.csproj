@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E883E0CE-608F-4362-A01A-446CAD294B5E}</ProjectGuid>
+    <ProjectGuid>{B09FA7C0-E3C2-4DDD-A7CC-8D7046A1041A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SqlServerAsyncRead</RootNamespace>
-    <AssemblyName>SqlServerAsyncRead</AssemblyName>
+    <RootNamespace>CreateDynamicControls</RootNamespace>
+    <AssemblyName>CreateDynamicControls</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,6 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,24 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Containers\Category.cs" />
+    <Compile Include="Classes\Controls\DataButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Classes\DataOperations.cs" />
-    <Compile Include="Classes\DataTableResults.cs" />
-    <Compile Include="Classes\ExceptionLogType.cs" />
-    <Compile Include="Classes\Exceptions.cs" />
+    <Compile Include="Classes\Containers\Product.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ButtonOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StackoverflowForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StackoverflowForm.Designer.cs">
-      <DependentUpon>StackoverflowForm.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,10 +73,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="StackoverflowForm.resx">
-      <DependentUpon>StackoverflowForm.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="DataScripts\readme.md" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,10 +90,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="DataScripts\script.sql" />
-    <Content Include="DataScripts\Script1.sql" />
+    <None Include="Resources\CheckDot_6x_16x.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

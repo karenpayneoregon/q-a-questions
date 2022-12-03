@@ -12,6 +12,39 @@ namespace SqlServerAsyncRead.Classes
         private const string ConnectionString 
             = "Data Source=.\\sqlexpress;Initial Catalog=NorthWind2020;Integrated Security=True";
 
+        public delegate void OnProcessing(string text);
+        public static event OnProcessing Processed;
+
+        // call a method to indicate time to reorder the product
+        public delegate void OnReorder(int productId);
+        public static event OnReorder Reorder;
+
+        public static void UpdateProductStockCount(int id, int amount)
+        {
+            using (var cn = new SqlConnection(ConnectionString))
+            {
+                using (var cmd = new SqlCommand() { Connection = cn })
+                {
+                    cmd.CommandText = "SELECT UnitsInStock FROM dbo.Products WHERE ProductID = @Id";
+                    cmd.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+
+                    cn.Open();
+
+                    var currentCount = (short)cmd.ExecuteScalar();
+                    if (currentCount - amount < 0)
+                        Processed?.Invoke("Insufficient stock");
+                    else
+                    {
+                        cmd.CommandText = "UPDATE dbo.Products SET UnitsInStock = @InStock WHERE ProductID = @Id";
+                        cmd.Parameters.Add("@InStock", SqlDbType.Int).Value = currentCount - amount;
+                        cmd.ExecuteNonQuery();
+                        Reorder?.Invoke(id);
+                        Processed?.Invoke("Processed");
+                    }
+                
+                } 
+            }
+        }
         public static async Task<DataTableResults> ReadProductsTask(CancellationToken ct)
         {
             var result = new DataTableResults() {DataTable = new DataTable()};
@@ -45,6 +78,7 @@ namespace SqlServerAsyncRead.Classes
                         }
 
                         result.DataTable.Load(await cmd.ExecuteReaderAsync(ct));
+
                         result.DataTable.Columns["ProductID"].ColumnMapping = MappingType.Hidden;
                     }
 
@@ -56,7 +90,7 @@ namespace SqlServerAsyncRead.Classes
 
         }
 
-        // works just fine, optd out to use lesser columns in SelectStatement
+        // works just fine, opt out to use lesser columns in SelectStatement
         private static string SelectStatement1()
         {
             return "SELECT P.ProductID, P.ProductName, P.SupplierID, S.CompanyName, P.CategoryID, " + 

@@ -20,6 +20,7 @@ namespace SqlServerAsyncReadCore
             InitializeComponent();
             
             //Shown += OnShown;
+            DataOperations.GetDateTime();
         }
 
         private async void OnShown(object? sender, EventArgs e)

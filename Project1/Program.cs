@@ -1,4 +1,5 @@
-﻿using FluentEmail.Core;
+﻿using System.Text;
+using FluentEmail.Core;
 
 namespace Project1;
 
@@ -33,6 +34,8 @@ internal class Program
             });
 
         Console.WriteLine(email.Data.Body); // for body of email
+
+
         Console.ReadLine();
     }
 }
