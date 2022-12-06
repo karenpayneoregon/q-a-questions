@@ -7,14 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Script1.data" />
-    <None Remove="Script1.sql" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Script1.data" />
-    <Content Include="Script1.sql" />
-  </ItemGroup>
-
 </Project>
