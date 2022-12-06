@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -19,7 +21,7 @@ namespace SqlServerAsyncReadCore
         {
             InitializeComponent();
             
-            //Shown += OnShown;
+            Shown += OnShown;
             DataOperations.GetDateTime();
         }
 
@@ -47,5 +49,14 @@ namespace SqlServerAsyncReadCore
         {
             DataTable table = dataGridView1.GetDataTable();
         }
+
+        private void ChunkButton_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = (DataTable)dataGridView1.DataSource;
+
+            DataHelper.DataTableToFiles(dataTable, true, 20, "tableData1");
+        }
+
+
     }
 }
