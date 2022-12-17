@@ -55,6 +55,33 @@ namespace SqlServerAsyncReadCore.Classes
             }
         }
 
+        /// <summary>
+        /// Stackoverflow
+        /// https://stackoverflow.com/questions/74763115/i-created-a-windows-form-and-connect-it-to-database-but-i-got-a-error-while-run/74765025#74765025
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="surName"></param>
+        /// <param name="address"></param>
+        public static void Insert(string name, string surName, string address)
+        {
+            using (var cn = new SqlConnection(_connectionString))
+            {
+                using var cmd = new SqlCommand
+                {
+                    Connection = cn,
+                    CommandText = "INSERT INTO [MyTable] (Name, Surename, Address) VALUES (@Name, @SurName, @Address);"
+                };
+
+                cmd.Parameters.Add("@Name", SqlDbType.NChar).Value = name;
+                cmd.Parameters.Add("@SurName", SqlDbType.NChar).Value = surName;
+                cmd.Parameters.Add("@Address", SqlDbType.NChar).Value = address;
+
+                cn.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+        }
+
         public static DataTable Categories()
         {
             var catTable = new DataTable();
@@ -77,22 +104,29 @@ namespace SqlServerAsyncReadCore.Classes
             {
                 var productTable = new DataTable();
 
-                using var cn = new SqlConnection(_connectionString);
-                using var cmd = new SqlCommand { Connection = cn, CommandText = SelectStatement() };
-                try
+                using (var cn = new SqlConnection(_connectionString))
                 {
-                    await cn.OpenAsync(ct);
-                }
-                catch (TaskCanceledException tce)
-                {
-                    return null;
-                }
-                catch (Exception ex)
-                {
-                    return null;
+                    using (var cmd = new SqlCommand { Connection = cn, CommandText = SelectStatement() })
+                    {
+                        try
+                        {
+                            await cn.OpenAsync(ct);
+                        }
+                        catch (TaskCanceledException tce)
+                        {
+                            return null;
+                        }
+                        catch (Exception ex)
+                        {
+                            return null;
+                        }
+
+                        productTable.Load(await cmd.ExecuteReaderAsync());
+
+                    }
                 }
 
-                productTable.Load(await cmd.ExecuteReaderAsync());
+
 
                 return productTable;
 
