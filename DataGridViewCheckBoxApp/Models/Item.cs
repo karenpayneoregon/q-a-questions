@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 
 namespace DataGridViewCheckBoxApp.Models;
@@ -19,7 +20,7 @@ public class Item : INotifyPropertyChanged
         }
     }
 
-    public int Id { get; set; }
+    public required int Id { get; set; }
     public string Description
     {
         get => _description;

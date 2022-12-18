@@ -1,4 +1,4 @@
-﻿namespace DataGridViewCheckBoxApp;
+﻿namespace TaskDialogAutoCloseApp;
 
 partial class Form1
 {
@@ -28,47 +28,46 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AutoCloseButton1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // AutoCloseButton1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(419, 188);
-            this.dataGridView1.TabIndex = 0;
+            this.AutoCloseButton1.Location = new System.Drawing.Point(142, 81);
+            this.AutoCloseButton1.Name = "AutoCloseButton1";
+            this.AutoCloseButton1.Size = new System.Drawing.Size(118, 29);
+            this.AutoCloseButton1.TabIndex = 0;
+            this.AutoCloseButton1.Text = "Auto close 1";
+            this.AutoCloseButton1.UseVisualStyleBackColor = true;
+            this.AutoCloseButton1.Click += new System.EventHandler(this.AutoCloseButton1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(61, 228);
+            this.button1.Location = new System.Drawing.Point(142, 116);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.Size = new System.Drawing.Size(118, 29);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Auto close 2";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.AutoCloseButton2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 286);
+            this.ClientSize = new System.Drawing.Size(436, 273);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.AutoCloseButton1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Code sample";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Form1";
             this.ResumeLayout(false);
 
     }
 
     #endregion
 
-    private DataGridView dataGridView1;
+    private Button AutoCloseButton1;
     private Button button1;
 }

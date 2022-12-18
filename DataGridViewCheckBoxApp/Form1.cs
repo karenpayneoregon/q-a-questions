@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using BindingListLibrary;
 using DataGridViewCheckBoxApp.Models;
 
@@ -47,5 +48,21 @@ public partial class Form1 : Form
                 // TODO
             }
         }
+    }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+        Dictionary<string, int> originalDictionary = new()
+        {
+            { "one", 1 },
+            { "four", 4 },
+            { "two", 2 },
+            { "three", 3 }
+        };
+
+
+
+        List<KeyValuePair<string, int>> myList = originalDictionary.ToList();
+        myList.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
     }
 }
