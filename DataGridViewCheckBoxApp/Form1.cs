@@ -1,4 +1,6 @@
+using System.Collections.Specialized;
 using System.Diagnostics;
+using System.Text.Json;
 using BindingListLibrary;
 using DataGridViewCheckBoxApp.Models;
 
@@ -52,6 +54,34 @@ public partial class Form1 : Form
 
     private void button1_Click(object sender, EventArgs e)
     {
+        CustomContainer dictionary = new();
+        dictionary.Add(new CustomItem() { Key = 1, Value = new List<string>() });
+        dictionary.Add(new CustomItem() {Key = 2, Value = new List<string>() {"A", "B"}});
+        dictionary.Add(new CustomItem() {Key = 3, Value = new List<string>()});
+        dictionary.Add(new CustomItem() {Key = 4, Value = new List<string>() { "C", "D" } });
+        dictionary.Add(new CustomItem() {Key = 3, Value = new List<string>()});
+
+
+        Debug.WriteLine(dictionary.Serialize());
+        Debug.WriteLine(dictionary.TryAdd(new CustomItem() { Key = 1, Value = new List<string>() { "A", "B" } })
+            ? "Added"
+            : "Not added");
+
+        Debug.WriteLine($"Contains value? {dictionary.ContainsValue(new List<string>() { "A", "B" })}");
+        Debug.WriteLine($"Contains value? {dictionary.ContainsValue(new List<string>() { "A", "b" })}");
+
+        Debug.WriteLine(dictionary.ContainsKey(2));
+        
+        var item = dictionary[1];
+        dictionary.Remove(item);
+        
+        dictionary.Clear();
+        
+
+    }
+
+    private static void Dict1()
+    {
         Dictionary<string, int> originalDictionary = new()
         {
             { "one", 1 },
@@ -61,8 +91,66 @@ public partial class Form1 : Form
         };
 
 
-
         List<KeyValuePair<string, int>> myList = originalDictionary.ToList();
         myList.Sort((pair1, pair2) => pair1.Value.CompareTo(pair2.Value));
+    }
+}
+
+public class CustomItem
+{
+    public int Key { get; set; }
+    public List<string> Value { get; set; }
+    public override string ToString() => $"{Key} {Value.Count}";
+}
+
+public class CustomContainer
+{
+
+    public List<CustomItem> Items = new();
+    public CustomItem this[int index] => Items[index];
+    public int Count => Items.Count;
+
+    public bool ContainsKey(int index) 
+        => Items.Any(x => x.Key == index);
+
+    public bool ContainsValue(List<string> list) 
+        => Items.Select(customItem => customItem.Value).ToList().Any(item => item.SequenceEqual(list));
+
+    public void Add(CustomItem item)
+    {
+        if (Items.All(customItem => customItem.Key != item.Key))
+        {
+            Items.Add(item);
+        }
+    }
+    public bool TryAdd(CustomItem item)
+    {
+        if (Items.All(payneItem => payneItem.Key != item.Key))
+        {
+            Items.Add(item);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void Remove(CustomItem item)
+    {
+        if (Items.Contains(item))
+        {
+            Items.Remove(item);
+        }
+    }
+
+    public void Clear()
+    {
+        Items.Clear();
+    }
+
+    public string Serialize()
+    {
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        return JsonSerializer.Serialize(Items, options);
     }
 }

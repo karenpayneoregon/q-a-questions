@@ -1,5 +1,5 @@
 ﻿using ConsoleApp2;
-using HidePathInExceptions.Classes;
+using HidePathInExceptions.Extensions;
 
 namespace HidePathInExceptions
 {

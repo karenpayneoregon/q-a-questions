@@ -1,4 +1,4 @@
-﻿namespace HidePathInExceptions.Classes
+﻿namespace HidePathInExceptions.Extensions
 {
     public static class ExceptionExtensions
     {
