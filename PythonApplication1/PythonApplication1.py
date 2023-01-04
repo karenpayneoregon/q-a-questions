@@ -1,12 +1,12 @@
 #------------------------------------------------------------------
 # Main module
 # Description
-#   TODO
+#   Sample code
 # Author
-#   TODO
+#   Karen Payne
 # Revisions
-#   Date    Changes
-#   TODO    TODO    
+#   By              Date        Changes
+#   Karen Payne     1/4/2023    Intial creation
 #
 # Run from terminal
 #    python PythonApplication1.py
@@ -25,7 +25,8 @@ clear()
 
 
 #
-# colorama is an external library
+#   colorama is an external library
+#   https://pypi.org/project/colorama/
 #
 from colorama import Fore, Back, Style, init
 init(autoreset=True)
@@ -35,8 +36,8 @@ print("")
 
 
 #
-# We want to create a Taxpayer which resides under the Classes folder so we 
-# must reference Taxpayser with the full path
+#   We want to create a Taxpayer which resides under the Classes folder so we 
+#   must reference Taxpayser with the full path
 #
 from Classes.TaxpayerClass import Taxpayer
 
@@ -52,7 +53,6 @@ print("Person")
 from Classes.PersonClass import Person
 person = Person("Karen", "Payne")
 print(f'Hello {person.FirstName} {person.LastName}')
-
 
 
 #
@@ -89,6 +89,9 @@ from Learning.BasicStatements import Sample1
 
 print("")
 
+#
+#   Two examples for reading lines in a plain text file
+#
 Sample1.IterateArray()
 Sample1.IterateArrayWithIndex()
 
@@ -109,16 +112,25 @@ with open("LinesFile.txt") as file_in:
 
 
     
-# Karen start work on working with SqlLite
-exec(open('Classes\sqlalchemy1.py').read())
+# Karen start work on working with SqlLite - works but is slow. 
+# TODO work on EF Core 7
+# exec(open('Classes\sqlalchemy1.py').read())
 
 #
-# Calling C# standard methods
+# Calling C# standard methods and custom code by Karen Payne
 #
 
 #from pythonnet import load
 import clr
 
+# PythonOedLibrary is a C# library created by Karen Payne
+# clr.AddReference is resolved at runtime
+clr.AddReference('PythonOedLibrary')
+from PythonOedLibrary import EnvironmentOperations
+
+print(EnvironmentOperations.Hello("Karen"))
+
+# from PythonOedLibrary import EnvironmentOperations
 # the CLR namespaces are now recognized as Python packages
 from System import String
 from System import DateTime
@@ -129,7 +141,14 @@ userName = Environment.UserName
 
 print("Current user: " + userName)
 
-# try and convert a string to a date
+
+
+#
+#   try and convert a string to a date
+#   dateValue will contain a date reprentation of the first argument to TryParse if the string is a date time
+#   otherwise 'ok' will equal false and a message is displayed indicating the string can not represent a date
+#
+#   ok, parsed in C# is a tuple which allows a method to return two types.
 dateValue = DateTime.Now
 ok, parsed = DateTime.TryParse("2023-01-01 12:01:00", dateValue)
 if ok:
@@ -137,7 +156,9 @@ if ok:
 else:
     print("Date conversion failed")
 
+#
 # from decimal to int
+#
 intValue = Decimal.ToInt32(Decimal(10.142857))
 assert isinstance(intValue, int)
 print(intValue)

@@ -52,6 +52,13 @@
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.9" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PythonOedLibrary\PythonOedLibrary.csproj">
+      <Name>PythonOedLibrary</Name>
+      <Project>{a88f5a9c-9773-4b14-8fa3-8b79c4e64b5b}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in

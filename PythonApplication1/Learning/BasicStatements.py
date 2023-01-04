@@ -45,6 +45,7 @@ class Sample1(object):
             # access items of a list using for loop
             for language in languages:
                 print(language)
+
 # End of class
 
 

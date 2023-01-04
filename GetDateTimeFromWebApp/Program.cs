@@ -10,7 +10,6 @@ internal partial class Program
         DateTime? birthdate = new DateTime(1956, 9, 24);
         Console.WriteLine(birthdate.Age());
 
-        var int32 = Decimal.ToInt32(12m);
         DateTime dateTime = new DateTime(2022, 2, 12, 13, 0, 0);
         var (day, month, year) = dateTime;
         Console.ReadLine();

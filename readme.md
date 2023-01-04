@@ -1,6 +1,6 @@
 # About
 
-For a Q-n-A forum and StackOverflow questions.
+Provides various solution for either learning or teaching
 
 ![x](assets/WorksOnMyMachineSmall.png)
 
