@@ -6,18 +6,18 @@ namespace BulkDeleteRecords;
 
 public partial class Form1 : Form
 {
-    private BindingSource bindingSource = new ();
+    private readonly BindingSource _bindingSource = new ();
     public Form1()
     {
         InitializeComponent();
 
-        bindingSource.DataSource = DataOperations.Read();
-        dataGridView1.DataSource = bindingSource;
+        _bindingSource.DataSource = DataOperations.Read();
+        dataGridView1.DataSource = _bindingSource;
     }
 
     private void DeleteButton_Click(object sender, EventArgs e)
     {
-        var list = ((List<Container>)bindingSource.DataSource).Select(x => $"'{x.Serial}'").Chunk(20).ToList();
+        var list = ((List<Container>)_bindingSource.DataSource).Select(x => $"'{x.Serial}'").Chunk(20).ToList();
         var deleteStatements = new List<string>();
         foreach (var serialLArray in list)
         {
@@ -26,7 +26,7 @@ public partial class Form1 : Form
 
         if (DataOperations.DeleteRecords(deleteStatements))
         {
-            bindingSource.DataSource = null;
+            _bindingSource.DataSource = null;
             DeleteButton.Enabled = false;
         }
         else
