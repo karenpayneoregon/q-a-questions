@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using DbPeekQueryLibrary.LanguageExtensions;
 
 namespace SqlServerAsyncReadCore.Classes
 {
@@ -33,25 +35,65 @@ namespace SqlServerAsyncReadCore.Classes
             
         }
 
-        private static bool Update(string cardNumber, string pin, decimal deposit)
+        public static DataSet ForumQuestion(string condition)
         {
-            using (var cn = new SqlConnection("Data Source=MAD-PC-023;Database=atmbd;Trusted_Connection=True;"))
+            using var cn = new SqlConnection(_connectionString1);
+            using var cmd = new SqlCommand
             {
-                using var cmd = new SqlCommand
-                {
-                    Connection = cn,
-                    CommandText = "UPDATE atmbd.atm SET Balance = Balance + @Deposit WHERE CardNumber = @CardNumber AND Pin = @Pin"
-                };
-                
-                cmd.Parameters.Add("@CardNumber", SqlDbType.NChar).Value = cardNumber;
-                cmd.Parameters.Add("@Pin", SqlDbType.NChar).Value = pin;
-                cmd.Parameters.Add("@Deposit", SqlDbType.Decimal).Value = deposit;
+                Connection = cn,
+                CommandText = "SELECT id,FirstName,LastName FROM dbo.Persons1 WHERE LastName LIKE @LastNameCondition"
+            };
 
-                cn.Open();
-                return cmd.ExecuteNonQuery() == 1;
-            }
+            cmd.Parameters.Add("@LastNameCondition", SqlDbType.NVarChar).Value = $"%{condition}%";
+
+            cn.Open();
+
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+            DataSet ds = new DataSet();
+            ds.Tables.Add(dt);
+
+            return ds;
+
         }
 
+        private static bool Update(string cardNumber, string pin, decimal deposit)
+        {
+            using var cn = new SqlConnection("Data Source=MAD-PC-023;Database=atmbd;Trusted_Connection=True;");
+            using var cmd = new SqlCommand
+            {
+                Connection = cn,
+                CommandText = 
+                    """
+                        UPDATE atmbd.atm 
+                            SET Balance = Balance + @Deposit 
+                        WHERE CardNumber = @CardNumber AND Pin = @Pin
+                    """
+            };
+                
+            cmd.Parameters.Add("@CardNumber", SqlDbType.NChar).Value = cardNumber;
+            cmd.Parameters.Add("@Pin", SqlDbType.NChar).Value = pin;
+            cmd.Parameters.Add("@Deposit", SqlDbType.Decimal).Value = deposit;
+
+            cn.Open();
+            return cmd.ExecuteNonQuery() == 1;
+        }
+        private static bool UpdateBad(string cardNumber, string pin, decimal deposit)
+        {
+            using var cn = new SqlConnection("Data Source=MAD-PC-023;Database=atmbd;Trusted_Connection=True;");
+            using var cmd = new SqlCommand
+            {
+                Connection = cn,
+                CommandText = $"""
+                UPDATE atmbd.atm 
+                    SET Balance = Balance + {deposit} 
+                WHERE CardNumber = {cardNumber} AND Pin = {pin}
+                """
+            };
+
+            cn.Open();
+            return cmd.ExecuteNonQuery() == 1;
+        }
         /// <summary>
         /// Stackoverflow
         /// https://stackoverflow.com/questions/74763115/i-created-a-windows-form-and-connect-it-to-database-but-i-got-a-error-while-run/74765025#74765025
