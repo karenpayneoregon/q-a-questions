@@ -55,8 +55,6 @@ namespace DataGridViewCombo1
 
         }
 
-
-
         // TODO
         private void CustomersDataGridViewOnEditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
@@ -69,17 +67,13 @@ namespace DataGridViewCombo1
 
         private void SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (_customerBindingSource.Current != null)
+            if (_customerBindingSource.Current == null) return;
+            if (!string.IsNullOrWhiteSpace(((DataGridViewComboBoxEditingControl)sender).Text))
             {
-                if (!string.IsNullOrWhiteSpace(((DataGridViewComboBoxEditingControl)sender).Text))
-                {
-                    //CustomersDataGridView.EndEdit();
-                    DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
+                //CustomersDataGridView.EndEdit();
+                DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
 
-                    ColorIdLabel.Text = currentRow.Field<int>("ColorId").ToString();
-                    
-
-                }
+                ColorIdLabel.Text = currentRow.Field<int>("ColorId").ToString();
             }
         }
 
@@ -95,13 +89,14 @@ namespace DataGridViewCombo1
             var colorName = (_colorBindingSource.DataSource as DataTable).AsEnumerable()
                 .FirstOrDefault(row => row.Field<int>("ColorId") == customerRow.Field<int>("ColorId"))
                 .Field<string>("ColorText");
+
             MessageBox.Show(colorName);
         }
 
         private void SetCurrentColorButton_Click(object sender, EventArgs e)
         {
             DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
-            currentRow.SetField("ColorId", -1);
+            currentRow.SetField("ColorId", 1); // set to red in this case
         }
     }
 }

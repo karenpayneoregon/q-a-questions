@@ -11,5 +11,5 @@ Two [BindingSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.f
 
 ## Before running
 
-> Run databasescript.sql
+:heavy_check_mark: Run databasescript.sql
 

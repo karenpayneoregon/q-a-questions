@@ -5,7 +5,7 @@ namespace DataGridViewCombo1.Classes
 {
     public class DataOperations
     {
-        private static string ConnectionString = 
+        private static readonly string ConnectionString = 
             "Data Source=.\\sqlexpress;Initial Catalog=DataGridViewCodeSample;Integrated Security=True";
 
         public static (DataTable customerTable, DataTable colorTable) LoadData()
