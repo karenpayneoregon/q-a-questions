@@ -9,6 +9,8 @@ Two [BindingSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.f
 
 ![image](assets/figure1.png)
 
+![Figure2](assets/figure2.png)
+
 ## Before running
 
 :heavy_check_mark: Run databasescript.sql
