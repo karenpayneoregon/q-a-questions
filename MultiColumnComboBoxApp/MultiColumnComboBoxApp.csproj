@@ -20,4 +20,8 @@
     <ProjectReference Include="..\MultiColumnComboBoxLibrary\MultiColumnComboBoxLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="assets\" />
+  </ItemGroup>
+
 </Project>
