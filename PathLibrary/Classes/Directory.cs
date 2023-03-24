@@ -1,15 +1,26 @@
-﻿using System.IO;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 
-namespace PathLibrary.Classes
+namespace PathLibrary.Classes;
+
+public class Directory
 {
-    public class Directory
-    {
-        private static readonly Regex _illegalRegex = 
-            new($"[{Regex.Escape(new string(Path.GetInvalidFileNameChars()))}]", 
-                RegexOptions.Compiled);
+    private static readonly Regex IllegalRegex = new($"[{Regex.Escape(
+        new string(Path.GetInvalidFileNameChars()))}]", 
+        RegexOptions.Compiled);
 
-        public static bool IsValidFolderName(string folder) 
-            => _illegalRegex.Replace(folder,"") == folder;
+    public static bool IsValidFolderName(string folder) 
+        => IllegalRegex.Replace(folder,"") == folder;
+
+    public static (bool isFolder, bool success) IsFileOrFolder(string path)
+    {
+        try
+        {
+            var attr = File.GetAttributes(path);
+            return attr.HasFlag(FileAttributes.Directory) ? (true, true)! : (false, true)!;
+        }
+        catch (FileNotFoundException) 
+        {
+            return (false, false);
+        }
     }
 }

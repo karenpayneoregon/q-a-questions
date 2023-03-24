@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAdapterFormApp.Extensions;
+using DataAdapterFormApp.Models;
 
 namespace DataAdapterFormApp.Classes
 {
@@ -28,6 +29,22 @@ namespace DataAdapterFormApp.Classes
         private static readonly SqlConnection connection = new SqlConnection(ConnectionString);
         public static readonly BindingSource BindingSource = new BindingSource();
 
+        public static List<Employee> ReadEmployees()
+        {
+            DataTable dt = new DataTable();
+            using (var cn = new SqlConnection(ConnectionString))
+            {
+                using (var cmd = new SqlCommand() {Connection = cn})
+                {
+                    cmd.CommandText = "SELECT id, FirstName, LastName, HiredDate FROM dbo.employee;";
+                    cn.Open();
+                    dt.Load(cmd.ExecuteReader());
+
+                }
+            }
+
+            return dt.ToList<Employee>();
+        }
         /// <summary>
         /// Read Employee data
         /// </summary>

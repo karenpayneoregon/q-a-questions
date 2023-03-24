@@ -46,6 +46,52 @@ namespace GetImageFromSqlServerFormApp.Classes
 
             }
         }
+        public static void InsertImage( byte[] imageBytes)
+        {
+            using (var cn = new SqlConnection(ConnectionString))
+            {
+                using (var cmd = new SqlCommand("INSERT INTO [dbo].[Pictures1] ([Photo])  VALUES (@ByteArray)", cn))
+                {
+
+                    cmd.Parameters.Add("@ByteArray", SqlDbType.VarBinary).Value = imageBytes;
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+
+                }
+
+            }
+        }
+
+        public static PhotoContainer ReadImage(int identifier)
+        {
+            var photoContainer = new PhotoContainer() {Id = identifier};
+            using (var cn = new SqlConnection(ConnectionString))
+            {
+                using (var cmd = new SqlCommand("SELECT id, Photo FROM dbo.Pictures1 WHERE dbo.Pictures1.id = @id;", cn))
+                {
+                    cmd.Parameters.Add("@Id", SqlDbType.Int).Value = identifier;
+                    cn.Open();
+                    var reader = cmd.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        reader.Read();
+                        var imageData = (byte[])reader[1];
+                        using (var ms = new MemoryStream(imageData, 0, imageData.Length))
+                        {
+                            ms.Write(imageData, 0, imageData.Length);
+                            photoContainer.Picture = Image.FromStream(ms, true);
+                        }
+
+                    }
+                    else
+                    {
+                        photoContainer.Picture = null;
+                    }
+                }
+            }
+
+            return photoContainer;
+        }
         /// <summary>
         /// Get image by primary key
         /// </summary>

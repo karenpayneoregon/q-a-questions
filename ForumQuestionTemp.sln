@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32228.343
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A710E28D-C6F8-417B-B6E0-6772426B65F9}"
 	ProjectSection(SolutionItems) = preProject
@@ -28,7 +28,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerAsyncReadCore", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAdapterFormApp", "DataAdapterFormApp\DataAdapterFormApp.csproj", "{E6B90F50-9132-441F-8BFC-71CE6DE7AA4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequenceConsoleApp", "SequenceConsoleApp\SequenceConsoleApp.csproj", "{66A302F6-7FF4-4C2A-885A-67B6E433EAE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SequenceConsoleApp", "SequenceConsoleApp\SequenceConsoleApp.csproj", "{66A302F6-7FF4-4C2A-885A-67B6E433EAE7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleHelperLibrary", "ConsoleHelperLibrary\ConsoleHelperLibrary.csproj", "{74BD9A60-1AB4-433E-9A3D-032E0FF0D70E}"
 EndProject
@@ -54,7 +54,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IterateFoldersApp", "Iterat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonConvertForColdFusion", "JsonConvertForColdFusion\JsonConvertForColdFusion.csproj", "{64C0B383-2AF4-4708-8DEA-5FBF7AEDB55A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateStuffConsoleApp", "DateStuffConsoleApp\DateStuffConsoleApp.csproj", "{C654C499-0E63-40C0-BFC7-9BF723C71EFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateStuffConsoleApp", "DateStuffConsoleApp\DateStuffConsoleApp.csproj", "{C654C499-0E63-40C0-BFC7-9BF723C71EFB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{4619BFA5-451D-4919-A9B5-5B8F49EB8739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColumnComboBoxLibrary", "MultiColumnComboBoxLibrary\MultiColumnComboBoxLibrary.csproj", "{173CD1D2-35F2-48AC-A7FF-2444622FE087}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColumnComboBoxApp", "MultiColumnComboBoxApp\MultiColumnComboBoxApp.csproj", "{36825DC6-CE7E-4883-8B78-08EA8656DA05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -150,6 +156,18 @@ Global
 		{C654C499-0E63-40C0-BFC7-9BF723C71EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C654C499-0E63-40C0-BFC7-9BF723C71EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C654C499-0E63-40C0-BFC7-9BF723C71EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4619BFA5-451D-4919-A9B5-5B8F49EB8739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4619BFA5-451D-4919-A9B5-5B8F49EB8739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4619BFA5-451D-4919-A9B5-5B8F49EB8739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4619BFA5-451D-4919-A9B5-5B8F49EB8739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{173CD1D2-35F2-48AC-A7FF-2444622FE087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{173CD1D2-35F2-48AC-A7FF-2444622FE087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{173CD1D2-35F2-48AC-A7FF-2444622FE087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{173CD1D2-35F2-48AC-A7FF-2444622FE087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36825DC6-CE7E-4883-8B78-08EA8656DA05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36825DC6-CE7E-4883-8B78-08EA8656DA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36825DC6-CE7E-4883-8B78-08EA8656DA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36825DC6-CE7E-4883-8B78-08EA8656DA05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -161,6 +179,8 @@ Global
 		{74BD9A60-1AB4-433E-9A3D-032E0FF0D70E} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 		{6267BF35-F0F9-4CCC-86B9-BE26157DF6FC} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 		{05B8AF58-147E-4FC3-A2A1-6F9586F60870} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
+		{4619BFA5-451D-4919-A9B5-5B8F49EB8739} = {A71487FA-F38C-403B-B1BF-C1C78AAD3E72}
+		{173CD1D2-35F2-48AC-A7FF-2444622FE087} = {62C900E5-9EAC-4B52-81C5-D9B1A217105B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}
