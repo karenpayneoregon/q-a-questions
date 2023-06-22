@@ -58,9 +58,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateStuffConsoleApp", "Date
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{4619BFA5-451D-4919-A9B5-5B8F49EB8739}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColumnComboBoxLibrary", "MultiColumnComboBoxLibrary\MultiColumnComboBoxLibrary.csproj", "{173CD1D2-35F2-48AC-A7FF-2444622FE087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiColumnComboBoxLibrary", "MultiColumnComboBoxLibrary\MultiColumnComboBoxLibrary.csproj", "{173CD1D2-35F2-48AC-A7FF-2444622FE087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiColumnComboBoxApp", "MultiColumnComboBoxApp\MultiColumnComboBoxApp.csproj", "{36825DC6-CE7E-4883-8B78-08EA8656DA05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultiColumnComboBoxApp", "MultiColumnComboBoxApp\MultiColumnComboBoxApp.csproj", "{36825DC6-CE7E-4883-8B78-08EA8656DA05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinFormsApp1\WinFormsApp1.csproj", "{2EA42B3A-A818-46FB-B924-1769A5E0AF78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -168,6 +170,10 @@ Global
 		{36825DC6-CE7E-4883-8B78-08EA8656DA05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36825DC6-CE7E-4883-8B78-08EA8656DA05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36825DC6-CE7E-4883-8B78-08EA8656DA05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EA42B3A-A818-46FB-B924-1769A5E0AF78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EA42B3A-A818-46FB-B924-1769A5E0AF78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EA42B3A-A818-46FB-B924-1769A5E0AF78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EA42B3A-A818-46FB-B924-1769A5E0AF78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
