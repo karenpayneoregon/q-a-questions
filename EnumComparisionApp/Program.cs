@@ -9,9 +9,9 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Sample1();
+        //Sample1();
         Sample2();
-        MicroSoftExample();
+        //MicroSoftExample();
 
 
         Console.ReadLine();

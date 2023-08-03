@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using System.Text;
 
 namespace DataGridViewCombo1.Classes
 {
@@ -34,6 +35,40 @@ namespace DataGridViewCombo1.Classes
             }
 
             return (dtCustomer, dtColor);
+
+        }
+        public static string CreateMessage()
+        {
+            StringBuilder builder = new StringBuilder();
+            var dtColor = new DataTable();
+
+            using (var cn = new SqlConnection { ConnectionString = ConnectionString })
+            {
+                using (var cmd = new SqlCommand { Connection = cn })
+                {
+                    cn.Open();
+
+                    cmd.CommandText = "SELECT ColorId,ColorText FROM Colors ORDER BY ColorText";
+                    dtColor.Load(cmd.ExecuteReader());
+
+                    builder.AppendLine("<P>");
+
+                    builder.AppendLine("    <table>");
+
+                    foreach (DataRow row in dtColor.Rows)
+                    {
+                        builder.AppendLine("        <tr>");
+                        builder.AppendLine($"           <td>{row.Field<int>("ColorId")}</td><td>{row.Field<string>("ColorText")}</td>");
+
+                        builder.AppendLine("        </tr>");
+                    }
+
+                    builder.AppendLine("    </table>");
+                    builder.AppendLine("<P>");
+                }
+            }
+
+            return builder.ToString();
 
         }
 

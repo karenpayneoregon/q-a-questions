@@ -1,6 +1,7 @@
-﻿using System.ComponentModel;
-using System.Diagnostics;
-using System.Reflection;
+﻿using System;
+using System.ComponentModel;
+using System.Linq;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using RangeForEach.Classes;
 
 namespace RangeForEach
@@ -10,32 +11,56 @@ namespace RangeForEach
         static void Main(string[] args)
         {
 
+            var owners = new[] { "Karen", "Bob", "John", "Anne", "Jim" };
+            var pets = new[] { "Dog", "Cat", "Bird", "Fish", "Rabbit" };
+
+            foreach (var index in 1..3)
+            {
+                Console.WriteLine($"  {owners[index],-8}{pets[index]}");
+            }
+
+            Console.WriteLine();
+
+            for (int index = 1; index < 3; index++)
+            {
+                Console.WriteLine($"  {owners[index],-8}{pets[index]}");
+            }
+
+            Console.WriteLine();
+
+            Range range = new(1, 3);
+
+            foreach (var index in range)
+            {
+                Console.WriteLine($"  {owners[index],-8}{pets[index]}");
+            }
 
 
-            (int id, string firstName, string middleName, string lastName) = 
-                new Person(1,"Karen", "", "Payne");
+            Console.ReadLine();
+        }
+
+        private static void Stuff()
+        {
+            (int id, string firstName, string middleName, string lastName) =
+                new Person(1, "Karen", "", "Payne");
 
             Console.WriteLine($"{id}, {firstName}, {middleName}, {lastName}");
-            //ForEachIndexing();
-            Console.ReadLine();
         }
 
         private static void ForEachIndexing()
         {
 
             var table = CreateTable();
-            var owners = new[] { "Karen", "Bob", "John" };
-            var pets = new[] { "Dog", "Cat", "Bird" };
-            
-            foreach (var index in 1..3)
+            var owners = new[] { "Karen", "Bob", "John", "Anne" };
+            var pets = new[] { "Dog", "Cat", "Bird", "Fish" };
+ 
+            foreach (var index in ..3)
             {
                 table.AddRow(owners[index], pets[index]);
             }
-
-
-            AnsiConsole.Write(table);
             
-            Console.ReadLine();
+            AnsiConsole.Write(table);
+
         }
     }
 

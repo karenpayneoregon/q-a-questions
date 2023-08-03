@@ -34,6 +34,7 @@ namespace DataAdapterFormApp
             this.GetChangesButton = new System.Windows.Forms.Button();
             this.ExportExcelButton = new System.Windows.Forms.Button();
             this.ExportToTxtButton = new System.Windows.Forms.Button();
+            this.DumpButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,17 +42,20 @@ namespace DataAdapterFormApp
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(515, 177);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(687, 218);
             this.dataGridView1.TabIndex = 0;
             // 
             // SaveChangeButton
             // 
             this.SaveChangeButton.Image = global::DataAdapterFormApp.Properties.Resources.SaveAll_16x;
             this.SaveChangeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveChangeButton.Location = new System.Drawing.Point(12, 196);
+            this.SaveChangeButton.Location = new System.Drawing.Point(16, 241);
+            this.SaveChangeButton.Margin = new System.Windows.Forms.Padding(4);
             this.SaveChangeButton.Name = "SaveChangeButton";
-            this.SaveChangeButton.Size = new System.Drawing.Size(99, 23);
+            this.SaveChangeButton.Size = new System.Drawing.Size(132, 28);
             this.SaveChangeButton.TabIndex = 1;
             this.SaveChangeButton.Text = "Save";
             this.SaveChangeButton.UseVisualStyleBackColor = true;
@@ -59,9 +63,10 @@ namespace DataAdapterFormApp
             // 
             // GetChangesButton
             // 
-            this.GetChangesButton.Location = new System.Drawing.Point(117, 196);
+            this.GetChangesButton.Location = new System.Drawing.Point(156, 241);
+            this.GetChangesButton.Margin = new System.Windows.Forms.Padding(4);
             this.GetChangesButton.Name = "GetChangesButton";
-            this.GetChangesButton.Size = new System.Drawing.Size(75, 23);
+            this.GetChangesButton.Size = new System.Drawing.Size(100, 28);
             this.GetChangesButton.TabIndex = 2;
             this.GetChangesButton.Text = "Changes";
             this.GetChangesButton.UseVisualStyleBackColor = true;
@@ -69,9 +74,10 @@ namespace DataAdapterFormApp
             // 
             // ExportExcelButton
             // 
-            this.ExportExcelButton.Location = new System.Drawing.Point(430, 196);
+            this.ExportExcelButton.Location = new System.Drawing.Point(573, 241);
+            this.ExportExcelButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExportExcelButton.Name = "ExportExcelButton";
-            this.ExportExcelButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportExcelButton.Size = new System.Drawing.Size(100, 28);
             this.ExportExcelButton.TabIndex = 3;
             this.ExportExcelButton.Text = "To Excel";
             this.ExportExcelButton.UseVisualStyleBackColor = true;
@@ -79,25 +85,39 @@ namespace DataAdapterFormApp
             // 
             // ExportToTxtButton
             // 
-            this.ExportToTxtButton.Location = new System.Drawing.Point(349, 195);
+            this.ExportToTxtButton.Location = new System.Drawing.Point(277, 242);
+            this.ExportToTxtButton.Margin = new System.Windows.Forms.Padding(4);
             this.ExportToTxtButton.Name = "ExportToTxtButton";
-            this.ExportToTxtButton.Size = new System.Drawing.Size(75, 23);
+            this.ExportToTxtButton.Size = new System.Drawing.Size(100, 28);
             this.ExportToTxtButton.TabIndex = 4;
             this.ExportToTxtButton.Text = "To Txt";
             this.ExportToTxtButton.UseVisualStyleBackColor = true;
             this.ExportToTxtButton.Click += new System.EventHandler(this.ExportToTxtButton_Click);
             // 
+            // DumpButton
+            // 
+            this.DumpButton.Location = new System.Drawing.Point(465, 242);
+            this.DumpButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DumpButton.Name = "DumpButton";
+            this.DumpButton.Size = new System.Drawing.Size(100, 28);
+            this.DumpButton.TabIndex = 5;
+            this.DumpButton.Text = "Dump";
+            this.DumpButton.UseVisualStyleBackColor = true;
+            this.DumpButton.Click += new System.EventHandler(this.DumpButton_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 230);
+            this.ClientSize = new System.Drawing.Size(689, 283);
+            this.Controls.Add(this.DumpButton);
             this.Controls.Add(this.ExportToTxtButton);
             this.Controls.Add(this.ExportExcelButton);
             this.Controls.Add(this.GetChangesButton);
             this.Controls.Add(this.SaveChangeButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Sample";
@@ -113,6 +133,7 @@ namespace DataAdapterFormApp
         private System.Windows.Forms.Button GetChangesButton;
         private System.Windows.Forms.Button ExportExcelButton;
         private System.Windows.Forms.Button ExportToTxtButton;
+        private System.Windows.Forms.Button DumpButton;
     }
 }
 

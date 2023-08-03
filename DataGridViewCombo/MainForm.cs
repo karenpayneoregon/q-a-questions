@@ -19,13 +19,14 @@ namespace DataGridViewCombo1
         private void Form2_Load(object sender, EventArgs e)
         {
             Setup();
-            CustomersDataGridView.AllowUserToAddRows = false;
-            
+            customersDataGridView.AllowUserToAddRows = false;
+            customersDataGridView.Enter += CustomersDataGridViewOnEnter;
+
         }
         private void Setup()
         {
 
-            CustomersDataGridView.AutoGenerateColumns = false;
+            customersDataGridView.AutoGenerateColumns = false;
 
             var (customerTable, colorTable) = DataOperations.LoadData();
 
@@ -45,21 +46,22 @@ namespace DataGridViewCombo1
             _customerBindingSource.DataSource = customerTable;
 
             bindingNavigator1.BindingSource = _customerBindingSource;
-            CustomersDataGridView.DataSource = _customerBindingSource;
+            customersDataGridView.DataSource = _customerBindingSource;
 
-            CustomersDataGridView.EditingControlShowing += CustomersDataGridViewOnEditingControlShowing;
+            customersDataGridView.EditingControlShowing += CustomersDataGridViewOnEditingControlShowing;
             var currentRow = ((DataRowView)_customerBindingSource.Current).Row;
             //ColorIdLabel.Text = currentRow.Field<int>("ColorId").ToString();
             ColorIdLabel.DataBindings.Add("Text", _customerBindingSource, "ColorId", true);
 
-
+ 
         }
+
 
         // TODO
         private void CustomersDataGridViewOnEditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            if (!CustomersDataGridView.CurrentCell.IsComboBoxCell()) return;
-            if (CustomersDataGridView.Columns[CustomersDataGridView.CurrentCell.ColumnIndex].Name != nameof(ColorComboBoxColumn)) return;
+            if (!customersDataGridView.CurrentCell.IsComboBoxCell()) return;
+            if (customersDataGridView.Columns[customersDataGridView.CurrentCell.ColumnIndex].Name != nameof(ColorComboBoxColumn)) return;
             if (!(e.Control is ComboBox cb)) return;
             cb.SelectionChangeCommitted -= SelectionChangeCommitted;
             cb.SelectionChangeCommitted += SelectionChangeCommitted;
@@ -97,6 +99,25 @@ namespace DataGridViewCombo1
         {
             DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
             currentRow.SetField("ColorId", 1); // set to red in this case
+        }
+
+        private void GetTableButton_Click(object sender, EventArgs e)
+        {
+            var (table, exception) = Operations.Read();
+            if (exception == null)
+            {
+                // use table
+            }
+            else
+            {
+                // deal with exception
+            }
+        }
+        private void CustomersDataGridViewOnEnter(object sender, EventArgs e)
+        {
+            customersDataGridView.Rows[0].Cells[0].Selected = true;
+            customersDataGridView.BeginEdit(false);
+            customersDataGridView.Enter -= CustomersDataGridViewOnEnter;
         }
     }
 }

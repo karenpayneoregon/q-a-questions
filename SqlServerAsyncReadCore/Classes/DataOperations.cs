@@ -176,11 +176,23 @@ namespace SqlServerAsyncReadCore.Classes
 
         private static string SelectStatement()
         {
-            return "SELECT P.ProductID, P.ProductName, P.SupplierID, S.CompanyName, P.CategoryID, " +
-                   "C.CategoryName, P.QuantityPerUnit, P.UnitPrice, P.UnitsInStock, P.UnitsOnOrder, " +
-                   "P.ReorderLevel, P.Discontinued, P.DiscontinuedDate " +
-                   "FROM  Products AS P INNER JOIN Categories AS C ON P.CategoryID = C.CategoryID " +
-                   "INNER JOIN Suppliers AS S ON P.SupplierID = S.SupplierID";
+            return
+                """
+                    SELECT 
+                        C.CategoryName, 
+                        P.ProductID, 
+                        P.ProductName, 
+                        P.SupplierID, 
+                        S.CompanyName, 
+                        P.CategoryID, 
+                        P.QuantityPerUnit, 
+                        P.UnitPrice, 
+                        P.UnitsInStock
+                    FROM  
+                        Products AS P INNER JOIN Categories AS C ON P.CategoryID = C.CategoryID 
+                        INNER JOIN Suppliers AS S ON P.SupplierID = S.SupplierID
+                    ORDER BY C.CategoryName
+                """;
         }
 
 

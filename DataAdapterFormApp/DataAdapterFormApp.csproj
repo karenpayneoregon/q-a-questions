@@ -105,6 +105,9 @@
     <Content Include="assets\image.png" />
     <Content Include="assets\SaveAll_16x.png" />
     <Content Include="readme.md" />
+    <None Include="SomeFile.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

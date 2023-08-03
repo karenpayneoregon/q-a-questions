@@ -13,7 +13,7 @@ namespace DataAdapterFormApp
         public Form1()
         {
             InitializeComponent();
-            Shown += OnShown;
+            //Shown += OnShown;
         }
 
         /// <summary>
@@ -88,5 +88,23 @@ namespace DataAdapterFormApp
                 // failed
             }
         }
+
+        private void DumpButton_Click(object sender, EventArgs e)
+        {
+            var (success, exception) = ExcelOperations.InsertColumnData(
+                "SomeFile.xlsx", 4,5, new List<string>()
+            {
+                "A", "B", "C", "D",
+            });
+
+            if (success)
+            {
+                // done
+            }else if (exception != null)
+            {
+                // inspect 
+            }
+        }
+
     }
 }

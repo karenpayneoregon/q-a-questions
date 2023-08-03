@@ -13,7 +13,6 @@ namespace RangeForEach
         [ModuleInitializer]
         public static void Init()
         {
-            AnsiConsole.MarkupLine("");
             Console.Title = "Code sample";
             WindowUtility.SetConsoleWindowPosition(WindowUtility.AnchorWindow.Center);
         }
