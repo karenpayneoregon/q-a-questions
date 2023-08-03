@@ -18,6 +18,7 @@ public partial class Form1 : Form
     private void Form1_Load(object sender, EventArgs e)
     {
         _bindingSource.DataSource = DataOperations.GetData();
+        _bindingSource.Sort = "TransDate";
         dataGridView1.DataSource = _bindingSource;
         SetLastColumnValue();
         dataGridView1.CellPainting += DataGridView1_CellPainting;
