@@ -128,6 +128,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunningTotalsFormsApp", "Ru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckBoxColumnCount", "DataGridViewCheckAll\CheckBoxColumnCount.csproj", "{C417BCCB-2295-4973-9C52-FAE8116B84FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumQuestion2023", "ForumQuestion2023\ForumQuestion2023.csproj", "{4B8F0697-F67C-43B3-9647-EC22D05559D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -298,6 +300,10 @@ Global
 		{C417BCCB-2295-4973-9C52-FAE8116B84FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C417BCCB-2295-4973-9C52-FAE8116B84FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C417BCCB-2295-4973-9C52-FAE8116B84FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8F0697-F67C-43B3-9647-EC22D05559D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8F0697-F67C-43B3-9647-EC22D05559D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8F0697-F67C-43B3-9647-EC22D05559D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8F0697-F67C-43B3-9647-EC22D05559D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -346,6 +352,7 @@ Global
 		{E2C0EFA9-9AEA-4313-8DE4-289D6C4E0E5B} = {0CB6F47D-3219-4030-98DC-002C2956E838}
 		{54A36C70-AE3A-4F63-B77D-9EAD114E33CB} = {F1CE7FF9-BF7F-48F8-9C3B-67993120685B}
 		{C417BCCB-2295-4973-9C52-FAE8116B84FD} = {F1CE7FF9-BF7F-48F8-9C3B-67993120685B}
+		{4B8F0697-F67C-43B3-9647-EC22D05559D4} = {3157391C-358A-4459-A03E-7DC0BBB50EE5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0BCE1AE6-CC47-4D9B-A743-600F2FB1E9B9}
