@@ -15,4 +15,11 @@ internal class Operations
     {
         Decide();
     }
+
+    public static void CheckDayOfWeek()
+    {
+        ColorsChanged?.Invoke(DateTime.Now.IsWeekend() ?
+            Color.Brown :
+            Color.Yellow);
+    }
 }

@@ -31,6 +31,7 @@ partial class Form1
         label1 = new Label();
         UpdateValueButton = new Button();
         label2 = new Label();
+        IsWeekendButton = new Button();
         SuspendLayout();
         // 
         // label1
@@ -61,11 +62,22 @@ partial class Form1
         label2.TabIndex = 2;
         label2.Text = "SingletonValue";
         // 
+        // IsWeekendButton
+        // 
+        IsWeekendButton.Location = new Point(165, 53);
+        IsWeekendButton.Name = "IsWeekendButton";
+        IsWeekendButton.Size = new Size(94, 29);
+        IsWeekendButton.TabIndex = 3;
+        IsWeekendButton.Text = "IsWeekend";
+        IsWeekendButton.UseVisualStyleBackColor = true;
+        IsWeekendButton.Click += IsWeekendButton_Click;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(308, 160);
+        Controls.Add(IsWeekendButton);
         Controls.Add(label2);
         Controls.Add(UpdateValueButton);
         Controls.Add(label1);
@@ -82,4 +94,5 @@ partial class Form1
     private Label label1;
     private Button UpdateValueButton;
     private Label label2;
+    private Button IsWeekendButton;
 }

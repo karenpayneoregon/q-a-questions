@@ -21,4 +21,9 @@ public partial class Form1 : Form
         Operations.DoSomeWork();
         label2.Text = $@"Singleton value is {Singleton.Instance.Value}";
     }
+
+    private void IsWeekendButton_Click(object sender, EventArgs e)
+    {
+        Operations.CheckDayOfWeek();
+    }
 }
