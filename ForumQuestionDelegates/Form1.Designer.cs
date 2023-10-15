@@ -30,6 +30,7 @@ partial class Form1
     {
         label1 = new Label();
         UpdateValueButton = new Button();
+        label2 = new Label();
         SuspendLayout();
         // 
         // label1
@@ -51,11 +52,21 @@ partial class Form1
         UpdateValueButton.UseVisualStyleBackColor = true;
         UpdateValueButton.Click += UpdateValueButton_Click;
         // 
+        // label2
+        // 
+        label2.AutoSize = true;
+        label2.Location = new Point(21, 99);
+        label2.Name = "label2";
+        label2.Size = new Size(108, 20);
+        label2.TabIndex = 2;
+        label2.Text = "SingletonValue";
+        // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(308, 160);
+        Controls.Add(label2);
         Controls.Add(UpdateValueButton);
         Controls.Add(label1);
         FormBorderStyle = FormBorderStyle.FixedToolWindow;
@@ -70,4 +81,5 @@ partial class Form1
 
     private Label label1;
     private Button UpdateValueButton;
+    private Label label2;
 }

@@ -65,6 +65,7 @@ public partial class Form1 : Form
     {
         Singleton.Instance.Value += 1;
         Operations.DoSomeWork();
+        label2.Text = $@"Singleton value is {Singleton.Instance.Value}";
     }
 }
 ```
