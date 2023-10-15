@@ -16,7 +16,7 @@ namespace SqlServerAsyncRead
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StackoverflowForm());
+            Application.Run(new Form1());
         }
     }
 }
