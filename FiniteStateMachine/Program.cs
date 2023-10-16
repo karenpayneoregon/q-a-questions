@@ -6,17 +6,23 @@ internal partial class Program
 {
     static void Main(string[] args)
     {
+        NewMethod();
 
 
+        Console.ReadLine();
+    }
+
+    private static void Method1()
+    {
         var items = (File.ReadAllLines("TextFile3.txt")
             .Select((line, index) => new { Line = line, Index = index })
             .Select(lineData => lineData)).ToList();
 
         List<string> sections = new List<string>()
         {
-            "INFO", 
-            "PANEL_INSP_RESULT", 
-            "BOARD_INSP_RESULT", 
+            "INFO",
+            "PANEL_INSP_RESULT",
+            "BOARD_INSP_RESULT",
             "COMPONENT_INSP_RESULT"
         };
 
@@ -39,18 +45,13 @@ internal partial class Program
                     {
                         Console.WriteLine($"\t\t{items[index].Line}");
                     }
-                    
                 }
             }
             else
             {
                 Console.WriteLine("\tFailed to read this section");
             }
-
         }
-
-
-        Console.ReadLine();
     }
 
     private static void NewMethod()

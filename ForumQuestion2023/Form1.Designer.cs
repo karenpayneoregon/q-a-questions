@@ -31,6 +31,7 @@ partial class Form1
         dataGridView1 = new DataGridView();
         SaveButton = new Button();
         panel1 = new Panel();
+        IterateDataButton = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         panel1.SuspendLayout();
         SuspendLayout();
@@ -59,12 +60,23 @@ partial class Form1
         // 
         // panel1
         // 
+        panel1.Controls.Add(IterateDataButton);
         panel1.Controls.Add(SaveButton);
         panel1.Dock = DockStyle.Bottom;
         panel1.Location = new Point(0, 384);
         panel1.Name = "panel1";
         panel1.Size = new Size(800, 66);
         panel1.TabIndex = 2;
+        // 
+        // IterateDataButton
+        // 
+        IterateDataButton.Location = new Point(112, 25);
+        IterateDataButton.Name = "IterateDataButton";
+        IterateDataButton.Size = new Size(94, 29);
+        IterateDataButton.TabIndex = 3;
+        IterateDataButton.Text = "Iterate";
+        IterateDataButton.UseVisualStyleBackColor = true;
+        IterateDataButton.Click += IterateDataButton_Click;
         // 
         // Form1
         // 
@@ -86,4 +98,5 @@ partial class Form1
     private DataGridView dataGridView1;
     private Button SaveButton;
     private Panel panel1;
+    private Button IterateDataButton;
 }
