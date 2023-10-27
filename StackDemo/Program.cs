@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Text.Json;
+using StackDemo.Classes;
+// ReSharper disable PossibleNullReferenceException
 
 namespace StackDemo;
 
@@ -57,6 +59,16 @@ internal partial class Program
 
     }
 }
+
+    public class DemoOperations
+    {
+        public static void DoSomething(DateTimeOffset dateTimeOffset)
+        {
+            var (day, month, year, offset) = dateTimeOffset;
+        }
+    }
+
+
 
 #region Place each class in their own file
 public class Root
