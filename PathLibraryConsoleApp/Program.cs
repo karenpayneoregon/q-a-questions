@@ -2,29 +2,51 @@
 using System.IO;
 using PathLibrary.Classes;
 using D = PathLibrary.Classes.Directory1;
+using static System.Globalization.DateTimeFormatInfo;
+// ReSharper disable ConvertClosureToMethodGroup
 
-namespace PathLibraryConsoleApp
+namespace PathLibraryConsoleApp;
+
+partial class Program
 {
-    partial class Program
+    private static List<string> _files = new();
+    static async Task Main(string[] args)
     {
-        static void Main(string[] args)
+
+        string[] include = { "**/Data*.cs", "**/Ext*.cs" };
+        string[] exclude =
         {
+            "**/*DataG*.cs",
+            "**/*DataR*.cs",
+            "**/*.AssemblyInfo.cs",
+            "**/*.g.cs"
+        };
 
-            
-            Console.WriteLine(DirectoryHelpers.ParentFolder(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Files")));
-            Console.WriteLine(DirectoryHelpers.ParentFolder());
+        DirectoryHelpers.TraverseFileMatch += DirectoryHelpers_TraverseFileMatch;
+        DirectoryHelpers.Done += DirectoryHelpers_Done;  
+        var solutionFolder = DirectoryHelpers.GetSolutionInfo().FullName;
+        await DirectoryHelpers.GetFiles(solutionFolder, include, exclude);
 
-            Console.ReadLine();
-        }
+        Console.ReadLine();
+    }
 
-        private static void ValidNames()
+    private static void DirectoryHelpers_Done(string message)
+    {
+        _files = _files.OrderBy(x => x).ToList();
+        foreach (var file in _files)
         {
-            string[] folderNames = { "|OED", "!OED~", "<<Dir", "\"SomeName", "Another\tName" };
-
-            foreach (var name in folderNames)
-            {
-                Console.WriteLine($"{name} is valid? {D.IsValidFolderName(name)}");
-            }
+            Console.WriteLine(file);
         }
     }
+
+    private static void DirectoryHelpers_TraverseFileMatch(FileMatchItem sender)
+    {
+        _files.Add(Path.Combine(sender.Folder, sender.FileName));
+
+    }
+
+
 }
+
+
+

@@ -28,5 +28,6 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Assets\" />
+	  <Folder Include="Properties\" />
 	</ItemGroup>
 </Project>

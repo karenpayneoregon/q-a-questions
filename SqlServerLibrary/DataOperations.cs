@@ -17,11 +17,7 @@ public class DataOperations
         using var cmd = new SqlCommand
         {
             Connection = cn,
-            CommandText =
-                @"
-                    INSERT INTO dbo.Customer (CompanyName, ContactName, ContactTypeIdentifier, GenderIdentifier) 
-                    VALUES (@CompanyName,  @ContactName,  @ContactTypeIdentifier,  @GenderIdentifier);
-                    SELECT CAST(scope_identity() AS int);"
+            CommandText = SqlStatements.InsertCustomer
         };
 
 

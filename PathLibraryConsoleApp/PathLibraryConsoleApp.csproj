@@ -2,7 +2,7 @@
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 		<ApplicationIcon>csharp.ico</ApplicationIcon>
@@ -21,16 +21,16 @@
 	  <ProjectReference Include="..\PathLibrary\PathLibrary.csproj" />
 	</ItemGroup>
 
-	<!--<ItemGroup>
-		<PackageReference Include="Spectre.Console" Version="0.44.0" />
-	</ItemGroup>-->
-
-	<!--<ItemGroup>
-		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
-	</ItemGroup>-->
-
 	<Target Name="MakeLogFolder" AfterTargets="Build">
 		<MakeDir Directories="$(OutDir)Files" />
 	</Target>
+
+	<ItemGroup>
+	  <EditorConfigFiles Remove="C:\OED\DotnetLand\VS2019\ForumQuestionTemp\PathLibraryConsoleApp\.editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="C:\OED\DotnetLand\VS2019\ForumQuestionTemp\PathLibraryConsoleApp\.editorconfig" />
+	</ItemGroup>
 
 </Project>

@@ -21,7 +21,8 @@ internal partial class Program
 
         using var context = new Context();
 
-        var groupedCategories = context.Products.Include(p => p.Category)
+        List<List<Products>> groupedCategories = context.Products
+            .Include(p => p.Category)
             .ToList()
             .OrderBy(p => p.Category.CategoryName)
             .ThenBy(p => p.ProductName)
@@ -45,6 +46,7 @@ internal partial class Program
         }
 
         var root = new Tree("[lightsteelblue]Grouped products by category[/]");
+        root.Style(Style.Parse("grey"));
 
         foreach (var container in containers)
         {

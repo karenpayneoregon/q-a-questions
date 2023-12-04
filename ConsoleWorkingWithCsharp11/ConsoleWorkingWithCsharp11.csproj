@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <Folder Include="DataScripts\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,6 +10,7 @@ internal partial class Program
     static void Main(string[] args)
     {
 
+
         CreateAppSettings();
 
         IConfigurationRoot config = InitConfiguration();
@@ -26,6 +27,7 @@ internal partial class Program
 
     }
 
+ 
     private static void CreateAppSettings()
     {
         List<MailAddress> addresses = new()

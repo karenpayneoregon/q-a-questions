@@ -13,6 +13,8 @@ public class Directory1
     /// </summary>
     /// <param name="folder">directory to check</param>
     /// <returns>true if valid, false if not</returns>
-    public static bool IsValidFolderName(string folder) 
-        => IllegalRegex.Replace(folder,"") == folder;
+    public static bool IsValidFolderName(string folder)
+    {
+        return IllegalRegex.Replace(folder, "") == folder;
+    }
 }
