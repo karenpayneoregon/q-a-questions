@@ -9,9 +9,9 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
-    private void button1_Click(object sender, EventArgs e)
+    private void SetToNullButton_Click(object sender, EventArgs e)
     {
-      
-        //DateTimePicker1.Value = DateTime.Now;
+
+        nullableDateTimePicker1.Value = DateTime.MinValue;
     }
 }

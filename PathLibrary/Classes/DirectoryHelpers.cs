@@ -1,7 +1,4 @@
-﻿
-using System.Reflection;
-using System.Text.RegularExpressions;
-using Microsoft.Extensions.FileSystemGlobbing;
+﻿using Microsoft.Extensions.FileSystemGlobbing;
 
 namespace PathLibrary.Classes;
 

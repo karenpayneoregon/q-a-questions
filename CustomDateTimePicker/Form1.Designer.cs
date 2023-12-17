@@ -28,40 +28,41 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-            this.button1 = new System.Windows.Forms.Button();
-            this.nullableDateTimePicker1 = new CustomDateTimePicker.Controls.NullableDateTimePicker();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(315, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // nullableDateTimePicker1
-            // 
-            this.nullableDateTimePicker1.DateTime = new System.DateTime(((long)(0)));
-            this.nullableDateTimePicker1.Location = new System.Drawing.Point(12, 21);
-            this.nullableDateTimePicker1.Name = "nullableDateTimePicker1";
-            this.nullableDateTimePicker1.Size = new System.Drawing.Size(250, 27);
-            this.nullableDateTimePicker1.TabIndex = 2;
-            this.nullableDateTimePicker1.Value = new System.DateTime(2023, 7, 22, 3, 39, 1, 82);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.nullableDateTimePicker1);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-
+        button1 = new Button();
+        nullableDateTimePicker1 = new Controls.NullableDateTimePicker();
+        SuspendLayout();
+        // 
+        // button1
+        // 
+        button1.Location = new Point(268, 22);
+        button1.Name = "button1";
+        button1.Size = new Size(179, 29);
+        button1.TabIndex = 1;
+        button1.Text = "Null out date";
+        button1.UseVisualStyleBackColor = true;
+        button1.Click += SetToNullButton_Click;
+        // 
+        // nullableDateTimePicker1
+        // 
+        nullableDateTimePicker1.DateTime = new DateTime(0L);
+        nullableDateTimePicker1.Location = new Point(12, 21);
+        nullableDateTimePicker1.Name = "nullableDateTimePicker1";
+        nullableDateTimePicker1.Size = new Size(250, 27);
+        nullableDateTimePicker1.TabIndex = 2;
+        nullableDateTimePicker1.Value = new DateTime(2023, 7, 22, 3, 39, 1, 82);
+        // 
+        // Form1
+        // 
+        AutoScaleDimensions = new SizeF(8F, 20F);
+        AutoScaleMode = AutoScaleMode.Font;
+        ClientSize = new Size(495, 344);
+        Controls.Add(nullableDateTimePicker1);
+        Controls.Add(button1);
+        FormBorderStyle = FormBorderStyle.FixedToolWindow;
+        Name = "Form1";
+        StartPosition = FormStartPosition.CenterScreen;
+        Text = "Form1";
+        ResumeLayout(false);
     }
 
     #endregion
