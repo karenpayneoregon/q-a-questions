@@ -1,11 +1,12 @@
 ﻿#pragma warning disable CS8618
 using System.ComponentModel;
-using System.Reflection;
 using System.Runtime.CompilerServices;
-using System.Security.Claims;
 
 namespace DataGridViewCheckBoxApp1.Models;
 
+/// <summary>
+/// INotifyPropertyChanged is needed for Form2, not Form1
+/// </summary>
 public class Product : INotifyPropertyChanged
 {
     private int _productId;
