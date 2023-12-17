@@ -6,6 +6,12 @@ using FastMember;
 namespace DataGridViewCheckBoxApp1.Classes;
 internal static class Extensions
 {
+    /// <summary>
+    /// Convert a list to a DataTable
+    /// </summary>
+    /// <typeparam name="T">Type</typeparam>
+    /// <param name="sender">List to convert</param>
+    /// <returns>DataTable</returns>
     public static DataTable ToDataTable<T>(this IEnumerable<T> sender)
     {
         DataTable table = new(typeof(T).Name);
@@ -14,30 +20,39 @@ internal static class Extensions
         return table;
     }
 
-    public static List<Product> AllCheckedProducts(this DataTable table)
-    {
-        return ConvertDataTable<Product>(table);
-    }
+    /// <summary>
+    /// Convert a DataTable to a List of <see cref="Product"/>
+    /// </summary>
+    /// <param name="table">DataTable to convert</param>
+    /// <returns>List of Product</returns>
+    public static List<Product>? AllCheckedProducts(this DataTable table) 
+        => ConvertDataTable<Product>(table);
 
-    public static List<T> ConvertDataTable<T>(this DataTable table) where T : class, new()
+    /// <summary>
+    /// Convert a DataTable to a List of <typeparamref name="T"/>
+    /// </summary>
+    /// <typeparam name="T">Type</typeparam>
+    /// <param name="table">DataTable which can represent <typeparamref name="T"/> </param>
+    public static List<T>? ConvertDataTable<T>(this DataTable table) where T : class, new()
     {
         try
         {
-            List<T> list = new List<T>();
+            List<T>? list = new List<T>();
 
-            foreach (var row in table.AsEnumerable())
+            foreach (DataRow row in table.AsEnumerable())
             {
                 T item = new T();
 
-                foreach (var prop in item.GetType().GetProperties())
+                foreach (var pi in item.GetType().GetProperties())
                 {
                     try
                     {
-                        PropertyInfo? propertyInfo = item.GetType().GetProperty(prop.Name);
-                        propertyInfo!.SetValue(item, Convert.ChangeType(row[prop.Name], propertyInfo.PropertyType), null);
+                        PropertyInfo? propertyInfo = item.GetType().GetProperty(pi.Name);
+                        propertyInfo!.SetValue(item, Convert.ChangeType(row[pi.Name], propertyInfo.PropertyType), null);
                     }
                     catch
                     {
+                        // can land here or nullable types
                         continue;
                     }
                 }
@@ -52,6 +67,9 @@ internal static class Extensions
             return null;
         }
     }
+
+
+ 
 }
 
 

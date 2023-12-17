@@ -1,14 +1,14 @@
 ﻿namespace DataGridViewCheckBoxApp1;
 
-partial class Form1
+partial class Form2
 {
     /// <summary>
-    ///  Required designer variable.
+    /// Required designer variable.
     /// </summary>
     private System.ComponentModel.IContainer components = null;
 
     /// <summary>
-    ///  Clean up any resources being used.
+    /// Clean up any resources being used.
     /// </summary>
     /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
     protected override void Dispose(bool disposing)
@@ -23,16 +23,16 @@ partial class Form1
     #region Windows Form Designer generated code
 
     /// <summary>
-    ///  Required method for Designer support - do not modify
-    ///  the contents of this method with the code editor.
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent()
     {
         dataGridView1 = new DataGridView();
         panel1 = new Panel();
+        ExitButton = new Button();
         ToggleCurrentButton = new Button();
         GetAllCheckedButton = new Button();
-        ExitButton = new Button();
         ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
         panel1.SuspendLayout();
         SuspendLayout();
@@ -46,7 +46,7 @@ partial class Form1
         dataGridView1.Name = "dataGridView1";
         dataGridView1.RowHeadersWidth = 51;
         dataGridView1.Size = new Size(800, 377);
-        dataGridView1.TabIndex = 0;
+        dataGridView1.TabIndex = 2;
         // 
         // panel1
         // 
@@ -57,7 +57,16 @@ partial class Form1
         panel1.Location = new Point(0, 377);
         panel1.Name = "panel1";
         panel1.Size = new Size(800, 73);
-        panel1.TabIndex = 1;
+        panel1.TabIndex = 3;
+        // 
+        // ExitButton
+        // 
+        ExitButton.Location = new Point(656, 21);
+        ExitButton.Name = "ExitButton";
+        ExitButton.Size = new Size(132, 29);
+        ExitButton.TabIndex = 2;
+        ExitButton.Text = "Exit";
+        ExitButton.UseVisualStyleBackColor = true;
         // 
         // ToggleCurrentButton
         // 
@@ -79,28 +88,17 @@ partial class Form1
         GetAllCheckedButton.UseVisualStyleBackColor = true;
         GetAllCheckedButton.Click += GetAllCheckedButton_Click;
         // 
-        // ExitButton
-        // 
-        ExitButton.Location = new Point(656, 21);
-        ExitButton.Name = "ExitButton";
-        ExitButton.Size = new Size(132, 29);
-        ExitButton.TabIndex = 2;
-        ExitButton.Text = "Exit";
-        ExitButton.UseVisualStyleBackColor = true;
-        ExitButton.Click += ExitButton_Click;
-        // 
-        // Form1
+        // Form2
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(800, 450);
         Controls.Add(dataGridView1);
         Controls.Add(panel1);
-        FormBorderStyle = FormBorderStyle.FixedToolWindow;
-        Name = "Form1";
+        Name = "Form2";
         StartPosition = FormStartPosition.CenterScreen;
-        Text = "Working with DataGridView Checkboxes";
-        Load += Form1_Load;
+        Text = "Form2";
+        Load += Form2_Load;
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         panel1.ResumeLayout(false);
         ResumeLayout(false);
@@ -110,7 +108,7 @@ partial class Form1
 
     private DataGridView dataGridView1;
     private Panel panel1;
-    private Button GetAllCheckedButton;
-    private Button ToggleCurrentButton;
     private Button ExitButton;
+    private Button ToggleCurrentButton;
+    private Button GetAllCheckedButton;
 }

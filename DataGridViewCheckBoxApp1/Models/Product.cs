@@ -1,13 +1,61 @@
 ﻿#pragma warning disable CS8618
+using System.ComponentModel;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Security.Claims;
+
 namespace DataGridViewCheckBoxApp1.Models;
 
-public class Product
+public class Product : INotifyPropertyChanged
 {
-    public int ProductId { get; set; }
-    public string ProductName { get; set; }
+    private int _productId;
+    private string _productName;
+    private decimal _unitPrice;
+    private short _unitsInStock;
 
-    public decimal? UnitPrice { get; set; }
-    public short? UnitsInStock { get; set; }
+    public int ProductId
+    {
+        get => _productId;
+        set
+        {
+            if (value == _productId) return;
+            _productId = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public string ProductName
+    {
+        get => _productName;
+        set
+        {
+            if (value == _productName) return;
+            _productName = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public decimal UnitPrice
+    {
+        get => _unitPrice;
+        set
+        {
+            if (value == _unitPrice) return;
+            _unitPrice = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public short UnitsInStock
+    {
+        get => _unitsInStock;
+        set
+        {
+            if (value == _unitsInStock) return;
+            _unitsInStock = value;
+            OnPropertyChanged();
+        }
+    }
 
     public Product(int id)
     {
@@ -21,5 +69,10 @@ public class Product
 
     public override string ToString() => ProductName;
 
+    public event PropertyChangedEventHandler? PropertyChanged;
+    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null!)
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
 
 }
