@@ -4,6 +4,9 @@ A [question](https://stackoverflow.com/questions/77688777/cant-add-data-from-jso
 
 They seem to be using .NET Framework and I use .NET Core so did not reply.
 
+![Screenshot](assets/screenshot.png)
+
+
 ## Important
 
 Personally, would never do this as what happens if the person who asked for this later decides to have multiple users use the application, for this reason the better idea is to use a database along with many other reasons and benefits for using a database.

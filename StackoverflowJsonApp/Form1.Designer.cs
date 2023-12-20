@@ -41,7 +41,7 @@ partial class Form1
         panel1.Dock = DockStyle.Bottom;
         panel1.Location = new Point(0, 277);
         panel1.Name = "panel1";
-        panel1.Size = new Size(693, 66);
+        panel1.Size = new Size(533, 66);
         panel1.TabIndex = 0;
         // 
         // AddNewEmployeeButton
@@ -61,19 +61,19 @@ partial class Form1
         dataGridView1.Location = new Point(0, 0);
         dataGridView1.Name = "dataGridView1";
         dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new Size(693, 277);
+        dataGridView1.Size = new Size(533, 277);
         dataGridView1.TabIndex = 1;
         // 
         // Form1
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(693, 343);
+        ClientSize = new Size(533, 343);
         Controls.Add(dataGridView1);
         Controls.Add(panel1);
         Name = "Form1";
         StartPosition = FormStartPosition.CenterScreen;
-        Text = "Form1";
+        Text = "Code sample";
         panel1.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
