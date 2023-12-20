@@ -7,7 +7,7 @@ namespace CheckedListBoxLastChecked
 {
     public partial class Form1 : Form
     {
-        private readonly LastChecked _lastChecked = new LastChecked() {Index = -1};
+        private readonly LastChecked _lastChecked = new LastChecked() { Index = -1 };
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace CheckedListBoxLastChecked
 
         private void CheckedListBox1OnItemCheck(object sender, ItemCheckEventArgs e)
         {
-           
+
             _lastChecked.CheckState = e.NewValue;
             _lastChecked.Index = e.Index;
 
@@ -37,11 +37,11 @@ namespace CheckedListBoxLastChecked
                 Console.WriteLine(checkedListBox1.Items[_lastChecked.Index]);
                 if (_lastChecked.CheckState == CheckState.Checked)
                 {
-                    
+
                 }
                 else
                 {
-                    
+
                 }
             }
             else
@@ -50,38 +50,12 @@ namespace CheckedListBoxLastChecked
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-Employee employee = new Employee() { FirstName = "Jim", LastName = "Gallagher" };
-Console.WriteLine(employee);
-Manager manager = new Manager() { FirstName = "Karen", LastName = "Payne" };
-Console.WriteLine(manager);
-        }
     }
-
+    // should be in its own file
     public class LastChecked
     {
         public int Index { get; set; }
         public CheckState CheckState { get; set; }
 
     }
-    public abstract class Human
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public override string ToString() => $"{FirstName} {LastName}";
-    }
-
-    public class Employee : Human
-    {
-        // uses base ToString
-    }
-
-    public class Manager : Human
-    {
-        public override string ToString() => $"{LastName} {FirstName}";
-    }
-
-
-
 }

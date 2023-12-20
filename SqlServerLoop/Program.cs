@@ -9,6 +9,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        Console.Title = "Code sample";
         var test = DataOperations.ValidateUser1();
 
         var userName = "payneoregon";

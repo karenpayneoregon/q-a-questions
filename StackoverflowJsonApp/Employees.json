@@ -1,0 +1,42 @@
+[
+  {
+    "ID": 1,
+    "Name": "Bill",
+    "Surname": "Jones",
+    "Age": 19,
+    "Salary": 25000,
+    "Position": "Sales Manager"
+  },
+  {
+    "ID": 2,
+    "Name": "Mary",
+    "Surname": "Gallagher",
+    "Age": 21,
+    "Salary": 10000,
+    "Position": "Sales clerk"
+  },
+  {
+    "ID": 3,
+    "Name": "Jane",
+    "Surname": "Adams",
+    "Age": 30,
+    "Salary": 50000,
+    "Position": "Assistant manager"
+  },
+  {
+    "ID": 4,
+    "Name": "Jimmy",
+    "Surname": "McFly",
+    "Age": 19,
+    "Salary": 30000,
+    "Position": "Security"
+  },
+  {
+    "ID": 5,
+    "Name": "Karen",
+    "Surname": "Payne",
+    "Age": 19,
+    "Salary": 250000,
+    "Position": "Manager"
+  }
+]
