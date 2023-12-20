@@ -1,12 +1,13 @@
 using StackoverflowJsonApp.Classes;
 using StackoverflowJsonApp.Models;
 using System.Text.Json;
+#pragma warning disable CA1869
 
 namespace StackoverflowJsonApp;
 
 public partial class Form1 : Form
 {
-    private BindingSource _bindingSource = new BindingSource();
+    private BindingSource _bindingSource = new();
     private SortableBindingList<Employee> _bindingList;
     private string _fileName => "Employees.json";
     public Form1()
@@ -26,13 +27,15 @@ public partial class Form1 : Form
         _bindingList = new SortableBindingList<Employee>(list);
         _bindingSource.DataSource = _bindingList;
         dataGridView1.DataSource = _bindingSource;
+
         dataGridView1.Columns["ID"]!.Visible = false;
+
         dataGridView1.ExpandColumns();
     }
 
     private void AddNewEmployeeButton_Click(object sender, EventArgs e)
     {
-        using AddEmployeeForm form = new AddEmployeeForm();
+        using AddEmployeeForm form = new();
         form.EmployeeAdded += Form_EmployeeAdded;
         form.ShowDialog();
     }
