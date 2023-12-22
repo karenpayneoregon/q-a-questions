@@ -9,8 +9,8 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        //Sample1();
-        Sample2();
+        Sample1();
+        //Sample2();
         //MicroSoftExample();
 
 
@@ -21,21 +21,28 @@ internal class Program
     {
         Helpers.Print();
 
-        List<string> list = new()
-        {
-            "DairyProducts", "dairyproducts", 
-            "Grains Cereals", 
-            "Beverages", "BEVERAGES"
-        };
-
+        List<string> list = ["DairyProducts", "dairyproducts", "Grains Cereals", "Beverages", "BEVERAGES"];
 
         foreach (var item in list)
         {
             Console.WriteLine(Enum.TryParse(item, true, out Category category)
                 ? $"Found: {category}"
-                : $"Could not find the specified {nameof(Category)}.{item}");
-
+                : $"Could not find the specified {item}");
         }
+        
+        Console.WriteLine();
+
+        list.Where(item => Enum.TryParse(item, true, out Category _))
+            .ToList()
+            .ForEach(Console.WriteLine);
+        
+        Console.WriteLine();
+
+        list.Select(item => Enum.TryParse(item, true, out Category category) ? 
+                category.ToString() : 
+                "Whoops")
+            .ToList()
+            .ForEach(Console.WriteLine);
 
         Console.WriteLine();
 
