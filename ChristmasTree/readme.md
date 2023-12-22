@@ -1,1 +1,2 @@
-﻿# About
+﻿
+![Christmas Tree](assets/ChristmasTree.gif)
