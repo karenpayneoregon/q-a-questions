@@ -33,9 +33,19 @@ public class Operations
     }
     private static string SelectStatement()
     {
-        return "SELECT P.ProductID, P.ProductName, P.SupplierID, S.CompanyName, P.CategoryID, " +
-               "C.CategoryName " +
-               "FROM  Products AS P INNER JOIN Categories AS C ON P.CategoryID = C.CategoryID " +
-               "INNER JOIN Suppliers AS S ON P.SupplierID = S.SupplierID ORDER BY P.ProductName";
+        return 
+            """
+            SELECT 
+                P.ProductID, 
+                P.ProductName, 
+                P.SupplierID, 
+                S.CompanyName, 
+                P.CategoryID, 
+                C.CategoryName 
+            FROM  Products AS P 
+            INNER JOIN Categories AS C ON P.CategoryID = C.CategoryID 
+            INNER JOIN Suppliers AS S ON P.SupplierID = S.SupplierID 
+            ORDER BY P.ProductName
+            """;
     }
 }
