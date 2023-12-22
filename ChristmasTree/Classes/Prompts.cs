@@ -6,5 +6,5 @@ internal class Prompts
             new TextPrompt<T>($"[white]{text}[/]?")
                 .PromptStyle("yellow")
                 .DefaultValue(value)
-                .ValidationErrorMessage("[red]Please enter a numbers[/]"));
+                .ValidationErrorMessage("[red]Please enter a number[/]"));
 }
