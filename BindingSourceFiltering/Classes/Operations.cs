@@ -15,8 +15,8 @@ public class Operations
 
         var productTable = new DataTable();
 
-        using var cn = new SqlConnection(_connectionString);
-        using var cmd = new SqlCommand { Connection = cn, CommandText = SelectStatement() };
+        using SqlConnection cn = new(_connectionString);
+        using SqlCommand cmd = new() { Connection = cn, CommandText = SelectStatement() };
         cn.Open();
             
         productTable.Load(cmd.ExecuteReader());
