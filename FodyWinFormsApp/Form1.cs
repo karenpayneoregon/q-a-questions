@@ -15,13 +15,15 @@ public partial class Form1 : Form
     }
 
     private SortableBindingList<M1.Person> FodyBindingList = new(BogusOperations.FodyPeople());
-    private BindingSource FodyBindingSource = new();
+    private BindingSource FodyBindingSource = new() ;
 
     private SortableBindingList<M2.Person> ConventionalBindingList = new(BogusOperations.People());
     private BindingSource ConventionalBindingSource = new();
 
     private void Form1_Shown(object? sender, EventArgs e)
     {
+
+    
         FodyBindingSource.DataSource = FodyBindingList;
         FodyDataGridView.DataSource = FodyBindingSource;
         FodyDataGridView.Columns["Id"].Visible = false;
@@ -39,18 +41,23 @@ public partial class Form1 : Form
 
     private void FodyChangeCurrentBButton_Click(object sender, EventArgs e)
     {
+
         M1.Person person = FodyBindingList[FodyBindingSource.Position];
-        person.FirstName = "Karen";
-        person.LastName = "Payne";
-        person.BirthDate = new DateOnly(1990, 12, 1);
+        M1.Person newPerson = BogusOperations.FodyPeople(1).FirstOrDefault()!;
+
+        person.FirstName = newPerson.FirstName;
+        person.LastName = newPerson.LastName;
+        person.BirthDate = newPerson.BirthDate;
 
     }
 
     private void ConventionalChangeCurrentBButton_Click(object sender, EventArgs e)
     {
         M2.Person person = ConventionalBindingList[ConventionalBindingSource.Position];
-        person.FirstName = "Jill";
-        person.LastName = "Smith";
-        person.BirthDate = new DateOnly(1980, 9, 1);
+        M2.Person newPerson = BogusOperations.People(1).FirstOrDefault()!;
+
+        person.FirstName = newPerson.FirstName;
+        person.LastName = newPerson.LastName;
+        person.BirthDate = newPerson.BirthDate;
     }
 }

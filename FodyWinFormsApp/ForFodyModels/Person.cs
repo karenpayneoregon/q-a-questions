@@ -17,7 +17,7 @@ public class Person
     public string FirstName { get; set; }
     public string LastName { get; set; }
     // When this property changes the event below is triggered
-    [OnChangedMethod(nameof(OnBirthDatePropertyChanged))]
+    //[OnChangedMethod(nameof(OnBirthDatePropertyChanged))]
     public DateOnly BirthDate { get; set; }
     public override string ToString() => $"{FirstName} {LastName}";
 
