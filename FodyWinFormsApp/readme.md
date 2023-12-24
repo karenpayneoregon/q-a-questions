@@ -17,8 +17,14 @@ Examples for conventional property change notification using [INotifyPropertyCha
 
 NET8 and Visual Studio 2022
 
+### Folder/class aliasing
+
+Is done in the project file.
+
 
 ## PropertyChanged.Fody
+
+See the [Wiki](https://github.com/Fody/PropertyChanged/wiki) for helpful information.
 
 Below are very basic usage, see the [docs](https://github.com/Fody/PropertyChanged) for more usages.
 

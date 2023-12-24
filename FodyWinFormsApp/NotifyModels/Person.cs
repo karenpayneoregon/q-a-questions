@@ -11,6 +11,17 @@ public class Person : INotifyPropertyChanged
     private string _lastName;
     private DateOnly _birthDate;
 
+    public Person()
+    {
+        
+    }
+
+    public Person(int id)
+    {
+        Id = id;
+    }
+    public int Id { get; set; }
+
     public string FirstName
     {
         get => _firstName;
