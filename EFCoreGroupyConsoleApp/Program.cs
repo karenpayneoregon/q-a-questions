@@ -30,20 +30,15 @@ internal partial class Program
             .Select(g => g.ToList())
             .ToList();
 
-        foreach (List<Products> products in groupedCategories)
+        groupedCategories.ForEach(products =>
         {
-            CategoryContainer container = new CategoryContainer
+            CategoryContainer container = new()
             {
                 CategoryName = products.FirstOrDefault()?.Category.CategoryName
             };
-
-            foreach (var p in products)
-            {
-                container.Products.Add(p);
-            }
-
+            products.ForEach(p => container.Products.Add(p));
             containers.Add(container);
-        }
+        });
 
         var root = new Tree("[lightsteelblue]Grouped products by category[/]");
         root.Style(Style.Parse("grey"));
@@ -51,14 +46,13 @@ internal partial class Program
         foreach (var container in containers)
         {
             var currentNode = root.AddNode($"[palegreen1_1]{container.CategoryName}[/]");
-            foreach (var product in container.Products)
-            {
-                currentNode.AddNode($"[white]{product.ProductId,-4}[/]{product.ProductName}");
-            }
+            container.Products.ForEach(p => 
+                currentNode.AddNode($"[white]{p.ProductId,-4}[/]{p.ProductName}"));
         }
 
         AnsiConsole.Write(root);
     }
+
 
     private static void EmployeeReportTo()
     {
