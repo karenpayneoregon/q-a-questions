@@ -12,6 +12,7 @@ internal partial class Program
     static void Main(string[] args)
     {
         GroupByCategories();
+        EmployeeReportTo();
         Console.ReadLine();
     }
 
@@ -23,7 +24,6 @@ internal partial class Program
 
         List<List<Products>> groupedCategories = context.Products
             .Include(p => p.Category)
-            .ToList()
             .OrderBy(p => p.Category.CategoryName)
             .ThenBy(p => p.ProductName)
             .GroupBy(p => p.CategoryId)
@@ -62,7 +62,6 @@ internal partial class Program
 
         List<IGrouping<int?, Employees>> groupedData = employees
             .Where(employee => employee.ReportsTo.HasValue)
-            .ToList()
             .OrderBy(employee => employee.LastName)
             .GroupBy(employee => employee.ReportsTo)
             .ToList();
