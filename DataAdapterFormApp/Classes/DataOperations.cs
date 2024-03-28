@@ -11,7 +11,7 @@ namespace DataAdapterFormApp.Classes
     /// </summary>
     public class DataOperations
     {
-        public static string ConnectionString => "TODO";
+        public static string ConnectionString => "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Database1.accdb";
 
         private static OleDbDataAdapter _sqlDataAdapter = new OleDbDataAdapter();
         private static readonly DataSet _dataSet = new DataSet();
@@ -26,7 +26,7 @@ namespace DataAdapterFormApp.Classes
         {
             try
             {
-                var selectStatement = "SELECT id, FirstName, LastName, HiredDate FROM dbo.employee;";
+                var selectStatement = "SELECT id, FirstName, LastName, CreatedDate FROM dbo.Person;";
                 _sqlDataAdapter = new OleDbDataAdapter(selectStatement, connection);
 
                 _sqlDataAdapter.Fill(_dataSet);

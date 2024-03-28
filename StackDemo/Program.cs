@@ -1,7 +1,11 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Text.Json;
 using StackDemo.Classes;
+using static System.Console;
+
 // ReSharper disable PossibleNullReferenceException
+// ReSharper disable ConditionIsAlwaysTrueOrFalse
+// ReSharper disable HeuristicUnreachableCode
 
 namespace StackDemo;
 
@@ -10,7 +14,35 @@ internal partial class Program
     static void Main(string[] args)
     {
 
+        Sample(DateOnly.FromDateTime(DateTime.Now));
+        ReadLine();
+    }
 
+    private static void Sample(DateOnly? value)
+    {
+        var (hasValue, actual) = value;
+        if (hasValue)
+        {
+            WriteLine(actual);
+        }
+        else
+        {
+            WriteLine("value is null");
+        }
+
+        if (value is not null)
+        {
+            WriteLine(value.Value);
+        }
+        else
+        {
+            WriteLine("value is null");
+        }
+
+    }
+
+    private static void MailSample()
+    {
         CreateAppSettings();
 
         IConfigurationRoot config = InitConfiguration();
@@ -20,14 +52,11 @@ internal partial class Program
 
         foreach (var address in addresses)
         {
-            Console.WriteLine($"{address.Display,-20}{address.Address}");
+            WriteLine($"{address.Display,-20}{address.Address}");
         }
-
-        Console.ReadLine();
-
     }
 
- 
+
     private static void CreateAppSettings()
     {
         List<MailAddress> addresses = new()
