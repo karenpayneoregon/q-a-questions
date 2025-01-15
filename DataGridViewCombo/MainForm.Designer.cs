@@ -50,6 +50,8 @@ namespace DataGridViewCombo1
             this.label1 = new System.Windows.Forms.Label();
             this.ColorIdLabel = new System.Windows.Forms.Label();
             this.SetCurrentColorButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.MoveDownButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -61,27 +63,34 @@ namespace DataGridViewCombo1
             this.CustomersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemTextBoxColumn,
             this.ColorComboBoxColumn});
-            this.CustomersDataGridView.Location = new System.Drawing.Point(3, 38);
+            this.CustomersDataGridView.Location = new System.Drawing.Point(4, 47);
+            this.CustomersDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CustomersDataGridView.Name = "CustomersDataGridView";
-            this.CustomersDataGridView.Size = new System.Drawing.Size(328, 155);
+            this.CustomersDataGridView.RowHeadersWidth = 51;
+            this.CustomersDataGridView.Size = new System.Drawing.Size(437, 191);
             this.CustomersDataGridView.TabIndex = 4;
             // 
             // ItemTextBoxColumn
             // 
             this.ItemTextBoxColumn.HeaderText = "Item";
+            this.ItemTextBoxColumn.MinimumWidth = 6;
             this.ItemTextBoxColumn.Name = "ItemTextBoxColumn";
+            this.ItemTextBoxColumn.Width = 125;
             // 
             // ColorComboBoxColumn
             // 
             this.ColorComboBoxColumn.HeaderText = "Color";
+            this.ColorComboBoxColumn.MinimumWidth = 6;
             this.ColorComboBoxColumn.Name = "ColorComboBoxColumn";
             this.ColorComboBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColorComboBoxColumn.Width = 125;
             // 
             // CurrentButton
             // 
-            this.CurrentButton.Location = new System.Drawing.Point(12, 212);
+            this.CurrentButton.Location = new System.Drawing.Point(16, 261);
+            this.CurrentButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CurrentButton.Name = "CurrentButton";
-            this.CurrentButton.Size = new System.Drawing.Size(75, 23);
+            this.CurrentButton.Size = new System.Drawing.Size(100, 28);
             this.CurrentButton.TabIndex = 5;
             this.CurrentButton.Text = "Current";
             this.CurrentButton.UseVisualStyleBackColor = true;
@@ -92,6 +101,7 @@ namespace DataGridViewCombo1
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -111,7 +121,7 @@ namespace DataGridViewCombo1
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(332, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(443, 27);
             this.bindingNavigator1.TabIndex = 6;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -121,13 +131,13 @@ namespace DataGridViewCombo1
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -137,7 +147,7 @@ namespace DataGridViewCombo1
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -146,7 +156,7 @@ namespace DataGridViewCombo1
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -155,13 +165,13 @@ namespace DataGridViewCombo1
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -169,14 +179,14 @@ namespace DataGridViewCombo1
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -184,7 +194,7 @@ namespace DataGridViewCombo1
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -193,47 +203,73 @@ namespace DataGridViewCombo1
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 242);
+            this.label1.Location = new System.Drawing.Point(16, 298);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(96, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Current color id";
             // 
             // ColorIdLabel
             // 
             this.ColorIdLabel.AutoSize = true;
-            this.ColorIdLabel.Location = new System.Drawing.Point(96, 242);
+            this.ColorIdLabel.Location = new System.Drawing.Point(128, 298);
+            this.ColorIdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ColorIdLabel.Name = "ColorIdLabel";
-            this.ColorIdLabel.Size = new System.Drawing.Size(13, 13);
+            this.ColorIdLabel.Size = new System.Drawing.Size(14, 16);
             this.ColorIdLabel.TabIndex = 8;
             this.ColorIdLabel.Text = "0";
             // 
             // SetCurrentColorButton
             // 
-            this.SetCurrentColorButton.Location = new System.Drawing.Point(245, 212);
+            this.SetCurrentColorButton.Location = new System.Drawing.Point(327, 261);
+            this.SetCurrentColorButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SetCurrentColorButton.Name = "SetCurrentColorButton";
-            this.SetCurrentColorButton.Size = new System.Drawing.Size(75, 23);
+            this.SetCurrentColorButton.Size = new System.Drawing.Size(100, 28);
             this.SetCurrentColorButton.TabIndex = 9;
             this.SetCurrentColorButton.Text = "Set color";
             this.SetCurrentColorButton.UseVisualStyleBackColor = true;
             this.SetCurrentColorButton.Click += new System.EventHandler(this.SetCurrentColorButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(175, 261);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 28);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Current";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // MoveDownButton
+            // 
+            this.MoveDownButton.Location = new System.Drawing.Point(175, 298);
+            this.MoveDownButton.Margin = new System.Windows.Forms.Padding(4);
+            this.MoveDownButton.Name = "MoveDownButton";
+            this.MoveDownButton.Size = new System.Drawing.Size(100, 28);
+            this.MoveDownButton.TabIndex = 11;
+            this.MoveDownButton.Text = "Down";
+            this.MoveDownButton.UseVisualStyleBackColor = true;
+            this.MoveDownButton.Click += new System.EventHandler(this.MoveDownButton_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 264);
+            this.ClientSize = new System.Drawing.Size(443, 393);
+            this.Controls.Add(this.MoveDownButton);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.SetCurrentColorButton);
             this.Controls.Add(this.ColorIdLabel);
             this.Controls.Add(this.label1);
@@ -241,6 +277,7 @@ namespace DataGridViewCombo1
             this.Controls.Add(this.CurrentButton);
             this.Controls.Add(this.CustomersDataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Code Sample";
@@ -275,5 +312,7 @@ namespace DataGridViewCombo1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ColorIdLabel;
         private System.Windows.Forms.Button SetCurrentColorButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button MoveDownButton;
     }
 }

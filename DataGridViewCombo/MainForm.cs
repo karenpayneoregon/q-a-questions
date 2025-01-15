@@ -107,5 +107,10 @@ namespace DataGridViewCombo1
             DataRow currentRow = ((DataRowView)_customerBindingSource.Current).Row;
             currentRow.SetField("ColorId", -1);
         }
+
+        private void MoveDownButton_Click(object sender, EventArgs e)
+        {
+            CustomersDataGridView.MoveRowDown(_customerBindingSource);
+        }
     }
 }
